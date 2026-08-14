@@ -4,7 +4,7 @@ config_version=5
 
 [application]
 config/name="CROWNFRONT: REALMS"
-config/version="1.0.0"
+config/version="1.1.0"
 run/main_scene="res://scenes/boot/Boot.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 

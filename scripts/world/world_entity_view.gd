@@ -8,10 +8,12 @@ var kind := ""
 var cell := Vector2i.ZERO
 var base_color := Color.WHITE
 var resolved := false
+var subtype := ""
 
 func configure(entity: Dictionary, display_name: String) -> void:
     entity_id = String(entity.get("entity_id", ""))
     kind = String(entity.get("kind", ""))
+    subtype = String(entity.get("resource_type", entity.get("pve_id", "")))
     var cell_data: Array = entity.get("cell", [0, 0])
     cell = Vector2i(int(cell_data[0]), int(cell_data[1]))
     resolved = bool(entity.get("resolved", entity.get("defeated", entity.get("depleted", false))))
@@ -36,7 +38,10 @@ func _build_marker(display_name: String, level: int) -> void:
     var material := StandardMaterial3D.new()
     material.albedo_color = base_color.darkened(0.45) if resolved else base_color
     material.metallic = 0.12
-    material.roughness = 0.72
+    material.roughness = 0.64
+    material.emission_enabled = true
+    material.emission = base_color * (0.08 if resolved else 0.22)
+    material.emission_energy_multiplier = 0.55
     mesh_instance.mesh = marker_mesh
     mesh_instance.material_override = material
     mesh_instance.position.y = 1.7
@@ -49,13 +54,14 @@ func _build_marker(display_name: String, level: int) -> void:
 
     var halo := MeshInstance3D.new()
     var halo_mesh := CylinderMesh.new(); halo_mesh.top_radius = 2.7; halo_mesh.bottom_radius = 2.7; halo_mesh.height = 0.09
-    var halo_material := StandardMaterial3D.new(); halo_material.albedo_color = Color(base_color, 0.5); halo_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+    var halo_material := StandardMaterial3D.new(); halo_material.albedo_color = Color(base_color, 0.58); halo_material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+    halo_material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
     halo.mesh = halo_mesh; halo.material_override = halo_material; halo.position.y = 0.08
     add_child(halo)
 
     var label := Label3D.new()
     label.text = "%s  Lv.%d" % [display_name, level] if kind != "CITY" else display_name
-    label.font_size = 28; label.outline_size = 8; label.modulate = Color.WHITE
+    label.font_size = 34; label.outline_size = 11; label.modulate = Color("fff5d9")
     label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
     label.no_depth_test = true; label.position.y = 5.0
     add_child(label)
@@ -66,7 +72,13 @@ func set_selected(value: bool) -> void:
 func _kind_color() -> Color:
     match kind:
         "CITY": return Color("f2c14e")
-        "RESOURCE": return Color("70d6a4")
+        "RESOURCE":
+            match subtype:
+                "food": return Color("d6c75f")
+                "wood": return Color("5dbb74")
+                "stone": return Color("9aa7b2")
+                "gold": return Color("f0b642")
+                _: return Color("70d6a4")
         "PVE": return Color("e86868")
         "MONSTER_CAMP": return Color("cf4f72")
         "RUINS": return Color("a78bda")

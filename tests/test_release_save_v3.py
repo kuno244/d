@@ -8,7 +8,7 @@ from save_contract import default_save, migrate_save, validate_save  # noqa: E40
 
 
 save = default_save(now=5_000)
-assert save["save_version"] == 3
+assert save["save_version"] == 4
 world = save["world_state"]
 for key in [
     "seed", "generated", "width", "height", "chunk_size", "region_size",
@@ -28,16 +28,17 @@ legacy["world_state"] = {
     "season_id": "preseason_01",
 }
 migrated = migrate_save(legacy, now=5_000)
-assert migrated["save_version"] == 3
-assert migrated["world_state"]["explored_chunks"] == [[3, 4]]
+assert migrated["save_version"] == 4
+assert migrated["world_state"]["explored_chunks"] == [[16, 16]]
+assert migrated["world_state"]["width"] == 1024
 assert migrated["resources"] == legacy["resources"]
 assert migrated["city_state"]["buildings"] == legacy["city_state"]["buildings"]
 assert validate_save(migrated) == []
 
 bad = default_save(now=5_000)
-bad["world_state"]["camera"] = {"cell": [-999, 999], "zoom": -20}
+bad["world_state"]["camera"] = {"cell": [-999, 99999], "zoom": -20}
 bad["world_state"]["last_world_timestamp"] = 999_999_999
 clean = migrate_save(bad, now=6_000)
-assert clean["world_state"]["camera"] == {"cell": [0, 63], "zoom": 0.35}
+assert clean["world_state"]["camera"] == {"cell": [0, 1023], "zoom": 0.28}
 assert clean["world_state"]["last_world_timestamp"] == 6_000
-print("PASS release save v3")
+print("PASS release save v4")

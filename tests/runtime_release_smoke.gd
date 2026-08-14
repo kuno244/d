@@ -10,14 +10,14 @@ func _run() -> void:
     var registry_errors := DataRegistry.initialize()
     _check(registry_errors.is_empty(), "DataRegistry initializes")
     var save_data := SaveService.default_save()
-    _check(int(save_data.get("save_version", 0)) == 3, "Save v3 default")
+    _check(int(save_data.get("save_version", 0)) == 4, "Save v4 default")
     GameState.reset_from_save(save_data)
 
     var config: Dictionary = DataRegistry.data.get("world", {}).get("world", {})
     var world_service := WorldService.new()
     world_service.configure(GameState.world_state, config, GameState.resources, GameState.capacities)
     _check(world_service.ensure_generated(), "World generated on first load")
-    _check(GameState.world_state.get("entities", []).size() == 87, "World entity count is 87")
+    _check(GameState.world_state.get("entities", []).size() == 1097, "World entity count is 1097")
     _check(not world_service.ensure_generated(), "World generation is idempotent")
 
     var resource: Dictionary = {}
@@ -54,6 +54,15 @@ func _run() -> void:
     await get_tree().process_frame
     await get_tree().process_frame
     _check(world_scene.active_chunks.size() <= 25 and world_scene.active_chunks.size() > 0, "World chunk budget")
+    _check(int(GameState.world_state.get("width", 0)) == 1024 and int(GameState.world_state.get("height", 0)) == 1024, "Large world dimensions")
+    _check(world_scene.entity_chunk_index.size() > 100, "World entities indexed by chunk")
+    var first_chunk: Node3D = world_scene.active_chunks.values()[0]
+    var terrain_mesh: ArrayMesh = first_chunk.get_node("Terrain").mesh
+    var mesh_arrays: Array = terrain_mesh.surface_get_arrays(0)
+    var terrain_vertices: PackedVector3Array = mesh_arrays[Mesh.ARRAY_VERTEX]
+    var first_normal := (terrain_vertices[1] - terrain_vertices[0]).cross(terrain_vertices[2] - terrain_vertices[0]).normalized()
+    _check(first_normal.y > 0.5, "Terrain triangles face the camera")
+    _check(world_scene.hud.has_node("Safe/Minimap") and world_scene.hud.has_node("Safe/BottomDock"), "Premium world HUD instantiates")
     world_scene.queue_free()
     await get_tree().process_frame
 

@@ -21,8 +21,8 @@ other = create_initial_world(config["seed"] + 1, config)
 
 assert first == second
 assert first != other
-assert first["width"] == 64 and first["height"] == 64
-assert first["chunk_size"] == 8 and first["region_size"] == 16
+assert first["width"] == 1024 and first["height"] == 1024
+assert first["chunk_size"] == 32 and first["region_size"] == 128
 assert len(first["biomes"]) == 64 * 64
 assert len(set(first["biomes"])) == 6
 assert first["player_city_id"] == "city_player_001"
@@ -30,18 +30,18 @@ assert first["player_city_id"] == "city_player_001"
 entities = first["entities"]
 cells = [tuple(entity["cell"]) for entity in entities]
 assert len(cells) == len(set(cells)), "world entities overlap"
-assert all(0 <= x < 64 and 0 <= y < 64 for x, y in cells)
+assert all(0 <= x < 1024 and 0 <= y < 1024 for x, y in cells)
 counts = {}
 for entity in entities:
     counts[entity["kind"]] = counts.get(entity["kind"], 0) + 1
 assert counts == {
     "CITY": 1,
-    "RESOURCE": 48,
-    "PVE": 18,
-    "RUINS": 6,
-    "VILLAGE": 5,
-    "MONSTER_CAMP": 6,
-    "FORTRESS": 3,
+    "RESOURCE": 600,
+    "PVE": 240,
+    "RUINS": 80,
+    "VILLAGE": 56,
+    "MONSTER_CAMP": 96,
+    "FORTRESS": 24,
 }
 
 resource = next(entity for entity in entities if entity["kind"] == "RESOURCE")

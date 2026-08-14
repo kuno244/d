@@ -214,8 +214,8 @@ def validate(root: Path | str) -> dict[str, Any]:
             errors.append(f"decoration asset not shipping ready: {aid}")
 
     save_version = save_schema.get("current_save_version", 0)
-    if save_version != 3:
-        errors.append(f"current release save version must be 3, got {save_version}")
+    if save_version != 4:
+        errors.append(f"current release save version must be 4, got {save_version}")
     required_dict = set(save_schema.get("required_dictionary_keys", []))
     required = {"profile", "resources", "capacities", "city_state", "progression", "troop_state", "research_state", "world_state"}
     if not required.issubset(required_dict):

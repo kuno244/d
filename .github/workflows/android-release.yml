@@ -69,6 +69,23 @@ jobs:
           python3 tools/validate_dev04_schema.py .
           python3 tools/shipping_gate.py .
 
+      - name: Render and validate World Map presentation
+        env:
+          GODOT_BIN: ${{ runner.temp }}/godot/Godot_v4.7.1-stable_linux.x86_64
+        run: |
+          set -euo pipefail
+          if ! command -v xvfb-run >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y xvfb
+          fi
+          CROWNFRONT_CAPTURE_PATH="$PWD/reports/world_map_release.png" \
+            xvfb-run -a "$GODOT_BIN" --audio-driver Dummy --path . \
+            --display-driver x11 --rendering-driver opengl3 --resolution 1280x720 \
+            tests/WorldVisualCapture.tscn 2>&1 | tee reports/ci_world_visual_capture.log
+          test -s reports/world_map_release.png
+          python3 tools/check_world_screenshot.py reports/world_map_release.png \
+            | tee reports/ci_world_visual_validation.json
+
       - name: Export debug-signed Android APK
         env:
           GODOT_BIN: ${{ runner.temp }}/godot/Godot_v4.7.1-stable_linux.x86_64
@@ -93,13 +110,16 @@ jobs:
       - name: Upload verified APK and reports
         uses: actions/upload-artifact@v4
         with:
-          name: CROWNFRONT_REALMS_ANDROID_1.0.0
+          name: CROWNFRONT_REALMS_ANDROID_1.1.0
           path: |
             build/CrownfrontRealms.apk
             build/CrownfrontRealms.apk.sha256
             reports/ci_android_export.log
             reports/ci_apk_signature.txt
             reports/ci_godot_import.log
+            reports/ci_world_visual_capture.log
+            reports/ci_world_visual_validation.json
+            reports/world_map_release.png
             reports/shipping_gate_report.json
           compression-level: 0
           if-no-files-found: error

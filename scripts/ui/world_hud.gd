@@ -4,19 +4,22 @@ extends Control
 signal action_requested(action: String, entity_id: String)
 signal city_requested
 signal center_army_requested
+signal overview_requested
 
-@onready var food_label: Label = $Safe/TopBar/Margin/HBox/Food
-@onready var wood_label: Label = $Safe/TopBar/Margin/HBox/Wood
-@onready var stone_label: Label = $Safe/TopBar/Margin/HBox/Stone
-@onready var gold_label: Label = $Safe/TopBar/Margin/HBox/Gold
-@onready var region_label: Label = $Safe/TopBar/Margin/HBox/Region
-@onready var zoom_label: Label = $Safe/TopBar/Margin/HBox/Zoom
+@onready var food_label: Label = $Safe/TopRow/ResourceDock/Margin/Resources/Food/Row/Value
+@onready var wood_label: Label = $Safe/TopRow/ResourceDock/Margin/Resources/Wood/Row/Value
+@onready var stone_label: Label = $Safe/TopRow/ResourceDock/Margin/Resources/Stone/Row/Value
+@onready var gold_label: Label = $Safe/TopRow/ResourceDock/Margin/Resources/Gold/Row/Value
+@onready var region_label: Label = $Safe/TopRow/RealmBadge/Margin/Stack/Region
+@onready var zoom_label: Label = $Safe/TopRow/WorldScale/Margin/Stack/Zoom
+@onready var scale_label: Label = $Safe/TopRow/WorldScale/Margin/Stack/Scale
 @onready var objective_label: Label = $Safe/ObjectivePanel/Margin/Objective
 @onready var selection_panel: PanelContainer = $Safe/SelectionPanel
-@onready var selection_title: Label = $Safe/SelectionPanel/Margin/VBox/Title
-@onready var selection_details: Label = $Safe/SelectionPanel/Margin/VBox/Details
-@onready var action_button: Button = $Safe/SelectionPanel/Margin/VBox/Action
+@onready var selection_title: Label = $Safe/SelectionPanel/Margin/Stack/Title
+@onready var selection_details: Label = $Safe/SelectionPanel/Margin/Stack/Details
+@onready var action_button: Button = $Safe/SelectionPanel/Margin/Stack/Action
 @onready var toast_label: Label = $Safe/ToastPanel/Margin/Toast
+@onready var minimap: WorldMinimap = $Safe/Minimap/Margin/Stack/Map
 
 var selected_entity_id := ""
 var selected_action := ""
@@ -28,14 +31,20 @@ func _process(delta: float) -> void:
         if toast_remaining <= 0.0: $Safe/ToastPanel.visible = false
 
 func set_resources(values: Dictionary, capacities: Dictionary) -> void:
-    food_label.text = "FOOD  %d/%d" % [int(values.get("food", 0)), int(capacities.get("food", 0))]
-    wood_label.text = "WOOD  %d/%d" % [int(values.get("wood", 0)), int(capacities.get("wood", 0))]
-    stone_label.text = "STONE  %d/%d" % [int(values.get("stone", 0)), int(capacities.get("stone", 0))]
-    gold_label.text = "GOLD  %d/%d" % [int(values.get("gold", 0)), int(capacities.get("gold", 0))]
+    food_label.text = "%s / %s" % [_compact(int(values.get("food", 0))), _compact(int(capacities.get("food", 0)))]
+    wood_label.text = "%s / %s" % [_compact(int(values.get("wood", 0))), _compact(int(capacities.get("wood", 0)))]
+    stone_label.text = "%s / %s" % [_compact(int(values.get("stone", 0))), _compact(int(capacities.get("stone", 0)))]
+    gold_label.text = "%s / %s" % [_compact(int(values.get("gold", 0))), _compact(int(capacities.get("gold", 0)))]
 
 func set_location(cell: Vector2i, region: Vector2i, biome_name: String, zoom_tier: String) -> void:
-    region_label.text = "%s  •  Region %d-%d  •  [%d,%d]" % [biome_name, region.x + 1, region.y + 1, cell.x, cell.y]
-    zoom_label.text = zoom_tier
+    region_label.text = "%s  •  REGION %d-%d" % [biome_name.to_upper(), region.x + 1, region.y + 1]
+    zoom_label.text = "%s VIEW  •  %d, %d" % [zoom_tier, cell.x, cell.y]
+
+func set_world_scale(width: int, height: int, chunks: int, entity_count: int) -> void:
+    scale_label.text = "%d × %d CELLS  •  %d CHUNKS  •  %d SITES" % [width, height, chunks, entity_count]
+
+func set_minimap_state(cell: Vector2i, world_size: Vector2i, entities: Array, explored: Array) -> void:
+    minimap.set_state(cell, world_size, entities, explored)
 
 func set_objective(step: int) -> void:
     var objectives := [
@@ -93,5 +102,13 @@ func _on_city_pressed() -> void:
 func _on_army_pressed() -> void:
     center_army_requested.emit()
 
+func _on_overview_pressed() -> void:
+    overview_requested.emit()
+
 func _on_close_pressed() -> void:
     clear_entity()
+
+func _compact(value: int) -> String:
+    if value >= 1000000: return "%.1fM" % (float(value) / 1000000.0)
+    if value >= 10000: return "%.1fK" % (float(value) / 1000.0)
+    return str(value)

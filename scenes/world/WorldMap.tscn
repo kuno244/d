@@ -1,16 +1,31 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://scripts/world/world_map_controller.gd" id="1_world"]
 [ext_resource type="Script" path="res://scripts/world/world_map_camera.gd" id="2_camera"]
 [ext_resource type="PackedScene" path="res://scenes/ui/WorldHUD.tscn" id="3_hud"]
 
+[sub_resource type="ProceduralSkyMaterial" id="SkyMaterial_world"]
+sky_top_color = Color(0.16, 0.36, 0.58, 1)
+sky_horizon_color = Color(0.78, 0.86, 0.82, 1)
+ground_bottom_color = Color(0.08, 0.13, 0.17, 1)
+ground_horizon_color = Color(0.62, 0.7, 0.63, 1)
+sun_angle_max = 18.0
+
+[sub_resource type="Sky" id="Sky_world"]
+sky_material = SubResource("SkyMaterial_world")
+
 [sub_resource type="Environment" id="Environment_world"]
-background_mode = 1
-background_color = Color(0.075, 0.12, 0.16, 1)
+background_mode = 2
+sky = SubResource("Sky_world")
 ambient_light_source = 3
-ambient_light_color = Color(0.66, 0.74, 0.82, 1)
-ambient_light_energy = 0.72
+ambient_light_color = Color(0.72, 0.79, 0.72, 1)
+ambient_light_energy = 1.05
+reflected_light_source = 2
 tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.69, 0.78, 0.78, 1)
+fog_light_energy = 0.45
+fog_density = 0.00035
 
 [sub_resource type="PlaneMesh" id="WaterMesh"]
 size = Vector2(410, 410)
@@ -24,9 +39,9 @@ environment = SubResource("Environment_world")
 [node name="Sun" type="DirectionalLight3D" parent="."]
 rotation_degrees = Vector3(-58, -28, 0)
 light_color = Color(1, 0.93, 0.77, 1)
-light_energy = 1.15
+light_energy = 1.35
 shadow_enabled = true
-directional_shadow_max_distance = 180.0
+directional_shadow_max_distance = 420.0
 
 [node name="WaterBackdrop" type="MeshInstance3D" parent="."]
 position = Vector3(0, -0.35, 0)
@@ -43,7 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 
 projection = 1
 current = true
 size = 82.0
-far = 700.0
+far = 4600.0
 
 [node name="UIRoot" type="CanvasLayer" parent="."]
 [node name="WorldHUD" parent="UIRoot" instance=ExtResource("3_hud")]

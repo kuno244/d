@@ -2,18 +2,19 @@
   "schema_version": 1,
   "world": {
     "seed": 731942,
-    "width": 64,
-    "height": 64,
-    "cell_size": 6.0,
-    "chunk_size": 8,
-    "region_size": 16,
-    "player_start": [32, 32],
-    "resource_nodes": 48,
-    "pve_encounters": 18,
-    "ruins": 6,
-    "villages": 5,
-    "monster_camps": 6,
-    "fortresses": 3,
+    "width": 1024,
+    "height": 1024,
+    "cell_size": 8.0,
+    "chunk_size": 32,
+    "region_size": 128,
+    "player_start": [512, 512],
+    "biome_scale": 88,
+    "resource_nodes": 600,
+    "pve_encounters": 240,
+    "ruins": 80,
+    "villages": 56,
+    "monster_camps": 96,
+    "fortresses": 24,
     "resource_respawn_sec": 900,
     "pve_respawn_sec": 1800,
     "biomes": [
@@ -29,7 +30,8 @@
       "max_active_chunks": 25,
       "max_visible_entities": 90,
       "max_lod0_props": 12,
-      "max_node3d": 240
+      "max_node3d": 260,
+      "detail_instances_per_chunk": 14
     }
   }
 }

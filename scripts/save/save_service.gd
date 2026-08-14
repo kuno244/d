@@ -1,6 +1,6 @@
 extends Node
 
-const CURRENT_SAVE_VERSION := 3
+const CURRENT_SAVE_VERSION := 4
 const SAVE_PATH := "user://crownfront_save.json"
 const TEMP_PATH := "user://crownfront_save.tmp"
 const BACKUP_PATH := "user://crownfront_save.bak"
@@ -23,10 +23,10 @@ func default_save() -> Dictionary:
         "research_state": {"progress": {}, "research_queue": null},
         "modifiers": [],
         "world_state": {
-            "seed": 731942, "generated": false, "width": 64, "height": 64, "chunk_size": 8, "region_size": 16,
-            "player_city_id": "city_player_001", "player_city_cell": [32, 32], "entities": [],
-            "armies": [{"army_id": "army_player_001", "display_name": "Crown Vanguard", "cell": [32, 34], "troops": {"troop_kingdom_swordsman": 50, "troop_kingdom_archer": 25}, "status": "IDLE", "target_entity_id": ""}],
-            "explored_chunks": [[4, 4]], "visible_chunks": [[4, 4]], "camera": {"cell": [32, 32], "zoom": 1.0},
+            "seed": 731942, "generated": false, "width": 1024, "height": 1024, "chunk_size": 32, "region_size": 128,
+            "player_city_id": "city_player_001", "player_city_cell": [512, 512], "entities": [],
+            "armies": [{"army_id": "army_player_001", "display_name": "Crown Vanguard", "cell": [512, 516], "troops": {"troop_kingdom_swordsman": 50, "troop_kingdom_archer": 25}, "status": "IDLE", "target_entity_id": ""}],
+            "explored_chunks": [[16, 16]], "visible_chunks": [[16, 16]], "camera": {"cell": [512, 512], "zoom": 1.35},
             "pending_battle": null, "last_world_timestamp": now, "objectives": {"chapter": 1, "step": 0},
             "season_id": "preseason_01"
         }
@@ -94,8 +94,16 @@ func migrate(save_data: Dictionary) -> Dictionary:
         save_data["world_state"] = world_v3
         save_data["save_version"] = 3
         version = 3
+    if version == 3:
+        var old_world: Dictionary = save_data.get("world_state", {}) if save_data.get("world_state") is Dictionary else {}
+        var large_world: Dictionary = default_save()["world_state"].duplicate(true)
+        for key in ["seed", "objectives", "season_id", "last_world_timestamp"]:
+            if old_world.has(key): large_world[key] = old_world[key]
+        save_data["world_state"] = large_world
+        save_data["save_version"] = 4
+        version = 4
     if version != CURRENT_SAVE_VERSION: return save_data
-    _normalize_v3(save_data, now)
+    _normalize_v4(save_data, now)
     return save_data
 
 func validate(save_data: Dictionary) -> Array[String]:
@@ -116,7 +124,7 @@ func delete_save() -> void:
 func has_save() -> bool:
     return not _read_valid(SAVE_PATH).is_empty() or not _read_valid(BACKUP_PATH).is_empty()
 
-func _normalize_v3(save_data: Dictionary, now: int) -> void:
+func _normalize_v4(save_data: Dictionary, now: int) -> void:
     var defaults := default_save()
     for key in ["profile", "resources", "capacities", "city_state", "progression", "troop_state", "research_state", "world_state"]:
         if not (save_data.get(key) is Dictionary): save_data[key] = defaults[key].duplicate(true)
@@ -174,14 +182,22 @@ func _normalize_v3(save_data: Dictionary, now: int) -> void:
     for key in world_defaults.keys():
         if not world.has(key) or (world_defaults[key] != null and typeof(world[key]) != typeof(world_defaults[key])):
             world[key] = world_defaults[key].duplicate(true) if world_defaults[key] is Array or world_defaults[key] is Dictionary else world_defaults[key]
-    world["width"] = 64
-    world["height"] = 64
-    world["chunk_size"] = 8
-    world["region_size"] = 16
+    var incompatible_world := int(world.get("width", 0)) != 1024 or int(world.get("height", 0)) != 1024 or int(world.get("chunk_size", 0)) != 32
+    if incompatible_world:
+        world["generated"] = false
+        world["entities"] = []
+        world["armies"] = world_defaults["armies"].duplicate(true)
+        world["explored_chunks"] = world_defaults["explored_chunks"].duplicate(true)
+        world["visible_chunks"] = world_defaults["visible_chunks"].duplicate(true)
+    world["width"] = 1024
+    world["height"] = 1024
+    world["chunk_size"] = 32
+    world["region_size"] = 128
+    world["player_city_cell"] = [512, 512]
     var camera: Dictionary = world.get("camera", {}) if world.get("camera") is Dictionary else {}
-    var camera_cell: Array = camera.get("cell", [32, 32])
-    camera["cell"] = [clampi(int(camera_cell[0]), 0, 63), clampi(int(camera_cell[1]), 0, 63)] if camera_cell.size() >= 2 else [32, 32]
-    camera["zoom"] = clampf(float(camera.get("zoom", 1.0)), 0.35, 2.2)
+    var camera_cell: Array = camera.get("cell", [512, 512])
+    camera["cell"] = [clampi(int(camera_cell[0]), 0, 1023), clampi(int(camera_cell[1]), 0, 1023)] if camera_cell.size() >= 2 else [512, 512]
+    camera["zoom"] = clampf(float(camera.get("zoom", 1.35)), 0.28, 3.6)
     world["camera"] = camera
     var world_timestamp := int(world.get("last_world_timestamp", now))
     world["last_world_timestamp"] = now if world_timestamp < 0 or world_timestamp > now else world_timestamp

@@ -1,33 +1,144 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://scripts/ui/world_hud.gd" id="1_hud"]
+[ext_resource type="Script" path="res://scripts/ui/world_minimap.gd" id="2_minimap"]
 
 [sub_resource type="StyleBoxFlat" id="TopStyle"]
-bg_color = Color(0.035, 0.055, 0.075, 0.96)
-border_width_bottom = 2
-border_color = Color(0.77, 0.59, 0.25, 0.9)
-corner_radius_bottom_left = 18
-corner_radius_bottom_right = 18
-
-[sub_resource type="StyleBoxFlat" id="PanelStyle"]
-bg_color = Color(0.055, 0.075, 0.105, 0.96)
+bg_color = Color(0.035, 0.075, 0.09, 0.96)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.42, 0.58, 0.68, 0.75)
+border_color = Color(0.71, 0.57, 0.27, 0.88)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.48)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="BadgeStyle"]
+bg_color = Color(0.12, 0.19, 0.18, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.88, 0.67, 0.27, 0.94)
 corner_radius_top_left = 18
 corner_radius_top_right = 18
 corner_radius_bottom_right = 18
 corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.55)
+shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id="ObjectiveStyle"]
-bg_color = Color(0.18, 0.13, 0.055, 0.93)
+[sub_resource type="StyleBoxFlat" id="ResourceStyle"]
+bg_color = Color(0.027, 0.065, 0.078, 0.97)
+border_width_bottom = 2
+border_color = Color(0.27, 0.53, 0.5, 0.78)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="ChipStyle"]
+bg_color = Color(0.095, 0.145, 0.145, 0.94)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.56, 0.52, 0.5)
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.04, 0.085, 0.105, 0.98)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.95, 0.72, 0.27, 0.85)
+border_color = Color(0.48, 0.69, 0.66, 0.86)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.55)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="ObjectiveStyle"]
+bg_color = Color(0.21, 0.145, 0.045, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.96, 0.73, 0.25, 0.9)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.4)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="MinimapStyle"]
+bg_color = Color(0.025, 0.055, 0.07, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.68, 0.61, 0.8)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 9
+
+[sub_resource type="StyleBoxFlat" id="DockStyle"]
+bg_color = Color(0.025, 0.06, 0.075, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.76, 0.59, 0.27, 0.88)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.58)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="ButtonNormal"]
+bg_color = Color(0.1, 0.22, 0.22, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.64, 0.75, 0.6, 0.75)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="ButtonHover"]
+bg_color = Color(0.18, 0.34, 0.31, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.98, 0.76, 0.3, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="ButtonPressed"]
+bg_color = Color(0.32, 0.24, 0.09, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.82, 0.42, 1)
 corner_radius_top_left = 14
 corner_radius_top_right = 14
 corner_radius_bottom_right = 14
@@ -51,162 +162,339 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 26
-theme_override_constants/margin_top = 18
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 26
-theme_override_constants/margin_bottom = 24
+theme_override_constants/margin_bottom = 22
 mouse_filter = 2
 
-[node name="TopBar" type="PanelContainer" parent="Safe"]
+[node name="TopRow" type="HBoxContainer" parent="Safe"]
 layout_mode = 0
 offset_right = 1868.0
-offset_bottom = 70.0
-theme_override_styles/panel = SubResource("TopStyle")
-[node name="Margin" type="MarginContainer" parent="Safe/TopBar"]
-layout_mode = 2
-theme_override_constants/margin_left = 22
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 22
-theme_override_constants/margin_bottom = 12
-[node name="HBox" type="HBoxContainer" parent="Safe/TopBar/Margin"]
-layout_mode = 2
-theme_override_constants/separation = 28
-[node name="Food" type="Label" parent="Safe/TopBar/Margin/HBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.95, 0.79, 0.38, 1)
-theme_override_font_sizes/font_size = 19
-text = "FOOD"
-[node name="Wood" type="Label" parent="Safe/TopBar/Margin/HBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.68, 0.9, 0.55, 1)
-theme_override_font_sizes/font_size = 19
-text = "WOOD"
-[node name="Stone" type="Label" parent="Safe/TopBar/Margin/HBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.75, 0.8, 0.86, 1)
-theme_override_font_sizes/font_size = 19
-text = "STONE"
-[node name="Gold" type="Label" parent="Safe/TopBar/Margin/HBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.69, 0.25, 1)
-theme_override_font_sizes/font_size = 19
-text = "GOLD"
-[node name="Spacer" type="Control" parent="Safe/TopBar/Margin/HBox"]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-[node name="Region" type="Label" parent="Safe/TopBar/Margin/HBox"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Region"
-[node name="Zoom" type="Label" parent="Safe/TopBar/Margin/HBox"]
-custom_minimum_size = Vector2(92, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.55, 0.82, 1, 1)
-theme_override_font_sizes/font_size = 18
-text = "MEDIUM"
-horizontal_alignment = 2
+offset_bottom = 100.0
+theme_override_constants/separation = 14
 
-[node name="ObjectivePanel" type="PanelContainer" parent="Safe"]
-layout_mode = 0
-offset_top = 88.0
-offset_right = 640.0
-offset_bottom = 140.0
-theme_override_styles/panel = SubResource("ObjectiveStyle")
-[node name="Margin" type="MarginContainer" parent="Safe/ObjectivePanel"]
+[node name="RealmBadge" type="PanelContainer" parent="Safe/TopRow"]
+custom_minimum_size = Vector2(342, 96)
 layout_mode = 2
-theme_override_constants/margin_left = 18
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 18
-theme_override_constants/margin_bottom = 10
-[node name="Objective" type="Label" parent="Safe/ObjectivePanel/Margin"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 17
-text = "CHAPTER I"
-
-[node name="SelectionPanel" type="PanelContainer" parent="Safe"]
-visible = false
-layout_mode = 0
-offset_left = 1450.0
-offset_top = 100.0
-offset_right = 1868.0
-offset_bottom = 472.0
-theme_override_styles/panel = SubResource("PanelStyle")
-[node name="Margin" type="MarginContainer" parent="Safe/SelectionPanel"]
-layout_mode = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 22
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 22
-[node name="VBox" type="VBoxContainer" parent="Safe/SelectionPanel/Margin"]
-layout_mode = 2
-theme_override_constants/separation = 16
-[node name="Title" type="Label" parent="Safe/SelectionPanel/Margin/VBox"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.78, 0.37, 1)
-theme_override_font_sizes/font_size = 25
-text = "World Entity"
-autowrap_mode = 2
-[node name="Details" type="Label" parent="Safe/SelectionPanel/Margin/VBox"]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "Details"
-autowrap_mode = 2
-[node name="Action" type="Button" parent="Safe/SelectionPanel/Margin/VBox"]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 20
-text = "ACTION"
-[node name="Close" type="Button" parent="Safe/SelectionPanel/Margin/VBox"]
-custom_minimum_size = Vector2(0, 48)
-layout_mode = 2
-text = "CLOSE"
-
-[node name="Bottom" type="HBoxContainer" parent="Safe"]
-layout_mode = 0
-offset_top = 950.0
-offset_right = 1868.0
-offset_bottom = 1038.0
-alignment = 1
-theme_override_constants/separation = 18
-[node name="City" type="Button" parent="Safe/Bottom"]
-custom_minimum_size = Vector2(240, 68)
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "CROWNKEEP"
-[node name="Army" type="Button" parent="Safe/Bottom"]
-custom_minimum_size = Vector2(240, 68)
-layout_mode = 2
-theme_override_font_sizes/font_size = 21
-text = "CROWN VANGUARD"
-[node name="Campaign" type="Button" parent="Safe/Bottom"]
-custom_minimum_size = Vector2(240, 68)
-layout_mode = 2
-disabled = true
-theme_override_font_sizes/font_size = 21
-text = "CAMPAIGN I"
-
-[node name="ToastPanel" type="PanelContainer" parent="Safe"]
-visible = false
-layout_mode = 0
-offset_left = 620.0
-offset_top = 820.0
-offset_right = 1248.0
-offset_bottom = 890.0
-theme_override_styles/panel = SubResource("ObjectiveStyle")
-[node name="Margin" type="MarginContainer" parent="Safe/ToastPanel"]
+theme_override_styles/panel = SubResource("BadgeStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/TopRow/RealmBadge"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 12
+theme_override_constants/margin_bottom = 10
+[node name="Stack" type="VBoxContainer" parent="Safe/TopRow/RealmBadge/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 2
+[node name="Title" type="Label" parent="Safe/TopRow/RealmBadge/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.81, 0.39, 1)
+theme_override_font_sizes/font_size = 25
+text = "CROWNFRONT: REALMS"
+[node name="Region" type="Label" parent="Safe/TopRow/RealmBadge/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.85, 0.8, 1)
+theme_override_font_sizes/font_size = 15
+text = "GRASSLANDS • REGION 5-5"
+
+[node name="ResourceDock" type="PanelContainer" parent="Safe/TopRow"]
+custom_minimum_size = Vector2(860, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("ResourceStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/TopRow/ResourceDock"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 10
+[node name="Resources" type="HBoxContainer" parent="Safe/TopRow/ResourceDock/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Food" type="PanelContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("ChipStyle")
+[node name="Row" type="HBoxContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources/Food"]
+layout_mode = 2
+theme_override_constants/separation = 9
+[node name="Icon" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Food/Row"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93, 0.8, 0.31, 1)
+theme_override_font_sizes/font_size = 25
+text = "F"
+horizontal_alignment = 1
+vertical_alignment = 1
+[node name="Value" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Food/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "1.8K / 6K"
+vertical_alignment = 1
+
+[node name="Wood" type="PanelContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("ChipStyle")
+[node name="Row" type="HBoxContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources/Wood"]
+layout_mode = 2
+theme_override_constants/separation = 9
+[node name="Icon" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Wood/Row"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.84, 0.5, 1)
+theme_override_font_sizes/font_size = 25
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+[node name="Value" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Wood/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "1.8K / 6K"
+vertical_alignment = 1
+
+[node name="Stone" type="PanelContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("ChipStyle")
+[node name="Row" type="HBoxContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources/Stone"]
+layout_mode = 2
+theme_override_constants/separation = 9
+[node name="Icon" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Stone/Row"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.78, 0.85, 1)
+theme_override_font_sizes/font_size = 25
+text = "S"
+horizontal_alignment = 1
+vertical_alignment = 1
+[node name="Value" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Stone/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "900 / 4.5K"
+vertical_alignment = 1
+
+[node name="Gold" type="PanelContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("ChipStyle")
+[node name="Row" type="HBoxContainer" parent="Safe/TopRow/ResourceDock/Margin/Resources/Gold"]
+layout_mode = 2
+theme_override_constants/separation = 9
+[node name="Icon" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Gold/Row"]
+custom_minimum_size = Vector2(38, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.66, 0.2, 1)
+theme_override_font_sizes/font_size = 25
+text = "G"
+horizontal_alignment = 1
+vertical_alignment = 1
+[node name="Value" type="Label" parent="Safe/TopRow/ResourceDock/Margin/Resources/Gold/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "450 / 3K"
+vertical_alignment = 1
+
+[node name="WorldScale" type="PanelContainer" parent="Safe/TopRow"]
+custom_minimum_size = Vector2(424, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("TopStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/TopRow/WorldScale"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 10
+[node name="Stack" type="VBoxContainer" parent="Safe/TopRow/WorldScale/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 3
+[node name="Scale" type="Label" parent="Safe/TopRow/WorldScale/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.76, 0.89, 0.84, 1)
+theme_override_font_sizes/font_size = 16
+text = "1024 × 1024 CELLS • 1024 CHUNKS"
+horizontal_alignment = 2
+[node name="Zoom" type="Label" parent="Safe/TopRow/WorldScale/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.75, 0.3, 1)
+theme_override_font_sizes/font_size = 18
+text = "MEDIUM VIEW • 512, 512"
+horizontal_alignment = 2
+
+[node name="ObjectivePanel" type="PanelContainer" parent="Safe"]
+layout_mode = 0
+offset_top = 116.0
+offset_right = 760.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("ObjectiveStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/ObjectivePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 11
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 11
+[node name="Objective" type="Label" parent="Safe/ObjectivePanel/Margin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.91, 0.66, 1)
+theme_override_font_sizes/font_size = 18
+text = "CHAPTER I • SCOUT THE REALM"
+vertical_alignment = 1
+
+[node name="Minimap" type="PanelContainer" parent="Safe"]
+layout_mode = 0
+offset_top = 752.0
+offset_right = 334.0
+offset_bottom = 1038.0
+theme_override_styles/panel = SubResource("MinimapStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/Minimap"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+[node name="Stack" type="VBoxContainer" parent="Safe/Minimap/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+[node name="Title" type="Label" parent="Safe/Minimap/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.76, 0.45, 1)
+theme_override_font_sizes/font_size = 17
+text = "REALM OVERVIEW"
+[node name="Map" type="Control" parent="Safe/Minimap/Margin/Stack"]
+custom_minimum_size = Vector2(0, 214)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2_minimap")
+
+[node name="SelectionPanel" type="PanelContainer" parent="Safe"]
+visible = false
+layout_mode = 0
+offset_left = 1398.0
+offset_top = 118.0
+offset_right = 1868.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/SelectionPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 26
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 26
+theme_override_constants/margin_bottom = 24
+[node name="Stack" type="VBoxContainer" parent="Safe/SelectionPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 17
+[node name="Eyebrow" type="Label" parent="Safe/SelectionPanel/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47, 0.72, 0.68, 1)
+theme_override_font_sizes/font_size = 14
+text = "SELECTED WORLD SITE"
+[node name="Title" type="Label" parent="Safe/SelectionPanel/Margin/Stack"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.79, 0.36, 1)
+theme_override_font_sizes/font_size = 27
+text = "World Entity"
+autowrap_mode = 2
+[node name="Divider" type="HSeparator" parent="Safe/SelectionPanel/Margin/Stack"]
+layout_mode = 2
+[node name="Details" type="Label" parent="Safe/SelectionPanel/Margin/Stack"]
+custom_minimum_size = Vector2(0, 232)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.83, 0.89, 0.86, 1)
+theme_override_font_sizes/font_size = 19
+text = "Details"
+autowrap_mode = 2
+[node name="Action" type="Button" parent="Safe/SelectionPanel/Margin/Stack"]
+custom_minimum_size = Vector2(0, 66)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.91, 0.63, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("ButtonPressed")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonNormal")
+text = "ACTION"
+[node name="Close" type="Button" parent="Safe/SelectionPanel/Margin/Stack"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+text = "CLOSE"
+
+[node name="BottomDock" type="PanelContainer" parent="Safe"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 920.0
+offset_right = 1348.0
+offset_bottom = 1038.0
+theme_override_styles/panel = SubResource("DockStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/BottomDock"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+[node name="Buttons" type="HBoxContainer" parent="Safe/BottomDock/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+[node name="City" type="Button" parent="Safe/BottomDock/Margin/Buttons"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.89, 0.61, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+text = "CITY"
+[node name="Army" type="Button" parent="Safe/BottomDock/Margin/Buttons"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.89, 0.61, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+text = "ARMY"
+[node name="Overview" type="Button" parent="Safe/BottomDock/Margin/Buttons"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.89, 0.61, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+text = "OVERVIEW"
+
+[node name="ToastPanel" type="PanelContainer" parent="Safe"]
+visible = false
+layout_mode = 0
+offset_left = 560.0
+offset_top = 826.0
+offset_right = 1308.0
+offset_bottom = 898.0
+theme_override_styles/panel = SubResource("ObjectiveStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/ToastPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 13
 [node name="Toast" type="Label" parent="Safe/ToastPanel/Margin"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(1, 0.93, 0.73, 1)
+theme_override_font_sizes/font_size = 19
 text = "Realm updated"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[connection signal="pressed" from="Safe/SelectionPanel/Margin/VBox/Action" to="." method="_on_action_pressed"]
-[connection signal="pressed" from="Safe/SelectionPanel/Margin/VBox/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Safe/Bottom/City" to="." method="_on_city_pressed"]
-[connection signal="pressed" from="Safe/Bottom/Army" to="." method="_on_army_pressed"]
+[connection signal="pressed" from="Safe/SelectionPanel/Margin/Stack/Action" to="." method="_on_action_pressed"]
+[connection signal="pressed" from="Safe/SelectionPanel/Margin/Stack/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Safe/BottomDock/Margin/Buttons/City" to="." method="_on_city_pressed"]
+[connection signal="pressed" from="Safe/BottomDock/Margin/Buttons/Army" to="." method="_on_army_pressed"]
+[connection signal="pressed" from="Safe/BottomDock/Margin/Buttons/Overview" to="." method="_on_overview_pressed"]

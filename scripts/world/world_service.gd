@@ -19,7 +19,7 @@ func ensure_generated() -> bool:
         return false
     var generated := generator.generate(int(state.get("seed", config.get("seed", 731942))))
     for key in generated.keys(): state[key] = generated[key]
-    _reveal_cell(_cell_from(state.get("player_city_cell", [32, 32])), 1)
+    _reveal_cell(_cell_from(state.get("player_city_cell", [512, 512])), 1)
     return true
 
 func process_offline(now: int) -> int:
@@ -128,8 +128,8 @@ func reveal_around(cell: Vector2i, radius_chunks: int = 1) -> void:
     _reveal_cell(cell, radius_chunks)
 
 func find_world_path(start: Vector2i, target: Vector2i, blocked: Dictionary = {}) -> Array[Vector2i]:
-    var width := int(state.get("width", 64))
-    var height := int(state.get("height", 64))
+    var width := int(state.get("width", 1024))
+    var height := int(state.get("height", 1024))
     if target.x < 0 or target.y < 0 or target.x >= width or target.y >= height or blocked.has(_cell_key(target)): return []
     var frontier: Array[Vector2i] = [start]
     var came_from := {_cell_key(start): start}
@@ -155,13 +155,13 @@ func find_world_path(start: Vector2i, target: Vector2i, blocked: Dictionary = {}
     return path
 
 func _reveal_cell(cell: Vector2i, radius_chunks: int) -> void:
-    var chunk_size := int(state.get("chunk_size", 8))
+    var chunk_size := int(state.get("chunk_size", 32))
     var center := Vector2i(cell.x / chunk_size, cell.y / chunk_size)
     var explored: Array = state.get("explored_chunks", [])
     var visible: Array = []
     for y in range(center.y - radius_chunks, center.y + radius_chunks + 1):
         for x in range(center.x - radius_chunks, center.x + radius_chunks + 1):
-            if x < 0 or y < 0 or x >= int(state.get("width", 64)) / chunk_size or y >= int(state.get("height", 64)) / chunk_size: continue
+            if x < 0 or y < 0 or x >= int(state.get("width", 1024)) / chunk_size or y >= int(state.get("height", 1024)) / chunk_size: continue
             var pair := [x, y]
             visible.append(pair)
             if not pair in explored: explored.append(pair)

@@ -23,8 +23,8 @@ for rel, tokens in required.items():
         assert token in text, (rel, token)
 
 config = json.loads((ROOT / "data/world/world.json").read_text())["world"]
-assert config["width"] == 64 and config["height"] == 64
-assert config["chunk_size"] == 8 and len(config["biomes"]) == 6
+assert config["width"] == 1024 and config["height"] == 1024
+assert config["chunk_size"] == 32 and len(config["biomes"]) == 6
 assert config["performance"]["max_active_chunks"] <= 25
 
 router = (ROOT / "scripts/core/scene_router.gd").read_text()

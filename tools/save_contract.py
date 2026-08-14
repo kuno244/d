@@ -2,7 +2,7 @@ from __future__ import annotations
 import json, os, time
 from pathlib import Path
 
-CURRENT_SAVE_VERSION = 3
+CURRENT_SAVE_VERSION = 4
 REQUIRED_DICT_KEYS = ("profile","resources","capacities","city_state","progression","troop_state","research_state","world_state")
 MAX_TIMER_DELTA_SEC = 90 * 24 * 3600
 
@@ -23,10 +23,10 @@ def default_save(now: int | None = None) -> dict:
         "research_state":{"progress":{},"research_queue":None},
         "modifiers":[],
         "world_state":{
-            "seed":731942,"generated":False,"width":64,"height":64,"chunk_size":8,"region_size":16,
-            "player_city_id":"city_player_001","player_city_cell":[32,32],"entities":[],
-            "armies":[{"army_id":"army_player_001","display_name":"Crown Vanguard","cell":[32,34],"troops":{"troop_kingdom_swordsman":50,"troop_kingdom_archer":25},"status":"IDLE","target_entity_id":""}],
-            "explored_chunks":[[4,4]],"visible_chunks":[[4,4]],"camera":{"cell":[32,32],"zoom":1.0},
+            "seed":731942,"generated":False,"width":1024,"height":1024,"chunk_size":32,"region_size":128,
+            "player_city_id":"city_player_001","player_city_cell":[512,512],"entities":[],
+            "armies":[{"army_id":"army_player_001","display_name":"Crown Vanguard","cell":[512,516],"troops":{"troop_kingdom_swordsman":50,"troop_kingdom_archer":25},"status":"IDLE","target_entity_id":""}],
+            "explored_chunks":[[16,16]],"visible_chunks":[[16,16]],"camera":{"cell":[512,512],"zoom":1.35},
             "pending_battle":None,"last_world_timestamp":now,"objectives":{"chapter":1,"step":0},
             "season_id":"preseason_01",
         },
@@ -40,7 +40,7 @@ def _sanitize_queue(q, now: int):
     q=dict(q); q["start_timestamp"]=start; q["finish_timestamp"]=finish
     return q
 
-def _normalize_v3(result: dict, now: int) -> dict:
+def _normalize_v4(result: dict, now: int) -> dict:
     base=default_save(now)
     for key in REQUIRED_DICT_KEYS:
         if not isinstance(result.get(key),dict): result[key]=json.loads(json.dumps(base[key]))
@@ -83,11 +83,19 @@ def _normalize_v3(result: dict, now: int) -> dict:
     for key,value in world_defaults.items():
         if key not in world or not isinstance(world[key],type(value)) and value is not None:
             world[key]=json.loads(json.dumps(value))
-    world["width"]=64; world["height"]=64; world["chunk_size"]=8; world["region_size"]=16
+    incompatible_world = int(world.get("width",0)) != 1024 or int(world.get("height",0)) != 1024 or int(world.get("chunk_size",0)) != 32
+    if incompatible_world:
+        world["generated"]=False
+        world["entities"]=[]
+        world["armies"]=json.loads(json.dumps(world_defaults["armies"]))
+        world["explored_chunks"]=json.loads(json.dumps(world_defaults["explored_chunks"]))
+        world["visible_chunks"]=json.loads(json.dumps(world_defaults["visible_chunks"]))
+    world["width"]=1024; world["height"]=1024; world["chunk_size"]=32; world["region_size"]=128
+    world["player_city_cell"]=[512,512]
     camera=world.get("camera",{}) if isinstance(world.get("camera"),dict) else {}
-    cell=camera.get("cell",[32,32]); cell=cell if isinstance(cell,list) and len(cell)>=2 else [32,32]
-    camera["cell"]=[min(63,max(0,int(cell[0]))),min(63,max(0,int(cell[1])))]
-    camera["zoom"]=min(2.2,max(0.35,float(camera.get("zoom",1.0))))
+    cell=camera.get("cell",[512,512]); cell=cell if isinstance(cell,list) and len(cell)>=2 else [512,512]
+    camera["cell"]=[min(1023,max(0,int(cell[0]))),min(1023,max(0,int(cell[1])))]
+    camera["zoom"]=min(3.6,max(0.28,float(camera.get("zoom",1.35))))
     world["camera"]=camera
     timestamp=int(world.get("last_world_timestamp",now))
     world["last_world_timestamp"]=now if timestamp<0 or timestamp>now else timestamp
@@ -126,8 +134,15 @@ def migrate_save(data: dict, now: int | None = None) -> dict:
             if key in base_world: base_world[key]=value
         result["world_state"]=base_world
         result["save_version"]=3; version=3
+    if version==3:
+        old_world=result.get("world_state",{}) if isinstance(result.get("world_state"),dict) else {}
+        large_world=default_save(now)["world_state"]
+        for key in ("seed","objectives","season_id","last_world_timestamp"):
+            if key in old_world: large_world[key]=old_world[key]
+        result["world_state"]=large_world
+        result["save_version"]=4; version=4
     if version!=CURRENT_SAVE_VERSION: raise ValueError(f"unsupported save version: {version}")
-    return _normalize_v3(result,now)
+    return _normalize_v4(result,now)
 
 def validate_save(data: dict) -> list[str]:
     errors=[]

@@ -3,7 +3,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/'tools'))
 from save_contract import default_save, validate_save, migrate_save, atomic_write_json, recover_json
 s=default_save(now=1000)
-assert s['save_version']==3
+assert s['save_version']==4
 for k in ['capacities','troop_state','research_state','modifiers']:
     assert k in s and isinstance(s[k], (dict,list)),k
 city=s['city_state']
@@ -12,14 +12,14 @@ for k in ['buildings','decorations','construction_queues','construction_queue','
 assert city['buildings'] and city['buildings'][0]['building_id']=='building_royal_citadel'
 assert city['buildings'][0]['state']=='ACTIVE' and city['buildings'][0]['level']==1
 assert validate_save(s)==[]
-# v1 migration preserves old values, adds all DEVELOPMENT 04 state, then reaches v3.
+# v1 migration preserves old values, adds all DEVELOPMENT 04 state, then reaches v4.
 v1={
  'save_version':1,'profile':{'created_at':5},
  'resources':{'food':123,'wood':456,'stone':78,'gold':9},
  'city_state':{'buildings':[],'training_queues':[],'research_queue':[]},
  'progression':{'account_level':2},'world_state':{'season_id':'preseason_01'}}
 m=migrate_save(v1,now=2000)
-assert m['save_version']==3 and m['resources']['food']==123 and m['progression']['account_level']==2
+assert m['save_version']==4 and m['resources']['food']==123 and m['progression']['account_level']==2
 assert 'capacities' in m and 'troop_state' in m and 'research_state' in m
 # Corrupted timestamps are sanitized: no negative/far-future active timers.
 m['city_state']['construction_queue']={'finish_timestamp':-999,'start_timestamp':999999999999,'state':'ACTIVE_QUEUE'}
@@ -39,6 +39,6 @@ assert clean['troop_state']['inventory']['troop_kingdom_swordsman']==0
 assert clean['research_state']['progress']['research_agricultural_methods']==0
 
 with tempfile.TemporaryDirectory() as td:
-    p=Path(td)/'save.json'; atomic_write_json(p,s); assert json.loads(p.read_text())['save_version']==3
-    p.write_text('{bad'); Path(str(p)+'.bak').write_text(json.dumps(s)); assert recover_json(p)['save_version']==3
-print('PASS dev04 save fields through v3 migration')
+    p=Path(td)/'save.json'; atomic_write_json(p,s); assert json.loads(p.read_text())['save_version']==4
+    p.write_text('{bad'); Path(str(p)+'.bak').write_text(json.dumps(s)); assert recover_json(p)['save_version']==4
+print('PASS dev04 save fields through v4 migration')

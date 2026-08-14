@@ -5,10 +5,10 @@ signal camera_moved(cell: Vector2i)
 
 @onready var camera: Camera3D = $Camera3D
 
-var world_width := 64
-var world_height := 64
-var cell_size := 6.0
-var zoom_value := 1.0
+var world_width := 1024
+var world_height := 1024
+var cell_size := 8.0
+var zoom_value := 1.35
 var target_position := Vector3.ZERO
 var velocity := Vector3.ZERO
 var dragging := false
@@ -26,7 +26,7 @@ func _ready() -> void:
 func configure(width: int, height: int, size_per_cell: float, camera_state: Dictionary) -> void:
     world_width = width; world_height = height; cell_size = size_per_cell
     var saved_cell: Array = camera_state.get("cell", [width / 2, height / 2])
-    zoom_value = clampf(float(camera_state.get("zoom", 1.0)), 0.35, 2.2)
+    zoom_value = clampf(float(camera_state.get("zoom", 1.35)), 0.28, 3.6)
     position = cell_to_local(Vector2i(int(saved_cell[0]), int(saved_cell[1])))
     target_position = position
     _apply_zoom()
@@ -34,7 +34,7 @@ func configure(width: int, height: int, size_per_cell: float, camera_state: Dict
 func _process(delta: float) -> void:
     var input_vector := Input.get_vector("camera_left", "camera_right", "camera_forward", "camera_back")
     if input_vector.length_squared() > 0.0:
-        velocity += Vector3(input_vector.x, 0.0, input_vector.y) * 75.0 * zoom_value * delta
+        velocity += Vector3(input_vector.x, 0.0, input_vector.y) * 112.0 * zoom_value * delta
     target_position += velocity * delta
     velocity = velocity.lerp(Vector3.ZERO, clampf(delta * 5.5, 0.0, 1.0))
     target_position = _clamp_position(target_position)
@@ -59,9 +59,12 @@ func get_camera_state() -> Dictionary:
     return {"cell": [current.x, current.y], "zoom": zoom_value}
 
 func get_zoom_tier() -> String:
-    if zoom_value < 0.7: return "CLOSE"
-    if zoom_value < 1.45: return "MEDIUM"
+    if zoom_value < 0.78: return "CLOSE"
+    if zoom_value < 1.85: return "MEDIUM"
     return "FAR"
+
+func set_overview_zoom() -> void:
+    _set_zoom(3.2)
 
 func cell_to_local(cell: Vector2i) -> Vector3:
     return Vector3((float(cell.x) - float(world_width - 1) * 0.5) * cell_size, 0.0, (float(cell.y) - float(world_height - 1) * 0.5) * cell_size)
@@ -99,15 +102,15 @@ func _unhandled_input(event: InputEvent) -> void:
         _set_zoom(zoom_value / maxf(0.1, event.factor))
 
 func _pan_screen_delta(delta: Vector2) -> void:
-    target_position += Vector3(-delta.x, 0.0, -delta.y) * 0.12 * zoom_value
-    velocity = Vector3(-delta.x, 0.0, -delta.y) * 0.7 * zoom_value
+    target_position += Vector3(-delta.x, 0.0, -delta.y) * 0.16 * zoom_value
+    velocity = Vector3(-delta.x, 0.0, -delta.y) * 0.82 * zoom_value
 
 func _set_zoom(value: float) -> void:
-    zoom_value = clampf(value, 0.35, 2.2)
+    zoom_value = clampf(value, 0.28, 3.6)
     _apply_zoom()
 
 func _apply_zoom() -> void:
-    camera.size = 82.0 * zoom_value
+    camera.size = 96.0 * zoom_value
 
 func _touch_distance() -> float:
     var points := touch_points.values()

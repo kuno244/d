@@ -27,8 +27,8 @@ class DeterministicRng:
         return minimum + self.next_u32() % (maximum_exclusive - minimum)
 
 
-def biome_at(seed: int, x: int, y: int, biome_ids: list[str]) -> str:
-    coarse = (x // 10) * 3 + (y // 10) * 5
+def biome_at(seed: int, x: int, y: int, biome_ids: list[str], biome_scale: int = 88) -> str:
+    coarse = (x // max(8, biome_scale)) * 3 + (y // max(8, biome_scale)) * 5
     detail = ((x * 73856093) ^ (y * 19349663) ^ int(seed)) & MASK32
     return biome_ids[(coarse + detail // 268435456) % len(biome_ids)]
 
@@ -59,11 +59,34 @@ def _free_cell(
     raise ValueError("world has no free entity cell")
 
 
+def _free_cell_in_ring(
+    rng: DeterministicRng,
+    occupied: set[tuple[int, int]],
+    width: int,
+    height: int,
+    start: tuple[int, int],
+    minimum_distance: float,
+    maximum_distance: float,
+) -> tuple[int, int]:
+    for _ in range(2048):
+        cell = (
+            min(width - 3, max(2, start[0] + rng.range(-int(maximum_distance), int(maximum_distance) + 1))),
+            min(height - 3, max(2, start[1] + rng.range(-int(maximum_distance), int(maximum_distance) + 1))),
+        )
+        distance = _distance(cell, start)
+        if minimum_distance <= distance <= maximum_distance and cell not in occupied:
+            occupied.add(cell)
+            return cell
+    return _free_cell(rng, occupied, width, height, start, minimum_distance)
+
+
 def create_initial_world(seed: int, config: dict) -> dict:
     width, height = int(config["width"]), int(config["height"])
     start = tuple(int(v) for v in config["player_start"])
     biome_ids = [str(item["id"]) for item in config["biomes"]]
-    biomes = [biome_at(seed, x, y, biome_ids) for y in range(height) for x in range(width)]
+    biome_scale = int(config.get("biome_scale", 88))
+    sample_step = max(1, min(width, height) // 64)
+    biomes = [biome_at(seed, x, y, biome_ids, biome_scale) for y in range(0, height, sample_step) for x in range(0, width, sample_step)]
     rng = DeterministicRng(seed)
     occupied = {start}
     entities: list[dict] = [{
@@ -73,8 +96,8 @@ def create_initial_world(seed: int, config: dict) -> dict:
 
     resource_types = ["food", "wood", "stone", "gold"]
     for index in range(int(config["resource_nodes"])):
-        cell = _free_cell(rng, occupied, width, height, start, 4.0)
-        level = min(6, max(1, 1 + int(_distance(cell, start) // 8)))
+        cell = _free_cell_in_ring(rng, occupied, width, height, start, 10.0, 42.0) if index < 20 else _free_cell(rng, occupied, width, height, start, 10.0)
+        level = min(6, max(1, 1 + int(_distance(cell, start) // 105)))
         total = 900 * level + rng.range(0, 301)
         entities.append({
             "entity_id": f"resource_{index + 1:03d}", "kind": "RESOURCE", "cell": list(cell),
@@ -88,8 +111,8 @@ def create_initial_world(seed: int, config: dict) -> dict:
         "monster_armored_wyvern", "monster_cursed_knight",
     ]
     for index in range(int(config["pve_encounters"])):
-        cell = _free_cell(rng, occupied, width, height, start, 6.0)
-        level = min(12, max(1, 1 + int(_distance(cell, start) // 5)))
+        cell = _free_cell_in_ring(rng, occupied, width, height, start, 24.0, 58.0) if index < 10 else _free_cell(rng, occupied, width, height, start, 24.0)
+        level = min(12, max(1, 1 + int(_distance(cell, start) // 55)))
         entities.append({
             "entity_id": f"pve_{index + 1:03d}", "kind": "PVE", "cell": list(cell),
             "pve_id": pve_types[index % len(pve_types)], "level": level,
@@ -98,13 +121,13 @@ def create_initial_world(seed: int, config: dict) -> dict:
         })
 
     neutral_counts = (
-        ("RUINS", "ruins", 5.0), ("VILLAGE", "villages", 3.0),
-        ("MONSTER_CAMP", "monster_camps", 7.0), ("FORTRESS", "fortresses", 10.0),
+        ("RUINS", "ruins", 20.0), ("VILLAGE", "villages", 14.0),
+        ("MONSTER_CAMP", "monster_camps", 34.0), ("FORTRESS", "fortresses", 72.0),
     )
     for kind, config_key, minimum_distance in neutral_counts:
         for index in range(int(config[config_key])):
-            cell = _free_cell(rng, occupied, width, height, start, minimum_distance)
-            level = min(10, max(1, 1 + int(_distance(cell, start) // 7)))
+            cell = _free_cell_in_ring(rng, occupied, width, height, start, minimum_distance, minimum_distance + 46.0) if index < 3 else _free_cell(rng, occupied, width, height, start, minimum_distance)
+            level = min(10, max(1, 1 + int(_distance(cell, start) // 72)))
             entity = {
                 "entity_id": f"{kind.lower()}_{index + 1:03d}", "kind": kind, "cell": list(cell),
                 "level": level, "owner_id": "neutral", "resolved": False,

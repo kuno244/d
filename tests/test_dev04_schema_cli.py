@@ -7,5 +7,5 @@ assert r['passed'],r['errors']
 assert r['buildings']==10 and r['building_levels']==200
 assert r['research_nodes']==20 and r['research_dag_acyclic']
 assert r['troops']==5 and r['resources']==4
-assert r['save_version']==3
+assert r['save_version']==4
 print('PASS dev04 schema cli',r['building_levels'],r['research_nodes'])
