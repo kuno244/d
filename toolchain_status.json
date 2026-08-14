@@ -1,0 +1,11 @@
+{
+  "status": "GODOT_RUNTIME_TEST_BLOCKED",
+  "official_release_identified": "4.7.1-stable",
+  "official_repository": "godotengine/godot-builds",
+  "requested_binary": "Godot_v4.7.1-stable_linux.x86_64.zip",
+  "executable_path": null,
+  "godot_version_command_run": false,
+  "headless_test_run": false,
+  "renderer_runtime_test_run": false,
+  "reason": "No preinstalled Godot executable or apt package was available. The official release was identified via GitHub, but the workspace could not materialize the release binary: direct workspace network/DNS access to github.com is blocked and the GitHub connector does not expose release-asset binary download in this session."
+}

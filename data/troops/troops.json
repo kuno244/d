@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "items": [
+    {
+      "id": "troop_kingdom_swordsman",
+      "asset_id": "troop_kingdom_swordsman",
+      "display_name": "Swordsmen",
+      "role": "melee_infantry",
+      "visual_state": "RAW_ONLY_DATA_ENTITY",
+      "training_building_id": "building_barracks",
+      "unlock_building_level": 1,
+      "unlock_citadel_level": 2,
+      "base_training_cost": {
+        "food": 28,
+        "wood": 12,
+        "stone": 0,
+        "gold": 2
+      },
+      "training_cost_growth_per_tier": 1.0,
+      "base_training_time_sec": 12,
+      "power_per_unit": 3,
+      "population_per_unit": 1,
+      "training_tier": 1
+    },
+    {
+      "id": "troop_kingdom_spearman",
+      "asset_id": "troop_kingdom_spearman",
+      "display_name": "Spearmen",
+      "role": "spear_infantry",
+      "visual_state": "RAW_ONLY_DATA_ENTITY",
+      "training_building_id": "building_barracks",
+      "unlock_building_level": 3,
+      "unlock_citadel_level": 3,
+      "base_training_cost": {
+        "food": 30,
+        "wood": 18,
+        "stone": 4,
+        "gold": 3
+      },
+      "training_cost_growth_per_tier": 1.0,
+      "base_training_time_sec": 15,
+      "power_per_unit": 4,
+      "population_per_unit": 1,
+      "training_tier": 1
+    },
+    {
+      "id": "troop_kingdom_archer",
+      "asset_id": "troop_kingdom_archer",
+      "display_name": "Archers",
+      "role": "ranged_archer",
+      "visual_state": "RAW_ONLY_DATA_ENTITY",
+      "training_building_id": "building_archery_range",
+      "unlock_building_level": 1,
+      "unlock_citadel_level": 3,
+      "base_training_cost": {
+        "food": 24,
+        "wood": 26,
+        "stone": 0,
+        "gold": 3
+      },
+      "training_cost_growth_per_tier": 1.0,
+      "base_training_time_sec": 14,
+      "power_per_unit": 4,
+      "population_per_unit": 1,
+      "training_tier": 1
+    },
+    {
+      "id": "troop_royal_cavalry",
+      "asset_id": "troop_royal_cavalry",
+      "display_name": "Cavalry",
+      "role": "mounted_cavalry",
+      "visual_state": "RAW_ONLY_DATA_ENTITY",
+      "training_building_id": "building_royal_stable",
+      "unlock_building_level": 1,
+      "unlock_citadel_level": 5,
+      "base_training_cost": {
+        "food": 55,
+        "wood": 24,
+        "stone": 6,
+        "gold": 8
+      },
+      "training_cost_growth_per_tier": 1.0,
+      "base_training_time_sec": 28,
+      "power_per_unit": 8,
+      "population_per_unit": 2,
+      "training_tier": 1
+    },
+    {
+      "id": "troop_battle_mage",
+      "asset_id": "troop_battle_mage",
+      "display_name": "Battle Mages",
+      "role": "ranged_magic",
+      "visual_state": "RAW_ONLY_DATA_ENTITY",
+      "training_building_id": "building_grand_academy",
+      "unlock_building_level": 5,
+      "unlock_citadel_level": 7,
+      "base_training_cost": {
+        "food": 34,
+        "wood": 20,
+        "stone": 18,
+        "gold": 14
+      },
+      "training_cost_growth_per_tier": 1.0,
+      "base_training_time_sec": 35,
+      "power_per_unit": 10,
+      "population_per_unit": 2,
+      "training_tier": 1
+    }
+  ]
+}

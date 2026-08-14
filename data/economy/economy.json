@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "resources": [
+    "food",
+    "wood",
+    "stone",
+    "gold"
+  ],
+  "starting_resources": {
+    "food": 1800,
+    "wood": 1800,
+    "stone": 900,
+    "gold": 450
+  },
+  "starting_capacity": {
+    "food": 6000,
+    "wood": 6000,
+    "stone": 4500,
+    "gold": 3000
+  },
+  "overflow_policy": "CLAMP_TO_CAPACITY",
+  "claim_overflow_policy": "CLAMP_TO_CAPACITY",
+  "base_population": {
+    "current": 80,
+    "cap": 200
+  },
+  "population_economy_bonus": {
+    "threshold_ratio": 0.75,
+    "production_bonus_pct": 0.05
+  },
+  "speedup_types": [
+    "generic_time_reduction",
+    "construction_speed_modifier",
+    "research_speed_modifier",
+    "training_speed_modifier"
+  ]
+}

@@ -1,0 +1,322 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/combat/tactical_battle_controller.gd" id="1_battle"]
+
+[sub_resource type="StyleBoxFlat" id="CardStyle"]
+bg_color = Color(0.055, 0.075, 0.105, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.46, 0.6, 0.72, 0.8)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="EnemyStyle"]
+bg_color = Color(0.16, 0.055, 0.07, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9, 0.32, 0.32, 0.85)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="GoldStyle"]
+bg_color = Color(0.19, 0.13, 0.045, 0.97)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.96, 0.72, 0.25, 0.95)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="PlayerToken"]
+bg_color = Color(0.22, 0.55, 0.82, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[sub_resource type="StyleBoxFlat" id="EnemyToken"]
+bg_color = Color(0.82, 0.25, 0.3, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
+
+[node name="TacticalBattleController" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_battle")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.045, 0.075, 0.085, 1)
+mouse_filter = 2
+
+[node name="Horizon" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 430.0
+offset_bottom = 800.0
+grow_horizontal = 2
+color = Color(0.18, 0.27, 0.18, 1)
+mouse_filter = 2
+
+[node name="Safe" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 34
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 34
+theme_override_constants/margin_bottom = 28
+
+[node name="Header" type="HBoxContainer" parent="Safe"]
+layout_mode = 0
+offset_right = 1852.0
+offset_bottom = 62.0
+alignment = 1
+[node name="Title" type="Label" parent="Safe/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.79, 0.38, 1)
+theme_override_font_sizes/font_size = 31
+text = "TACTICAL ENGAGEMENT"
+[node name="Spacer" type="Control" parent="Safe/Header"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+[node name="Round" type="Label" parent="Safe/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "ROUND 0"
+
+[node name="ArmyCard" type="PanelContainer" parent="Safe"]
+layout_mode = 0
+offset_top = 102.0
+offset_right = 500.0
+offset_bottom = 325.0
+theme_override_styles/panel = SubResource("CardStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/ArmyCard"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 22
+[node name="VBox" type="VBoxContainer" parent="Safe/ArmyCard/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 14
+[node name="ArmyName" type="Label" parent="Safe/ArmyCard/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.52, 0.81, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Crown Vanguard"
+[node name="ArmyPower" type="Label" parent="Safe/ArmyCard/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "Power"
+[node name="ArmyHealth" type="ProgressBar" parent="Safe/ArmyCard/Margin/VBox"]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+[node name="Formation" type="Label" parent="Safe/ArmyCard/Margin/VBox"]
+layout_mode = 2
+text = "Balanced Formation  •  Infantry / Ranged"
+
+[node name="EnemyCard" type="PanelContainer" parent="Safe"]
+layout_mode = 0
+offset_left = 1352.0
+offset_top = 102.0
+offset_right = 1852.0
+offset_bottom = 325.0
+theme_override_styles/panel = SubResource("EnemyStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/EnemyCard"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 22
+[node name="VBox" type="VBoxContainer" parent="Safe/EnemyCard/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 14
+[node name="EnemyName" type="Label" parent="Safe/EnemyCard/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.48, 0.48, 1)
+theme_override_font_sizes/font_size = 25
+text = "Hostile Force"
+[node name="EnemyPower" type="Label" parent="Safe/EnemyCard/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "Power"
+[node name="EnemyHealth" type="ProgressBar" parent="Safe/EnemyCard/Margin/VBox"]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+[node name="Threat" type="Label" parent="Safe/EnemyCard/Margin/VBox"]
+layout_mode = 2
+text = "Hostile world encounter"
+
+[node name="Battlefield" type="Control" parent="Safe"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 185.0
+offset_right = 1332.0
+offset_bottom = 650.0
+mouse_filter = 2
+[node name="Player1" type="Panel" parent="Safe/Battlefield"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 185.0
+offset_right = 161.0
+offset_bottom = 241.0
+theme_override_styles/panel = SubResource("PlayerToken")
+[node name="Player2" type="Panel" parent="Safe/Battlefield"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 115.0
+offset_right = 231.0
+offset_bottom = 171.0
+theme_override_styles/panel = SubResource("PlayerToken")
+[node name="Player3" type="Panel" parent="Safe/Battlefield"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 255.0
+offset_right = 231.0
+offset_bottom = 311.0
+theme_override_styles/panel = SubResource("PlayerToken")
+[node name="Enemy1" type="Panel" parent="Safe/Battlefield"]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 185.0
+offset_right = 707.0
+offset_bottom = 241.0
+theme_override_styles/panel = SubResource("EnemyToken")
+[node name="Enemy2" type="Panel" parent="Safe/Battlefield"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 115.0
+offset_right = 637.0
+offset_bottom = 171.0
+theme_override_styles/panel = SubResource("EnemyToken")
+[node name="Enemy3" type="Panel" parent="Safe/Battlefield"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 255.0
+offset_right = 637.0
+offset_bottom = 311.0
+theme_override_styles/panel = SubResource("EnemyToken")
+
+[node name="EventPanel" type="PanelContainer" parent="Safe"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 650.0
+offset_right = 1362.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("CardStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/EventPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 12
+[node name="Event" type="Label" parent="Safe/EventPanel/Margin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "Armies take formation"
+horizontal_alignment = 1
+
+[node name="Commands" type="HBoxContainer" parent="Safe"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 835.0
+offset_right = 1617.0
+offset_bottom = 935.0
+alignment = 1
+theme_override_constants/separation = 18
+[node name="CommanderStrike" type="Button" parent="Safe/Commands"]
+custom_minimum_size = Vector2(280, 78)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Commander Strike"
+[node name="ShieldWall" type="Button" parent="Safe/Commands"]
+custom_minimum_size = Vector2(240, 78)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SHIELD WALL"
+[node name="AutoBattle" type="Button" parent="Safe/Commands"]
+custom_minimum_size = Vector2(240, 78)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "AUTO BATTLE"
+[node name="Retreat" type="Button" parent="Safe/Commands"]
+custom_minimum_size = Vector2(200, 78)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "RETREAT"
+
+[node name="ResultPanel" type="PanelContainer" parent="Safe"]
+visible = false
+layout_mode = 0
+offset_left = 590.0
+offset_top = 270.0
+offset_right = 1262.0
+offset_bottom = 740.0
+theme_override_styles/panel = SubResource("GoldStyle")
+[node name="Margin" type="MarginContainer" parent="Safe/ResultPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 38
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 38
+theme_override_constants/margin_bottom = 35
+[node name="VBox" type="VBoxContainer" parent="Safe/ResultPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+[node name="Title" type="Label" parent="Safe/ResultPanel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "VICTORY"
+horizontal_alignment = 1
+[node name="Details" type="Label" parent="Safe/ResultPanel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Battle results"
+horizontal_alignment = 1
+vertical_alignment = 1
+[node name="Return" type="Button" parent="Safe/ResultPanel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Return to World"
+
+[node name="BattleTimer" type="Timer" parent="."]
+wait_time = 0.72
+
+[connection signal="timeout" from="BattleTimer" to="." method="_on_battle_timer_timeout"]
+[connection signal="pressed" from="Safe/Commands/CommanderStrike" to="." method="_on_commander_strike_pressed"]
+[connection signal="pressed" from="Safe/Commands/ShieldWall" to="." method="_on_shield_wall_pressed"]
+[connection signal="pressed" from="Safe/Commands/AutoBattle" to="." method="_on_auto_battle_pressed"]
+[connection signal="pressed" from="Safe/Commands/Retreat" to="." method="_on_retreat_pressed"]
+[connection signal="pressed" from="Safe/ResultPanel/Margin/VBox/Return" to="." method="_on_return_pressed"]

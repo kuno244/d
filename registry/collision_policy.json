@@ -1,0 +1,26 @@
+{
+  "HERO": {
+    "strategy": "CapsuleShape3D + optional simple hit volumes",
+    "max_collision_mesh_triangles": 0
+  },
+  "TROOP": {
+    "strategy": "CapsuleShape3D",
+    "max_collision_mesh_triangles": 0
+  },
+  "PVE_CREATURE": {
+    "strategy": "capsule/boxes or convex proxy",
+    "max_collision_mesh_triangles": 500
+  },
+  "BUILDING": {
+    "strategy": "compound boxes",
+    "max_collision_mesh_triangles": 0
+  },
+  "WORLD_OBJECT": {
+    "strategy": "primitive or low-poly convex proxy when needed",
+    "max_collision_mesh_triangles": 500
+  },
+  "DECORATION": {
+    "strategy": "no collision by default",
+    "max_collision_mesh_triangles": 0
+  }
+}

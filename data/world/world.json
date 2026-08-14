@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "world": {
+    "seed": 731942,
+    "width": 64,
+    "height": 64,
+    "cell_size": 6.0,
+    "chunk_size": 8,
+    "region_size": 16,
+    "player_start": [32, 32],
+    "resource_nodes": 48,
+    "pve_encounters": 18,
+    "ruins": 6,
+    "villages": 5,
+    "monster_camps": 6,
+    "fortresses": 3,
+    "resource_respawn_sec": 900,
+    "pve_respawn_sec": 1800,
+    "biomes": [
+      {"id": "grasslands", "display_name": "Grasslands", "color": "78a75a", "movement_cost": 1.0},
+      {"id": "forest", "display_name": "Emerald Forest", "color": "3f784b", "movement_cost": 1.2},
+      {"id": "rocky_highlands", "display_name": "Rocky Highlands", "color": "8a806f", "movement_cost": 1.35},
+      {"id": "mountains", "display_name": "Crown Mountains", "color": "656674", "movement_cost": 2.0},
+      {"id": "riverlands", "display_name": "Riverlands", "color": "4f91a8", "movement_cost": 1.25},
+      {"id": "open_plains", "display_name": "Open Plains", "color": "b9b765", "movement_cost": 0.85}
+    ],
+    "performance": {
+      "visible_chunk_radius": 2,
+      "max_active_chunks": 25,
+      "max_visible_entities": 90,
+      "max_lod0_props": 12,
+      "max_node3d": 240
+    }
+  }
+}

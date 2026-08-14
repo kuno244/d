@@ -1,0 +1,44 @@
+{
+  "current_save_version": 3,
+  "required_dictionary_keys": [
+    "profile",
+    "resources",
+    "capacities",
+    "city_state",
+    "progression",
+    "troop_state",
+    "research_state",
+    "world_state"
+  ],
+  "required_array_keys": [
+    "modifiers"
+  ],
+  "city_state_keys": [
+    "buildings",
+    "decorations",
+    "construction_queues",
+    "construction_queue",
+    "production",
+    "population",
+    "city_power"
+  ],
+  "building_dynamic_fields": [
+    "instance_id",
+    "building_id",
+    "grid_position",
+    "rotation_degrees",
+    "level",
+    "state",
+    "production_stored",
+    "last_production_timestamp"
+  ],
+  "world_state_keys": [
+    "seed", "generated", "width", "height", "chunk_size", "region_size",
+    "player_city_id", "player_city_cell", "entities", "armies", "explored_chunks",
+    "visible_chunks", "camera", "pending_battle", "last_world_timestamp", "objectives"
+  ],
+  "timer_fields": [
+    "start_timestamp",
+    "finish_timestamp"
+  ]
+}

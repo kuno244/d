@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "items": [
+    {
+      "id": "food",
+      "display_name": "Food",
+      "starting_amount": 1800,
+      "starting_capacity": 6000
+    },
+    {
+      "id": "wood",
+      "display_name": "Wood",
+      "starting_amount": 1800,
+      "starting_capacity": 6000
+    },
+    {
+      "id": "stone",
+      "display_name": "Stone",
+      "starting_amount": 900,
+      "starting_capacity": 4500
+    },
+    {
+      "id": "gold",
+      "display_name": "Gold",
+      "starting_amount": 450,
+      "starting_capacity": 3000
+    }
+  ]
+}

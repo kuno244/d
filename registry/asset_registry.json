@@ -1,0 +1,3107 @@
+{
+  "schema_version": 3,
+  "assets": [
+    {
+      "asset_id": "world_rock_cluster",
+      "index": 1,
+      "drive_file_id": "1sM1YlP55JMizGT8AXrIJYMJwsSlAGdKW",
+      "original_file": "root/Meshy_AI_model (1).glb",
+      "source_file": "assets/source/world_rock_cluster.glb",
+      "category": "WORLD_OBJECT",
+      "gameplay_role": "terrain_prop",
+      "classification_confidence": "high",
+      "visual_note": "Stylized rock outcrop with vegetation.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1998096,
+      "source_vertices": 1047904,
+      "source_size_bytes": 91660212,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9451877
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1582278
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6347467
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1998096,
+          "triangles": 38120,
+          "vertices": 18000,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 746444,
+          "bounds_max_relative_delta": 0.00477,
+          "path": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1998096,
+          "triangles": 14644,
+          "vertices": 6751,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 284744,
+          "bounds_max_relative_delta": 0.00687,
+          "path": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1998096,
+          "triangles": 4387,
+          "vertices": 1985,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 85396,
+          "bounds_max_relative_delta": 0.01205,
+          "path": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "lower_mass",
+            "center": [
+              -1.9e-05,
+              -0.385473,
+              0.00925
+            ],
+            "size": [
+              1.751088,
+              0.710374,
+              1.293815
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -1.9e-05,
+              0.236104,
+              0.00925
+            ],
+            "size": [
+              0.913611,
+              0.81397,
+              0.730625
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "texture_strategy": "base_color baked to vertex colors for mobile static LODs; no embedded texture images",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/world_rock_cluster.glb",
+        "LOD0": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod0.glb",
+        "LOD1": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod1.glb",
+        "LOD2": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "world_stylized_tree",
+      "index": 2,
+      "drive_file_id": "1QH61VSyyG_3xcHnhsRA6YENhZlfIdoo_",
+      "original_file": "root/Meshy_AI_model (2).glb",
+      "source_file": "assets/source/world_stylized_tree.glb",
+      "category": "WORLD_OBJECT",
+      "gameplay_role": "vegetation_prop",
+      "classification_confidence": "high",
+      "visual_note": "Large stylized broadleaf tree.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1953030,
+      "source_vertices": 1365866,
+      "source_size_bytes": 104482580,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8390280
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1362220
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 5730112
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1953030,
+          "triangles": 27933,
+          "vertices": 13134,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 546340,
+          "bounds_max_relative_delta": 0.0098,
+          "path": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1953030,
+          "triangles": 11971,
+          "vertices": 5431,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 231544,
+          "bounds_max_relative_delta": 0.01778,
+          "path": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1953030,
+          "triangles": 3999,
+          "vertices": 1731,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 76676,
+          "bounds_max_relative_delta": 0.02213,
+          "path": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "trunk",
+            "center": [
+              0.007434,
+              -0.343008,
+              -0.003321
+            ],
+            "size": [
+              0.41476,
+              1.218739,
+              0.363057
+            ]
+          },
+          {
+            "name": "canopy",
+            "center": [
+              0.007434,
+              0.475832,
+              -0.003321
+            ],
+            "size": [
+              1.696746,
+              0.856926,
+              1.485231
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "simple primitive/low-poly convex proxy only when interactive",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/world_stylized_tree.glb",
+        "LOD0": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod0.glb",
+        "LOD1": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod1.glb",
+        "LOD2": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "decoration_bush_cluster",
+      "index": 3,
+      "drive_file_id": "1WHd1sAVErgYd6iOgWAukc0hG_k_R7Qbi",
+      "original_file": "root/Meshy_AI_model (3).glb",
+      "source_file": "assets/source/decoration_bush_cluster.glb",
+      "category": "DECORATION",
+      "gameplay_role": "vegetation_decoration",
+      "classification_confidence": "high",
+      "visual_note": "Low bush/grass/flower cluster.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1977478,
+      "source_vertices": 1136308,
+      "source_size_bytes": 100657092,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 12049814
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2066534
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8266175
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1977478,
+          "triangles": 15843,
+          "vertices": 5087,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 272504,
+          "bounds_max_relative_delta": 0.0281,
+          "path": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1977478,
+          "triangles": 6565,
+          "vertices": 1957,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 111088,
+          "bounds_max_relative_delta": 0.03049,
+          "path": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1977478,
+          "triangles": 2623,
+          "vertices": 784,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 45008,
+          "bounds_max_relative_delta": 0.07732,
+          "path": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "none",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "reason": "decoration_non_interactive"
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "none by default; primitive only if gameplay requires",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/decoration_bush_cluster.glb",
+        "LOD0": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod0.glb",
+        "LOD1": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod1.glb",
+        "LOD2": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_watchtower",
+      "index": 4,
+      "drive_file_id": "16Q83nENQ8r0ePlWtFzuLuS_3GgDxAjAt",
+      "original_file": "220717/0e64f7c2.../Meshy_AI_model.glb",
+      "source_file": "assets/source/building_watchtower.glb",
+      "category": "BUILDING",
+      "gameplay_role": "defense_watchtower",
+      "classification_confidence": "high",
+      "visual_note": "Stone-and-timber watchtower.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_watchtower/building_watchtower_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1990500,
+      "source_vertices": 1033847,
+      "source_size_bytes": 97049220,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 12623357
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1823162
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9089994
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1990500,
+          "triangles": 50350,
+          "vertices": 24891,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 1003460,
+          "bounds_max_relative_delta": 0.00429,
+          "path": "assets/mobile/buildings/building_watchtower/building_watchtower_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1990500,
+          "triangles": 23862,
+          "vertices": 11647,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 473700,
+          "bounds_max_relative_delta": 0.00192,
+          "path": "assets/mobile/buildings/building_watchtower/building_watchtower_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1990500,
+          "triangles": 9001,
+          "vertices": 4349,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 178596,
+          "bounds_max_relative_delta": 0.01998,
+          "path": "assets/mobile/buildings/building_watchtower/building_watchtower_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000429,
+              -0.647618,
+              -0.000446
+            ],
+            "size": [
+              0.649366,
+              0.609097,
+              0.649324
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000429,
+              -0.07659,
+              -0.000446
+            ],
+            "size": [
+              0.538836,
+              0.875576,
+              0.538801
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000429,
+              0.475404,
+              -0.000446
+            ],
+            "size": [
+              0.331591,
+              0.799439,
+              0.33157
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_watchtower.glb",
+        "LOD0": "assets/mobile/buildings/building_watchtower/building_watchtower_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_watchtower/building_watchtower_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_watchtower/building_watchtower_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "world_stone_bridge",
+      "index": 5,
+      "drive_file_id": "1wL8z0MZGSwpaikG7mBzActfV_ap-FDXJ",
+      "original_file": "root/Meshy_AI_model.glb",
+      "source_file": "assets/source/world_stone_bridge.glb",
+      "category": "WORLD_OBJECT",
+      "gameplay_role": "bridge_landmark",
+      "classification_confidence": "high",
+      "visual_note": "Stone bridge with wooden deck and banners.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1949618,
+      "source_vertices": 1047965,
+      "source_size_bytes": 94331388,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11139961
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2251337
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7240305
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1949618,
+          "triangles": 48374,
+          "vertices": 23089,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 950916,
+          "bounds_max_relative_delta": 0.00434,
+          "path": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1949618,
+          "triangles": 22035,
+          "vertices": 10306,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 430316,
+          "bounds_max_relative_delta": 0.01017,
+          "path": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1949618,
+          "triangles": 7949,
+          "vertices": 3629,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 154448,
+          "bounds_max_relative_delta": 0.02964,
+          "path": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "deck",
+            "center": [
+              -0.000253,
+              0.018201,
+              -0.006172
+            ],
+            "size": [
+              1.825092,
+              0.172956,
+              1.570516
+            ]
+          },
+          {
+            "name": "support_a",
+            "center": [
+              -0.608617,
+              -0.222017,
+              -0.006172
+            ],
+            "size": [
+              0.475284,
+              0.480434,
+              1.331525
+            ]
+          },
+          {
+            "name": "support_b",
+            "center": [
+              0.60811,
+              -0.222017,
+              -0.006172
+            ],
+            "size": [
+              0.475284,
+              0.480434,
+              1.331525
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "simple primitive/low-poly convex proxy only when interactive",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/world_stone_bridge.glb",
+        "LOD0": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod0.glb",
+        "LOD1": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod1.glb",
+        "LOD2": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_archery_range",
+      "index": 6,
+      "drive_file_id": "14Hw3zdPzXS9UVIj0WuhlyjFy6gLpdOBA",
+      "original_file": "A06/package1",
+      "source_file": "assets/source/building_archery_range.glb",
+      "category": "BUILDING",
+      "gameplay_role": "troop_training_archer",
+      "classification_confidence": "high",
+      "visual_note": "Training compound with archery targets.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_archery_range/building_archery_range_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1990584,
+      "source_vertices": 1054262,
+      "source_size_bytes": 93695276,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10470847
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1784081
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6946720
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1990584,
+          "triangles": 48056,
+          "vertices": 22991,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 945532,
+          "bounds_max_relative_delta": 0.00307,
+          "path": "assets/mobile/buildings/building_archery_range/building_archery_range_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1990584,
+          "triangles": 22913,
+          "vertices": 10660,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 446516,
+          "bounds_max_relative_delta": 0.00634,
+          "path": "assets/mobile/buildings/building_archery_range/building_archery_range_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1990584,
+          "triangles": 9166,
+          "vertices": 4146,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 177328,
+          "bounds_max_relative_delta": 0.00712,
+          "path": "assets/mobile/buildings/building_archery_range/building_archery_range_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.001264,
+              -0.646917,
+              0.008084
+            ],
+            "size": [
+              1.656485,
+              0.608679,
+              1.567258
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.001264,
+              -0.076281,
+              0.008084
+            ],
+            "size": [
+              1.37453,
+              0.874976,
+              1.300491
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.001264,
+              0.475334,
+              0.008084
+            ],
+            "size": [
+              0.845865,
+              0.798891,
+              0.800302
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_archery_range.glb",
+        "LOD0": "assets/mobile/buildings/building_archery_range/building_archery_range_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_archery_range/building_archery_range_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_archery_range/building_archery_range_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_grand_academy",
+      "index": 7,
+      "drive_file_id": "1O7XSOCFTwW0GddpQaMoclGuTLqXVbzoL",
+      "original_file": "A07/package1",
+      "source_file": "assets/source/building_grand_academy.glb",
+      "category": "BUILDING",
+      "gameplay_role": "research_academy",
+      "classification_confidence": "high",
+      "visual_note": "Academy/observatory with armillary structure.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1976750,
+      "source_vertices": 1034836,
+      "source_size_bytes": 96668132,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 12477401
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2175695
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8619862
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1976750,
+          "triangles": 77939,
+          "vertices": 38453,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 1551520,
+          "bounds_max_relative_delta": 0.00134,
+          "path": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1976750,
+          "triangles": 37823,
+          "vertices": 18547,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 751628,
+          "bounds_max_relative_delta": 0.00167,
+          "path": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1976750,
+          "triangles": 16066,
+          "vertices": 7738,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 317596,
+          "bounds_max_relative_delta": 0.00128,
+          "path": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000574,
+              -0.647675,
+              0.000118
+            ],
+            "size": [
+              1.311492,
+              0.609111,
+              1.386565
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000574,
+              -0.076633,
+              0.000118
+            ],
+            "size": [
+              1.088259,
+              0.875598,
+              1.150554
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000574,
+              0.475374,
+              0.000118
+            ],
+            "size": [
+              0.669698,
+              0.799459,
+              0.708033
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_grand_academy.glb",
+        "LOD0": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_royal_citadel",
+      "index": 8,
+      "drive_file_id": "1bjMPT-AvuPKmHNmgKN7eoytzpi2bqEJy",
+      "original_file": "A08/package1",
+      "source_file": "assets/source/building_royal_citadel.glb",
+      "category": "BUILDING",
+      "gameplay_role": "city_headquarters",
+      "classification_confidence": "high",
+      "visual_note": "Large blue-roofed royal castle/citadel.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1917250,
+      "source_vertices": 1041163,
+      "source_size_bytes": 94001340,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10948626
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2517464
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7550384
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1917250,
+          "triangles": 74689,
+          "vertices": 30647,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 1387624,
+          "bounds_max_relative_delta": 0.00376,
+          "path": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1917250,
+          "triangles": 38100,
+          "vertices": 14981,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 697900,
+          "bounds_max_relative_delta": 0.00911,
+          "path": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1917250,
+          "triangles": 16785,
+          "vertices": 6227,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 302048,
+          "bounds_max_relative_delta": 0.01603,
+          "path": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.010752,
+              -0.64794,
+              -0.000572
+            ],
+            "size": [
+              1.071417,
+              0.608912,
+              0.899243
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.010752,
+              -0.077085,
+              -0.000572
+            ],
+            "size": [
+              0.889048,
+              0.875311,
+              0.74618
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.010752,
+              0.474742,
+              -0.000572
+            ],
+            "size": [
+              0.547106,
+              0.799197,
+              0.459188
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "texture_strategy": "base_color baked to vertex colors for mobile static LODs; no embedded texture images",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_royal_citadel.glb",
+        "LOD0": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_lumber_mill",
+      "index": 9,
+      "drive_file_id": "1uplAhgmIHLn5Jy1KZaGmHcauv3mWhhvl",
+      "original_file": "A09/package1",
+      "source_file": "assets/source/building_lumber_mill.glb",
+      "category": "BUILDING",
+      "gameplay_role": "resource_lumber",
+      "classification_confidence": "high",
+      "visual_note": "Sawmill with logs and circular saw.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1976988,
+      "source_vertices": 1057378,
+      "source_size_bytes": 94849036,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11153243
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1654647
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7561104
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1976988,
+          "triangles": 37641,
+          "vertices": 17740,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 736536,
+          "bounds_max_relative_delta": 0.00295,
+          "path": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1976988,
+          "triangles": 17857,
+          "vertices": 8272,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 347632,
+          "bounds_max_relative_delta": 0.00409,
+          "path": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1976988,
+          "triangles": 6753,
+          "vertices": 2900,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 128432,
+          "bounds_max_relative_delta": 0.00786,
+          "path": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.001069,
+              -0.517952,
+              0.000544
+            ],
+            "size": [
+              1.789381,
+              0.487109,
+              1.546003
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.001069,
+              -0.061287,
+              0.000544
+            ],
+            "size": [
+              1.484806,
+              0.700219,
+              1.282854
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.001069,
+              0.380155,
+              0.000544
+            ],
+            "size": [
+              0.913727,
+              0.63933,
+              0.789448
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_lumber_mill.glb",
+        "LOD0": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_alliance_hall",
+      "index": 10,
+      "drive_file_id": "1DGkpZ4RKg-fOWU55fsWWaFr-cuFAqDLv",
+      "original_file": "A10/package1",
+      "source_file": "assets/source/building_alliance_hall.glb",
+      "category": "BUILDING",
+      "gameplay_role": "alliance_hall",
+      "classification_confidence": "high",
+      "visual_note": "Stone hall with heraldic crest and red banners.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1958076,
+      "source_vertices": 1030159,
+      "source_size_bytes": 95793804,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 12155931
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2113196
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8578091
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1958076,
+          "triangles": 72067,
+          "vertices": 35107,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 1427520,
+          "bounds_max_relative_delta": 0.00053,
+          "path": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1958076,
+          "triangles": 35623,
+          "vertices": 17173,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 703244,
+          "bounds_max_relative_delta": 0.00131,
+          "path": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1958076,
+          "triangles": 14869,
+          "vertices": 7072,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 292576,
+          "bounds_max_relative_delta": 0.00189,
+          "path": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000199,
+              -0.648004,
+              -0.001095
+            ],
+            "size": [
+              1.260623,
+              0.608898,
+              1.250529
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000199,
+              -0.077163,
+              -0.001095
+            ],
+            "size": [
+              1.046049,
+              0.87529,
+              1.037673
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000199,
+              0.474651,
+              -0.001095
+            ],
+            "size": [
+              0.643722,
+              0.799178,
+              0.638568
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_alliance_hall.glb",
+        "LOD0": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_barracks",
+      "index": 11,
+      "drive_file_id": "1mrSqCfndx-tuGw74mjyyEImcv1Vw1L7J",
+      "original_file": "A11/package1",
+      "source_file": "assets/source/building_barracks.glb",
+      "category": "BUILDING",
+      "gameplay_role": "troop_training_infantry",
+      "classification_confidence": "medium",
+      "visual_note": "Fortified timber-and-stone military hall; matched as Barracks by remaining building set and visual form.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_barracks/building_barracks_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1879474,
+      "source_vertices": 996219,
+      "source_size_bytes": 93377824,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 12509832
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1854387
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8639365
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1879474,
+          "triangles": 45067,
+          "vertices": 21542,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 886476,
+          "bounds_max_relative_delta": 0.00127,
+          "path": "assets/mobile/buildings/building_barracks/building_barracks_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1879474,
+          "triangles": 22471,
+          "vertices": 10580,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 439932,
+          "bounds_max_relative_delta": 0.00139,
+          "path": "assets/mobile/buildings/building_barracks/building_barracks_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1879474,
+          "triangles": 8459,
+          "vertices": 3968,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 165992,
+          "bounds_max_relative_delta": 0.00287,
+          "path": "assets/mobile/buildings/building_barracks/building_barracks_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.00082,
+              -0.523048,
+              -0.003095
+            ],
+            "size": [
+              1.78029,
+              0.485399,
+              1.785712
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.00082,
+              -0.067987,
+              -0.003095
+            ],
+            "size": [
+              1.477262,
+              0.697761,
+              1.481761
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.00082,
+              0.371906,
+              -0.003095
+            ],
+            "size": [
+              0.909084,
+              0.637086,
+              0.911853
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_barracks.glb",
+        "LOD0": "assets/mobile/buildings/building_barracks/building_barracks_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_barracks/building_barracks_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_barracks/building_barracks_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_farm",
+      "index": 12,
+      "drive_file_id": "1P4zJKNFsubKiHahC6hWM_3HdnFdCzRkY",
+      "original_file": "A12/package1",
+      "source_file": "assets/source/building_farm.glb",
+      "category": "BUILDING",
+      "gameplay_role": "resource_food",
+      "classification_confidence": "high",
+      "visual_note": "Farmhouse/mill with crops and water wheel.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_farm/building_farm_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1994620,
+      "source_vertices": 1105375,
+      "source_size_bytes": 98318224,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11886499
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1728418
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7707823
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1994620,
+          "triangles": 36441,
+          "vertices": 16031,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 694788,
+          "bounds_max_relative_delta": 0.00107,
+          "path": "assets/mobile/buildings/building_farm/building_farm_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1994620,
+          "triangles": 16981,
+          "vertices": 7177,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 319600,
+          "bounds_max_relative_delta": 0.00138,
+          "path": "assets/mobile/buildings/building_farm/building_farm_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1994620,
+          "triangles": 6523,
+          "vertices": 2640,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 121512,
+          "bounds_max_relative_delta": 0.00412,
+          "path": "assets/mobile/buildings/building_farm/building_farm_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000533,
+              -0.347763,
+              -0.000145
+            ],
+            "size": [
+              1.788953,
+              0.326751,
+              1.744299
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000533,
+              -0.041433,
+              -0.000145
+            ],
+            "size": [
+              1.484451,
+              0.469705,
+              1.447397
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000533,
+              0.254685,
+              -0.000145
+            ],
+            "size": [
+              0.913508,
+              0.428861,
+              0.890706
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_farm.glb",
+        "LOD0": "assets/mobile/buildings/building_farm/building_farm_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_farm/building_farm_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_farm/building_farm_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_stone_quarry",
+      "index": 13,
+      "drive_file_id": "16Gx4n9Ae2EY63davRWBUzVweIaF8mpUx",
+      "original_file": "A13/package1",
+      "source_file": "assets/source/building_stone_quarry.glb",
+      "category": "BUILDING",
+      "gameplay_role": "resource_stone",
+      "classification_confidence": "high",
+      "visual_note": "Stone quarry structure with hoist/crane.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1981100,
+      "source_vertices": 1048873,
+      "source_size_bytes": 93489072,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10329633
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1869625
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7168661
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1981100,
+          "triangles": 39809,
+          "vertices": 19152,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 785144,
+          "bounds_max_relative_delta": 0.00432,
+          "path": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1981100,
+          "triangles": 18972,
+          "vertices": 8967,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 372136,
+          "bounds_max_relative_delta": 0.00414,
+          "path": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1981100,
+          "triangles": 7136,
+          "vertices": 3302,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 139460,
+          "bounds_max_relative_delta": 0.00702,
+          "path": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000267,
+              -0.528773,
+              0.000175
+            ],
+            "size": [
+              1.788753,
+              0.493857,
+              1.596868
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000267,
+              -0.065782,
+              0.000175
+            ],
+            "size": [
+              1.484285,
+              0.70992,
+              1.325061
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000267,
+              0.381776,
+              0.000175
+            ],
+            "size": [
+              0.913406,
+              0.648188,
+              0.815422
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_stone_quarry.glb",
+        "LOD0": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "building_royal_stable",
+      "index": 14,
+      "drive_file_id": "1CdZPDRUuvOyX_T9LIxiBwkzg1a7GsnLh",
+      "original_file": "A14/package1",
+      "source_file": "assets/source/building_royal_stable.glb",
+      "category": "BUILDING",
+      "gameplay_role": "troop_training_cavalry",
+      "classification_confidence": "medium",
+      "visual_note": "Large stable-like building with broad door and hay/farm details.",
+      "processed_file": null,
+      "mobile_file": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod0.glb",
+      "rig_state": "C",
+      "rig_required": "not_required",
+      "anatomy": "static",
+      "source_triangles": 1972208,
+      "source_vertices": 1053969,
+      "source_size_bytes": 97069184,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 12517744
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1786331
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8506060
+        }
+      ],
+      "lods": {
+        "LOD0": {
+          "input_triangles": 1972208,
+          "triangles": 52116,
+          "vertices": 25116,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 1028248,
+          "bounds_max_relative_delta": 0.00045,
+          "path": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod0.glb"
+        },
+        "LOD1": {
+          "input_triangles": 1972208,
+          "triangles": 26204,
+          "vertices": 12422,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 514200,
+          "bounds_max_relative_delta": 0.0011,
+          "path": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod1.glb"
+        },
+        "LOD2": {
+          "input_triangles": 1972208,
+          "triangles": 10401,
+          "vertices": 4699,
+          "texture_sizes": {},
+          "texture_mode": "base_color_baked_to_vertex_colors",
+          "embedded_texture_count": 0,
+          "file_size_bytes": 200992,
+          "bounds_max_relative_delta": 0.00404,
+          "path": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod2.glb"
+        }
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.00019,
+              -0.648118,
+              -0.001337
+            ],
+            "size": [
+              1.430969,
+              0.609071,
+              1.625375
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.00019,
+              -0.077114,
+              -0.001337
+            ],
+            "size": [
+              1.187399,
+              0.87554,
+              1.348715
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.00019,
+              0.474856,
+              -0.001337
+            ],
+            "size": [
+              0.730707,
+              0.799406,
+              0.829979
+            ]
+          }
+        ]
+      },
+      "shipping_status": "READY_STATIC_MOBILE",
+      "collision_policy": "compound primitive boxes; no source mesh collision",
+      "source_texture_sizes": {
+        "base_color": [
+          4096,
+          4096
+        ],
+        "metallic_roughness": [
+          2048,
+          2048
+        ],
+        "normal": [
+          4096,
+          4096
+        ]
+      },
+      "mobile_texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments",
+      "mobile_texture_sizes": {
+        "LOD0": "vertex_colors",
+        "LOD1": "vertex_colors",
+        "LOD2": "vertex_colors"
+      },
+      "quality_gate_status": "PASS",
+      "quality_review": "PASS_VISUAL_ISOMETRIC_LOD0_LOD1; LOD2_DISTANCE_ONLY",
+      "optimization_status": "PASS_STATIC_MOBILE",
+      "clean_step": "in_memory_geometry_cleanup_no_standalone_clean_file",
+      "processed_paths": {
+        "working_source_copy": "assets/source/building_royal_stable.glb",
+        "LOD0": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod2.glb"
+      }
+    },
+    {
+      "asset_id": "troop_kingdom_swordsman",
+      "index": 15,
+      "drive_file_id": "1kHOQXXhqF3-Hq2deDQ2GfiLYd4EIZPMW",
+      "original_file": "A15/package2",
+      "source_file": "assets/source/troop_kingdom_swordsman.glb",
+      "category": "TROOP",
+      "gameplay_role": "melee_infantry",
+      "classification_confidence": "high",
+      "visual_note": "Human sword-and-shield infantry.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1994360,
+      "source_vertices": 1034320,
+      "source_size_bytes": 97318004,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 12472946
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1938116
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9325217
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "troop_kingdom_spearman",
+      "index": 16,
+      "drive_file_id": "1MHPwq2uhslit7pMkNAZej6L2dEBDhQpx",
+      "original_file": "A16/package2",
+      "source_file": "assets/source/troop_kingdom_spearman.glb",
+      "category": "TROOP",
+      "gameplay_role": "spear_infantry",
+      "classification_confidence": "high",
+      "visual_note": "Human spear-and-shield infantry.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1971800,
+      "source_vertices": 1025715,
+      "source_size_bytes": 93169452,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10570466
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2000247
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7700774
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "monster_forest_troll",
+      "index": 17,
+      "drive_file_id": "1YexOXurOHf4ITnuH74RdDAPLGWR3oI-a",
+      "original_file": "A17/package2",
+      "source_file": "assets/source/monster_forest_troll.glb",
+      "category": "PVE_CREATURE",
+      "gameplay_role": "pve_brute",
+      "classification_confidence": "high",
+      "visual_note": "Large green troll carrying crude gear/weapons.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "custom_by_anatomy",
+      "source_triangles": 1955730,
+      "source_vertices": 1031452,
+      "source_size_bytes": 90816280,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9256480
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1966590
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6612712
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsules/boxes or very low-poly convex proxy based on anatomy; never source mesh"
+    },
+    {
+      "asset_id": "monster_stone_golem",
+      "index": 18,
+      "drive_file_id": "1cUXz5lR5LQPNanFqu22FvRYLNUJTsQUe",
+      "original_file": "A18/package2",
+      "source_file": "assets/source/monster_stone_golem.glb",
+      "category": "PVE_CREATURE",
+      "gameplay_role": "pve_construct",
+      "classification_confidence": "high",
+      "visual_note": "Humanoid stone golem with runic plates.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "custom_by_anatomy",
+      "source_triangles": 1939510,
+      "source_vertices": 1008496,
+      "source_size_bytes": 88923924,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9113997
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1667860
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6458094
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsules/boxes or very low-poly convex proxy based on anatomy; never source mesh"
+    },
+    {
+      "asset_id": "monster_titan_boar",
+      "index": 19,
+      "drive_file_id": "1C7pv4WXMcDazCMnSpNXejzq9tNFgy9d1",
+      "original_file": "A19/package2",
+      "source_file": "assets/source/monster_titan_boar.glb",
+      "category": "PVE_CREATURE",
+      "gameplay_role": "pve_beast",
+      "classification_confidence": "high",
+      "visual_note": "Large armored tusked boar.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "quadruped",
+      "source_triangles": 1993550,
+      "source_vertices": 1041326,
+      "source_size_bytes": 89772580,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8521784
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1794078
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 5548427
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsules/boxes or very low-poly convex proxy based on anatomy; never source mesh"
+    },
+    {
+      "asset_id": "monster_armored_wyvern",
+      "index": 20,
+      "drive_file_id": "1P3oaQGCTpd_vdOCADkc4T_n7rnLmd49Z",
+      "original_file": "A20/package2",
+      "source_file": "assets/source/monster_armored_wyvern.glb",
+      "category": "PVE_CREATURE",
+      "gameplay_role": "pve_flying_beast",
+      "classification_confidence": "high",
+      "visual_note": "Dark armored winged wyvern/dragon.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "winged_creature_custom",
+      "source_triangles": 1964254,
+      "source_vertices": 1019209,
+      "source_size_bytes": 88018248,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8405217
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1800204
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 5317704
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsules/boxes or very low-poly convex proxy based on anatomy; never source mesh"
+    },
+    {
+      "asset_id": "troop_royal_cavalry",
+      "index": 21,
+      "drive_file_id": "1M9Rvkva9X-EC5e7s-KR4hlHqBxPf2hfe",
+      "original_file": "A21/package2",
+      "source_file": "assets/source/troop_royal_cavalry.glb",
+      "category": "TROOP",
+      "gameplay_role": "mounted_cavalry",
+      "classification_confidence": "high",
+      "visual_note": "Mounted armored rider with spear and shield.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "integrated_rider_plus_horse_complex",
+      "source_triangles": 1928910,
+      "source_vertices": 1005527,
+      "source_size_bytes": 90998156,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10561984
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1905103
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7116808
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "troop_battle_mage",
+      "index": 22,
+      "drive_file_id": "1xD5X4svKgPCuHVq2q-UvRgdTqHlNR56T",
+      "original_file": "A22/package2",
+      "source_file": "assets/source/troop_battle_mage.glb",
+      "category": "TROOP",
+      "gameplay_role": "ranged_magic",
+      "classification_confidence": "high",
+      "visual_note": "Hooded battle mage holding crystal-tipped staff.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1996564,
+      "source_vertices": 1031807,
+      "source_size_bytes": 86506768,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7268105
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1317076
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 4434038
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "troop_kingdom_archer",
+      "index": 23,
+      "drive_file_id": "1M5XRfgSTMnmtwMH5WRxNh5625Ly5i7EF",
+      "original_file": "A23/package2",
+      "source_file": "assets/source/troop_kingdom_archer.glb",
+      "category": "TROOP",
+      "gameplay_role": "ranged_archer",
+      "classification_confidence": "high",
+      "visual_note": "Human archer with bow and quiver.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1974570,
+      "source_vertices": 1025413,
+      "source_size_bytes": 90647912,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9965951
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1495624
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6269629
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "monster_cursed_knight",
+      "index": 24,
+      "drive_file_id": "17BMHrNMUHK9gg49TM0LTQlGDfhCmhhax",
+      "original_file": "A24/package2",
+      "source_file": "assets/source/monster_cursed_knight.glb",
+      "category": "PVE_CREATURE",
+      "gameplay_role": "pve_elite_humanoid",
+      "classification_confidence": "high",
+      "visual_note": "Dark armored cursed knight with torn purple cloth and sword.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "custom_by_anatomy",
+      "source_triangles": 1995020,
+      "source_vertices": 1043313,
+      "source_size_bytes": 91832156,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9258901
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2127791
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6424154
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsules/boxes or very low-poly convex proxy based on anatomy; never source mesh"
+    },
+    {
+      "asset_id": "hero_cassian_vale",
+      "index": 25,
+      "drive_file_id": "1c6blgzQR12JXeNnTWWvob_3rXT4tGCDQ",
+      "original_file": "A25/package3",
+      "source_file": "assets/source/hero_cassian_vale.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Young human commander with long spear and small round shield; matches Cassian Vale description.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1944054,
+      "source_vertices": 1007468,
+      "source_size_bytes": 93915320,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11802301
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1929556
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8494305
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_fire_mage_001",
+      "index": 26,
+      "drive_file_id": "1_fXkAyVnJDpxG6U0QRZJvj2yqudbuNXS",
+      "original_file": "A26/package3",
+      "source_file": "assets/source/hero_fire_mage_001.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Distinct male fire mage. Does not visually match the previously specified female Lyra Emberveil; identity intentionally unresolved.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1985308,
+      "source_vertices": 1032987,
+      "source_size_bytes": 92191008,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10391840
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1695579
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6694475
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_aurelian_stormblade",
+      "index": 27,
+      "drive_file_id": "1t6x8qWKgLHriyz4PGZSEgGLeufcAJOph",
+      "original_file": "A27/package3",
+      "source_file": "assets/source/hero_aurelian_stormblade.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Blue-gold armored male commander with large sword and red cloth; strong Aurelian match.",
+      "processed_file": "assets/processed/hero_aurelian_stormblade/hero_aurelian_stormblade_clean.glb",
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1969846,
+      "source_vertices": 1030744,
+      "source_size_bytes": 94682864,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11512081
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2197628
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7857245
+        }
+      ],
+      "lods": {},
+      "collision": {
+        "strategy": "CapsuleShape3D",
+        "primitive": true,
+        "center": [
+          0.0006670057773590088,
+          -0.0014805197715759277,
+          -0.007245004177093506
+        ],
+        "axis": "Y",
+        "radius": 0.4008,
+        "height": 1.5597,
+        "collision_mesh_triangles": 0
+      },
+      "shipping_status": "BLOCKED_RIG_AND_OPTIMIZATION",
+      "optimization_status": "PROTOTYPE_REJECTED_UV_DISTORTION",
+      "quality_review": "FAIL_UV_AND_LOW_LOD_GEOMETRY",
+      "prototype_diagnostics": {
+        "LOD0": {
+          "path": "assets/processed/hero_aurelian_stormblade/diagnostics/hero_aurelian_stormblade_lod0.glb",
+          "triangles": 59999,
+          "texture_sizes": {
+            "base_color": [
+              2048,
+              2048
+            ],
+            "metallic_roughness": [
+              1024,
+              1024
+            ],
+            "normal": [
+              2048,
+              2048
+            ]
+          }
+        },
+        "LOD1": {
+          "path": "assets/processed/hero_aurelian_stormblade/diagnostics/hero_aurelian_stormblade_lod1.glb",
+          "triangles": 30000,
+          "texture_sizes": {
+            "base_color": [
+              1024,
+              1024
+            ],
+            "metallic_roughness": [
+              1024,
+              1024
+            ],
+            "normal": [
+              1024,
+              1024
+            ]
+          }
+        },
+        "LOD2": {
+          "path": "assets/processed/hero_aurelian_stormblade/diagnostics/hero_aurelian_stormblade_lod2.glb",
+          "triangles": 10000,
+          "texture_sizes": {
+            "base_color": [
+              1024,
+              1024
+            ],
+            "metallic_roughness": [
+              512,
+              512
+            ],
+            "normal": [
+              1024,
+              1024
+            ]
+          }
+        },
+        "result": "REJECTED: LOD0 has visible UV interpolation artifacts; LOD1/LOD2 progressively unacceptable close-up. Files quarantined outside assets/mobile."
+      }
+    },
+    {
+      "asset_id": "hero_brakk_ironhide",
+      "index": 28,
+      "drive_file_id": "1riIaa5NuRshbzjSfi5le44SM398fhE4I",
+      "original_file": "A28/package3",
+      "source_file": "assets/source/hero_brakk_ironhide.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Massive green orc in dark heavy armor with large axe; strong Brakk match.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1989954,
+      "source_vertices": 1040223,
+      "source_size_bytes": 93966692,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10435800
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2140042
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7578653
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_kael_thornwind",
+      "index": 29,
+      "drive_file_id": "1pzlK4C5555lSA3ZevnZllZ_Z25mfVQ9H",
+      "original_file": "A29/package3",
+      "source_file": "assets/source/hero_kael_thornwind.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Male elf scout in green-brown armor with large bow/quiver; strong Kael match.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1964218,
+      "source_vertices": 1020984,
+      "source_size_bytes": 89366060,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 9219672
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1566546
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 5999949
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_rakan_sandfang",
+      "index": 30,
+      "drive_file_id": "1sjlvbbx_bx03xGf46UnlOnSFpwmV-884",
+      "original_file": "A30/package3",
+      "source_file": "assets/source/hero_rakan_sandfang.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Bearded desert-styled male in sand/gold armor with spear; strong Rakan match.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1988238,
+      "source_vertices": 1031062,
+      "source_size_bytes": 94046824,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11284365
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1697898
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 7712678
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_vex_nightclaw",
+      "index": 31,
+      "drive_file_id": "1searHfhPpW2J95eKdtSyI1XTbHC__IxP",
+      "original_file": "A31/package3",
+      "source_file": "assets/source/hero_vex_nightclaw.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Catlike beastfolk scout with tail, dark armor and twin curved blades; strong Vex match.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_with_tail",
+      "source_triangles": 1992802,
+      "source_vertices": 1037988,
+      "source_size_bytes": 95457748,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11643544
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 1822910
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8252200
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_selene_frostborn",
+      "index": 32,
+      "drive_file_id": "1UXvdNUnMbWyoTVy22EzoYgbJoKH8NI5G",
+      "original_file": "A32/package3",
+      "source_file": "assets/source/hero_selene_frostborn.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Female ice mage in blue/silver-teal armor with blue crystal staff; strong Selene match.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1998378,
+      "source_vertices": 1039610,
+      "source_size_bytes": 95733572,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11785067
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2011366
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8053280
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_mira_dawnshield",
+      "index": 33,
+      "drive_file_id": "1ZeEa3DigKDOLJX1S9_Zm9TRDiqD46oto",
+      "original_file": "A33/package3",
+      "source_file": "assets/source/hero_mira_dawnshield.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "medium",
+      "visual_note": "Female sword-and-shield paladin with blue cloth and gold accents; likely Mira, though armor is darker than original white-gold brief.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1965516,
+      "source_vertices": 1027646,
+      "source_size_bytes": 94541436,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 11384230
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2072912
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 8169047
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    },
+    {
+      "asset_id": "hero_torvald_runehammer",
+      "index": 34,
+      "drive_file_id": "1oIhZNChC6pzujMHuVjY3zFcg20WkPeaM",
+      "original_file": "A34/package3",
+      "source_file": "assets/source/hero_torvald_runehammer.glb",
+      "category": "HERO",
+      "gameplay_role": "commander",
+      "classification_confidence": "high",
+      "visual_note": "Short powerful red-bearded male with very large hammer; strong Torvald match.",
+      "processed_file": null,
+      "mobile_file": null,
+      "rig_state": "C",
+      "rig_required": "required",
+      "anatomy": "humanoid_biped",
+      "source_triangles": 1994252,
+      "source_vertices": 1048227,
+      "source_size_bytes": 93405980,
+      "source_textures": [
+        {
+          "name": "base_color",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 10136925
+        },
+        {
+          "name": "metallic_roughness",
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "bytes": 2040028
+        },
+        {
+          "name": "normal",
+          "width": 4096,
+          "height": 4096,
+          "format": "JPEG",
+          "bytes": 6981061
+        }
+      ],
+      "lods": {},
+      "collision": null,
+      "shipping_status": "BLOCKED_RAW_ONLY",
+      "collision_policy": "capsule or capsule+simple hit volumes after rigging; never source mesh"
+    }
+  ],
+  "development_phase": "DEVELOPMENT_03",
+  "classified_count": 34,
+  "unknown_count": 0,
+  "optimized_quality_pass_count": 2,
+  "rig_required_count": 20,
+  "static_asset_count": 14,
+  "static_quality_pass_count": 14,
+  "static_rejected_count": 0
+}

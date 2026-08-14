@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "account_level_cap": 60,
+  "city_level_cap": 20,
+  "season_id": "preseason_01",
+  "city_power_sources": [
+    "buildings",
+    "research",
+    "trained_troops",
+    "hero_hook",
+    "alliance_hook"
+  ],
+  "citadel_rule": {
+    "type": "MAX_BUILDING_LEVEL",
+    "default_offset": 0,
+    "exceptions": {}
+  },
+  "population": {
+    "starting_current": 80,
+    "starting_cap": 200,
+    "training_capacity_factor": 1.0
+  }
+}

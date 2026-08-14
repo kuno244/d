@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "grid": {
+    "width": 32,
+    "height": 32,
+    "cell_size": 2.0,
+    "origin": [
+      -32.0,
+      0.0,
+      -32.0
+    ],
+    "allow_rotation": true,
+    "rotation_step_degrees": 90
+  },
+  "construction": {
+    "initial_builder_slots": 1,
+    "max_future_builder_slots": 3,
+    "cancel_refund_pct": 0.5
+  },
+  "offline": {
+    "base_cap_sec": 36000,
+    "max_timestamp_delta_sec": 604800
+  },
+  "lod_profiles": {
+    "important_building": {
+      "lod0_max_distance": 28.0,
+      "lod1_max_distance": 58.0
+    },
+    "ordinary_building": {
+      "lod0_max_distance": 24.0,
+      "lod1_max_distance": 52.0
+    },
+    "world_object": {
+      "lod0_max_distance": 20.0,
+      "lod1_max_distance": 46.0
+    },
+    "decoration": {
+      "lod0_max_distance": 14.0,
+      "lod1_max_distance": 32.0
+    }
+  },
+  "decoration": {
+    "allowed_asset_ids": [
+      "decoration_bush_cluster"
+    ],
+    "default_power": 0,
+    "requires_collision": false
+  }
+}

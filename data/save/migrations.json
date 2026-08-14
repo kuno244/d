@@ -1,0 +1,8 @@
+{
+  "current_version": 3,
+  "migrations": [
+    {"from": 0, "to": 1, "description": "Add world_state foundation."},
+    {"from": 1, "to": 2, "description": "Add capacities, persistent building instances, construction/production state, population/power, troop inventory/training queues, research progress/queue, and modifiers. Seed Royal Citadel if the legacy city had no saved buildings."},
+    {"from": 2, "to": 3, "description": "Add the deterministic 64x64 world, entity persistence, starter army, exploration, camera state, objectives, and pending tactical battle state."}
+  ]
+}

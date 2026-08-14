@@ -1,0 +1,162 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/frontend/main_menu.gd" id="1_menu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.045, 0.055, 0.075, 1)
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 52.0
+offset_right = 600.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 34
+text = "CROWNFRONT: REALMS"
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="VBoxContainer" parent="Center"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="NewGame" type="Button" parent="Center/Menu"]
+custom_minimum_size = Vector2(300, 52)
+layout_mode = 2
+text = "New Game"
+
+[node name="Continue" type="Button" parent="Center/Menu"]
+custom_minimum_size = Vector2(300, 52)
+layout_mode = 2
+text = "Continue"
+
+[node name="Settings" type="Button" parent="Center/Menu"]
+custom_minimum_size = Vector2(300, 52)
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="Center/Menu"]
+custom_minimum_size = Vector2(300, 52)
+layout_mode = 2
+text = "Quit"
+
+[node name="SettingsPanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 56.0
+offset_top = 150.0
+offset_right = 470.0
+offset_bottom = 590.0
+
+[node name="Margin" type="MarginContainer" parent="SettingsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="SettingsPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Heading" type="Label" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+text = "Graphics / Controls"
+
+[node name="GraphicsPresetLabel" type="Label" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+text = "Graphics preset"
+
+[node name="GraphicsPreset" type="OptionButton" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+item_count = 3
+selected = 1
+popup/item_0/text = "Low"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "High"
+popup/item_2/id = 2
+
+[node name="TestResolutionLabel" type="Label" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+text = "Test resolution"
+
+[node name="TestResolution" type="OptionButton" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+item_count = 3
+selected = 1
+popup/item_0/text = "1280 × 720"
+popup/item_0/id = 0
+popup/item_1/text = "1600 × 900"
+popup/item_1/id = 1
+popup/item_2/text = "1920 × 1080"
+popup/item_2/id = 2
+
+[node name="WindowModeLabel" type="Label" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+text = "Window mode"
+
+[node name="WindowMode" type="OptionButton" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="CameraSensitivityLabel" type="Label" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+text = "Camera sensitivity"
+
+[node name="CameraSensitivity" type="HSlider" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+min_value = 0.5
+max_value = 2.0
+step = 0.05
+value = 1.0
+
+[node name="UIScaleLabel" type="Label" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+text = "UI scale"
+
+[node name="UIScale" type="HSlider" parent="SettingsPanel/Margin/VBox"]
+layout_mode = 2
+min_value = 0.8
+max_value = 1.4
+step = 0.05
+value = 1.0
+
+[connection signal="pressed" from="Center/Menu/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Center/Menu/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Center/Menu/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Center/Menu/Quit" to="." method="_on_quit_pressed"]
+[connection signal="item_selected" from="SettingsPanel/Margin/VBox/GraphicsPreset" to="." method="_on_graphics_preset_item_selected"]
+[connection signal="value_changed" from="SettingsPanel/Margin/VBox/CameraSensitivity" to="." method="_on_camera_sensitivity_value_changed"]
+[connection signal="value_changed" from="SettingsPanel/Margin/VBox/UIScale" to="." method="_on_ui_scale_value_changed"]
+
+[connection signal="item_selected" from="SettingsPanel/Margin/VBox/TestResolution" to="." method="_on_test_resolution_item_selected"]
+[connection signal="item_selected" from="SettingsPanel/Margin/VBox/WindowMode" to="." method="_on_window_mode_item_selected"]

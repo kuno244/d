@@ -1,0 +1,354 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/city_hud.gd" id="1_hud"]
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.055, 0.075, 0.11, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.66, 0.5, 0.19, 0.65)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.36)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="BarStyle"]
+bg_color = Color(0.035, 0.05, 0.08, 0.92)
+corner_radius_bottom_left = 12
+corner_radius_bottom_right = 12
+
+[node name="CityHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_hud")
+
+[node name="SafeArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 18.0
+offset_right = -24.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="TopBar" type="PanelContainer" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("BarStyle")
+
+[node name="Margin" type="MarginContainer" parent="SafeArea/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Resources" type="HBoxContainer" parent="SafeArea/TopBar/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Food" type="Label" parent="SafeArea/TopBar/Margin/Resources"]
+layout_mode = 2
+text = "Food  0/0"
+[node name="Wood" type="Label" parent="SafeArea/TopBar/Margin/Resources"]
+layout_mode = 2
+text = "Wood  0/0"
+[node name="Stone" type="Label" parent="SafeArea/TopBar/Margin/Resources"]
+layout_mode = 2
+text = "Stone  0/0"
+[node name="Gold" type="Label" parent="SafeArea/TopBar/Margin/Resources"]
+layout_mode = 2
+text = "Gold  0/0"
+[node name="Power" type="Label" parent="SafeArea/TopBar/Margin/Resources"]
+layout_mode = 2
+text = "Power  0"
+[node name="Population" type="Label" parent="SafeArea/TopBar/Margin/Resources"]
+layout_mode = 2
+text = "Pop  0/0"
+
+[node name="BottomNav" type="HBoxContainer" parent="SafeArea"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = -76.0
+offset_right = 340.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="Build" type="Button" parent="SafeArea/BottomNav"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Build"
+[node name="Research" type="Button" parent="SafeArea/BottomNav"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Research"
+[node name="Troops" type="Button" parent="SafeArea/BottomNav"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Troops"
+[node name="Heroes" type="Button" parent="SafeArea/BottomNav"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Heroes"
+[node name="World" type="Button" parent="SafeArea/BottomNav"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "World"
+
+[node name="BuildPanel" type="PanelContainer" parent="SafeArea"]
+visible = false
+layout_mode = 0
+offset_left = 20.0
+offset_top = 94.0
+offset_right = 390.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Margin" type="MarginContainer" parent="SafeArea/BuildPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+[node name="VBox" type="VBoxContainer" parent="SafeArea/BuildPanel/Margin"]
+layout_mode = 2
+[node name="Title" type="Label" parent="SafeArea/BuildPanel/Margin/VBox"]
+layout_mode = 2
+text = "Build Menu"
+[node name="DecorationManagementHint" type="Label" parent="SafeArea/BuildPanel/Margin/VBox"]
+layout_mode = 2
+text = "Placed Decorations"
+visible = false
+
+[node name="Scroll" type="ScrollContainer" parent="SafeArea/BuildPanel/Margin/VBox"]
+custom_minimum_size = Vector2(320, 470)
+layout_mode = 2
+[node name="Items" type="VBoxContainer" parent="SafeArea/BuildPanel/Margin/VBox/Scroll"]
+layout_mode = 2
+
+[node name="BuildingPanel" type="PanelContainer" parent="SafeArea"]
+visible = false
+layout_mode = 0
+offset_left = 420.0
+offset_top = 94.0
+offset_right = 800.0
+offset_bottom = 390.0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Margin" type="MarginContainer" parent="SafeArea/BuildingPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+[node name="VBox" type="VBoxContainer" parent="SafeArea/BuildingPanel/Margin"]
+layout_mode = 2
+[node name="Title" type="Label" parent="SafeArea/BuildingPanel/Margin/VBox"]
+layout_mode = 2
+text = "Building"
+[node name="State" type="Label" parent="SafeArea/BuildingPanel/Margin/VBox"]
+layout_mode = 2
+text = "State: ACTIVE"
+[node name="Function" type="Label" parent="SafeArea/BuildingPanel/Margin/VBox"]
+layout_mode = 2
+text = "Function:"
+[node name="UpgradePreview" type="Label" parent="SafeArea/BuildingPanel/Margin/VBox"]
+layout_mode = 2
+text = "Next level • cost • duration"
+autowrap_mode = 2
+[node name="Upgrade" type="Button" parent="SafeArea/BuildingPanel/Margin/VBox"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Upgrade"
+[node name="Move" type="Button" parent="SafeArea/BuildingPanel/Margin/VBox"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Move"
+[node name="Collect" type="Button" parent="SafeArea/BuildingPanel/Margin/VBox"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Collect"
+[node name="Info" type="Button" parent="SafeArea/BuildingPanel/Margin/VBox"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Info"
+
+[node name="PlacementPanel" type="PanelContainer" parent="SafeArea"]
+visible = false
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -150.0
+offset_right = 330.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Margin" type="MarginContainer" parent="SafeArea/PlacementPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 7
+[node name="HBox" type="HBoxContainer" parent="SafeArea/PlacementPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+[node name="PlacementStatus" type="Label" parent="SafeArea/PlacementPanel/Margin/HBox"]
+custom_minimum_size = Vector2(210, 52)
+layout_mode = 2
+text = "Placement • VALID"
+vertical_alignment = 1
+[node name="Rotate" type="Button" parent="SafeArea/PlacementPanel/Margin/HBox"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Rotate"
+[node name="Confirm" type="Button" parent="SafeArea/PlacementPanel/Margin/HBox"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Confirm"
+[node name="Cancel" type="Button" parent="SafeArea/PlacementPanel/Margin/HBox"]
+custom_minimum_size = Vector2(120, 52)
+layout_mode = 2
+text = "Cancel"
+
+[node name="ConstructionPanel" type="PanelContainer" parent="SafeArea"]
+visible = false
+layout_mode = 0
+offset_left = 820.0
+offset_top = 94.0
+offset_right = 1210.0
+offset_bottom = 270.0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Margin" type="MarginContainer" parent="SafeArea/ConstructionPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+[node name="VBox" type="VBoxContainer" parent="SafeArea/ConstructionPanel/Margin"]
+layout_mode = 2
+[node name="Construction" type="Label" parent="SafeArea/ConstructionPanel/Margin/VBox"]
+layout_mode = 2
+text = "Construction"
+[node name="Progress" type="ProgressBar" parent="SafeArea/ConstructionPanel/Margin/VBox"]
+custom_minimum_size = Vector2(300, 18)
+layout_mode = 2
+show_percentage = false
+[node name="Cancel" type="Button" parent="SafeArea/ConstructionPanel/Margin/VBox"]
+layout_mode = 2
+text = "Cancel"
+[node name="Speedup" type="Button" parent="SafeArea/ConstructionPanel/Margin/VBox"]
+layout_mode = 2
+text = "Speed-up Hook"
+
+[node name="TrainingPanel" type="PanelContainer" parent="SafeArea"]
+visible = false
+layout_mode = 0
+offset_left = 20.0
+offset_top = 94.0
+offset_right = 430.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Margin" type="MarginContainer" parent="SafeArea/TrainingPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+[node name="VBox" type="VBoxContainer" parent="SafeArea/TrainingPanel/Margin"]
+layout_mode = 2
+[node name="Training" type="Label" parent="SafeArea/TrainingPanel/Margin/VBox"]
+layout_mode = 2
+text = "Training Panel"
+[node name="QueueStatus" type="Label" parent="SafeArea/TrainingPanel/Margin/VBox"]
+layout_mode = 2
+text = "Queue: empty"
+[node name="TrainingAmount" type="SpinBox" parent="SafeArea/TrainingPanel/Margin/VBox"]
+layout_mode = 2
+min_value = 1.0
+max_value = 1000.0
+value = 10.0
+[node name="Scroll" type="ScrollContainer" parent="SafeArea/TrainingPanel/Margin/VBox"]
+custom_minimum_size = Vector2(350, 450)
+layout_mode = 2
+[node name="Items" type="VBoxContainer" parent="SafeArea/TrainingPanel/Margin/VBox/Scroll"]
+layout_mode = 2
+
+[node name="ResearchPanel" type="PanelContainer" parent="SafeArea"]
+visible = false
+layout_mode = 0
+offset_left = 20.0
+offset_top = 94.0
+offset_right = 460.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Margin" type="MarginContainer" parent="SafeArea/ResearchPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+[node name="VBox" type="VBoxContainer" parent="SafeArea/ResearchPanel/Margin"]
+layout_mode = 2
+[node name="ResearchTree" type="Label" parent="SafeArea/ResearchPanel/Margin/VBox"]
+layout_mode = 2
+text = "Research Tree"
+[node name="QueueStatus" type="Label" parent="SafeArea/ResearchPanel/Margin/VBox"]
+layout_mode = 2
+text = "Current research: none"
+[node name="Scroll" type="ScrollContainer" parent="SafeArea/ResearchPanel/Margin/VBox"]
+custom_minimum_size = Vector2(380, 470)
+layout_mode = 2
+[node name="Items" type="VBoxContainer" parent="SafeArea/ResearchPanel/Margin/VBox/Scroll"]
+layout_mode = 2
+
+[node name="HeroPanel" type="PanelContainer" parent="SafeArea"]
+visible = false
+layout_mode = 0
+offset_left = 20.0
+offset_top = 94.0
+offset_right = 420.0
+offset_bottom = 280.0
+theme_override_styles/panel = SubResource("PanelStyle")
+[node name="Label" type="Label" parent="SafeArea/HeroPanel"]
+layout_mode = 2
+text = "Heroes — data-only foundation"
+
+[connection signal="pressed" from="SafeArea/BottomNav/Build" to="." method="open_build_menu"]
+[connection signal="pressed" from="SafeArea/BottomNav/Research" to="." method="open_research"]
+[connection signal="pressed" from="SafeArea/BottomNav/Troops" to="." method="open_troops"]
+[connection signal="pressed" from="SafeArea/BottomNav/Heroes" to="." method="open_heroes"]
+[connection signal="pressed" from="SafeArea/BottomNav/World" to="." method="_on_world_pressed"]
+[connection signal="pressed" from="SafeArea/BuildingPanel/Margin/VBox/Upgrade" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="SafeArea/BuildingPanel/Margin/VBox/Move" to="." method="_on_move_pressed"]
+[connection signal="pressed" from="SafeArea/BuildingPanel/Margin/VBox/Collect" to="." method="_on_collect_pressed"]
+[connection signal="pressed" from="SafeArea/BuildingPanel/Margin/VBox/Info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="SafeArea/ConstructionPanel/Margin/VBox/Cancel" to="." method="_on_cancel_construction_pressed"]
+[connection signal="pressed" from="SafeArea/ConstructionPanel/Margin/VBox/Speedup" to="." method="_on_speedup_hook_pressed"]
+
+[connection signal="pressed" from="SafeArea/PlacementPanel/Margin/HBox/Rotate" to="." method="_on_placement_rotate_pressed"]
+[connection signal="pressed" from="SafeArea/PlacementPanel/Margin/HBox/Confirm" to="." method="_on_placement_confirm_pressed"]
+[connection signal="pressed" from="SafeArea/PlacementPanel/Margin/HBox/Cancel" to="." method="_on_placement_cancel_pressed"]

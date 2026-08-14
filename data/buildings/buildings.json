@@ -1,0 +1,3868 @@
+{
+  "schema_version": 2,
+  "items": [
+    {
+      "id": "building_royal_citadel",
+      "asset_id": "building_royal_citadel",
+      "display_name": "Royal Citadel",
+      "category": "CORE",
+      "role": "city_headquarters",
+      "functionality": "city_progression",
+      "footprint": [
+        4,
+        4
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 600,
+        "wood": 650,
+        "stone": 500,
+        "gold": 180
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.43
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.37
+      },
+      "unlock_citadel_level": 1,
+      "prerequisites": [],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 600,
+            "wood": 650,
+            "stone": 500,
+            "gold": 180
+          },
+          "build_time_sec": 90,
+          "citadel_required_level": 1,
+          "power": 140,
+          "storage_contribution": 1800,
+          "population_cap_contribution": 120,
+          "population_required": 0,
+          "production_per_hour": 42,
+          "local_production_cap": 180
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 860,
+            "wood": 930,
+            "stone": 715,
+            "gold": 255
+          },
+          "build_time_sec": 123,
+          "citadel_required_level": 1,
+          "power": 185,
+          "storage_contribution": 2142,
+          "population_cap_contribution": 139,
+          "population_required": 68,
+          "production_per_hour": 48,
+          "local_production_cap": 212
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 1225,
+            "wood": 1330,
+            "stone": 1020,
+            "gold": 370
+          },
+          "build_time_sec": 169,
+          "citadel_required_level": 2,
+          "power": 244,
+          "storage_contribution": 2549,
+          "population_cap_contribution": 161,
+          "population_required": 86,
+          "production_per_hour": 55,
+          "local_production_cap": 251
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 1755,
+            "wood": 1900,
+            "stone": 1460,
+            "gold": 525
+          },
+          "build_time_sec": 231,
+          "citadel_required_level": 3,
+          "power": 322,
+          "storage_contribution": 3033,
+          "population_cap_contribution": 187,
+          "population_required": 104,
+          "production_per_hour": 63,
+          "local_production_cap": 296
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 2510,
+            "wood": 2720,
+            "stone": 2090,
+            "gold": 755
+          },
+          "build_time_sec": 317,
+          "citadel_required_level": 4,
+          "power": 425,
+          "storage_contribution": 3610,
+          "population_cap_contribution": 217,
+          "population_required": 122,
+          "production_per_hour": 72,
+          "local_production_cap": 349
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 3590,
+            "wood": 3885,
+            "stone": 2990,
+            "gold": 1075
+          },
+          "build_time_sec": 434,
+          "citadel_required_level": 5,
+          "power": 561,
+          "storage_contribution": 4295,
+          "population_cap_contribution": 252,
+          "population_required": 140,
+          "production_per_hour": 83,
+          "local_production_cap": 412
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 5130,
+            "wood": 5560,
+            "stone": 4275,
+            "gold": 1540
+          },
+          "build_time_sec": 595,
+          "citadel_required_level": 6,
+          "power": 741,
+          "storage_contribution": 5112,
+          "population_cap_contribution": 292,
+          "population_required": 158,
+          "production_per_hour": 95,
+          "local_production_cap": 486
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 7335,
+            "wood": 7950,
+            "stone": 6115,
+            "gold": 2200
+          },
+          "build_time_sec": 815,
+          "citadel_required_level": 7,
+          "power": 978,
+          "storage_contribution": 6083,
+          "population_cap_contribution": 339,
+          "population_required": 176,
+          "production_per_hour": 108,
+          "local_production_cap": 573
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 10490,
+            "wood": 11365,
+            "stone": 8745,
+            "gold": 3145
+          },
+          "build_time_sec": 1117,
+          "citadel_required_level": 8,
+          "power": 1290,
+          "storage_contribution": 7238,
+          "population_cap_contribution": 393,
+          "population_required": 194,
+          "production_per_hour": 124,
+          "local_production_cap": 677
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 15005,
+            "wood": 16255,
+            "stone": 12500,
+            "gold": 4500
+          },
+          "build_time_sec": 1530,
+          "citadel_required_level": 9,
+          "power": 1703,
+          "storage_contribution": 8614,
+          "population_cap_contribution": 456,
+          "population_required": 212,
+          "production_per_hour": 142,
+          "local_production_cap": 798
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 21455,
+            "wood": 23240,
+            "stone": 17880,
+            "gold": 6435
+          },
+          "build_time_sec": 2096,
+          "citadel_required_level": 10,
+          "power": 2248,
+          "storage_contribution": 10250,
+          "population_cap_contribution": 529,
+          "population_required": 230,
+          "production_per_hour": 163,
+          "local_production_cap": 942
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 30680,
+            "wood": 33235,
+            "stone": 25565,
+            "gold": 9205
+          },
+          "build_time_sec": 2872,
+          "citadel_required_level": 11,
+          "power": 2968,
+          "storage_contribution": 12198,
+          "population_cap_contribution": 614,
+          "population_required": 248,
+          "production_per_hour": 186,
+          "local_production_cap": 1112
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 43870,
+            "wood": 47530,
+            "stone": 36560,
+            "gold": 13160
+          },
+          "build_time_sec": 3934,
+          "citadel_required_level": 12,
+          "power": 3918,
+          "storage_contribution": 14516,
+          "population_cap_contribution": 712,
+          "population_required": 266,
+          "production_per_hour": 213,
+          "local_production_cap": 1312
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 62735,
+            "wood": 67965,
+            "stone": 52280,
+            "gold": 18820
+          },
+          "build_time_sec": 5390,
+          "citadel_required_level": 13,
+          "power": 5171,
+          "storage_contribution": 17274,
+          "population_cap_contribution": 826,
+          "population_required": 284,
+          "production_per_hour": 244,
+          "local_production_cap": 1548
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 89715,
+            "wood": 97190,
+            "stone": 74760,
+            "gold": 26915
+          },
+          "build_time_sec": 7385,
+          "citadel_required_level": 14,
+          "power": 6826,
+          "storage_contribution": 20556,
+          "population_cap_contribution": 959,
+          "population_required": 302,
+          "production_per_hour": 280,
+          "local_production_cap": 1827
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 128290,
+            "wood": 138980,
+            "stone": 106910,
+            "gold": 38485
+          },
+          "build_time_sec": 10117,
+          "citadel_required_level": 15,
+          "power": 9010,
+          "storage_contribution": 24461,
+          "population_cap_contribution": 1112,
+          "population_required": 320,
+          "production_per_hour": 320,
+          "local_production_cap": 2155
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 183455,
+            "wood": 198740,
+            "stone": 152880,
+            "gold": 55035
+          },
+          "build_time_sec": 13860,
+          "citadel_required_level": 16,
+          "power": 11894,
+          "storage_contribution": 29109,
+          "population_cap_contribution": 1290,
+          "population_required": 338,
+          "production_per_hour": 367,
+          "local_production_cap": 2543
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 262340,
+            "wood": 284200,
+            "stone": 218615,
+            "gold": 78700
+          },
+          "build_time_sec": 18989,
+          "citadel_required_level": 17,
+          "power": 15699,
+          "storage_contribution": 34639,
+          "population_cap_contribution": 1496,
+          "population_required": 356,
+          "production_per_hour": 420,
+          "local_production_cap": 3001
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 375145,
+            "wood": 406410,
+            "stone": 312620,
+            "gold": 112545
+          },
+          "build_time_sec": 26014,
+          "citadel_required_level": 18,
+          "power": 20723,
+          "storage_contribution": 41221,
+          "population_cap_contribution": 1736,
+          "population_required": 374,
+          "production_per_hour": 481,
+          "local_production_cap": 3541
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 536460,
+            "wood": 581165,
+            "stone": 447050,
+            "gold": 160935
+          },
+          "build_time_sec": 35640,
+          "citadel_required_level": 19,
+          "power": 27355,
+          "storage_contribution": 49053,
+          "population_cap_contribution": 2013,
+          "population_required": 392,
+          "production_per_hour": 550,
+          "local_production_cap": 4179
+        }
+      ],
+      "progression_rule": "CITY_LEVEL_GATE",
+      "milestones": [
+        {
+          "level": 1,
+          "unlocks": [
+            "building_farm",
+            "building_lumber_mill",
+            "building_stone_quarry"
+          ],
+          "research_tier": 0,
+          "troop_features": [
+            "troop_inventory"
+          ]
+        },
+        {
+          "level": 2,
+          "unlocks": [
+            "building_barracks"
+          ],
+          "research_tier": 0,
+          "troop_features": [
+            "swordsmen_training"
+          ]
+        },
+        {
+          "level": 3,
+          "unlocks": [
+            "building_grand_academy",
+            "building_archery_range"
+          ],
+          "research_tier": 1,
+          "troop_features": [
+            "spearmen_training",
+            "archers_training"
+          ]
+        },
+        {
+          "level": 4,
+          "unlocks": [
+            "building_watchtower"
+          ],
+          "research_tier": 1,
+          "troop_features": [
+            "city_defense"
+          ]
+        },
+        {
+          "level": 5,
+          "unlocks": [
+            "building_royal_stable"
+          ],
+          "research_tier": 2,
+          "troop_features": [
+            "cavalry_training"
+          ]
+        },
+        {
+          "level": 6,
+          "unlocks": [
+            "building_alliance_hall"
+          ],
+          "research_tier": 2,
+          "troop_features": [
+            "alliance_support"
+          ]
+        },
+        {
+          "level": 7,
+          "unlocks": [],
+          "research_tier": 3,
+          "troop_features": [
+            "battle_mage_training"
+          ]
+        },
+        {
+          "level": 10,
+          "unlocks": [],
+          "research_tier": 4,
+          "troop_features": [
+            "training_capacity_II"
+          ]
+        },
+        {
+          "level": 13,
+          "unlocks": [],
+          "research_tier": 4,
+          "troop_features": [
+            "army_slot_future_II"
+          ]
+        },
+        {
+          "level": 16,
+          "unlocks": [],
+          "research_tier": 5,
+          "troop_features": [
+            "training_capacity_III"
+          ]
+        },
+        {
+          "level": 20,
+          "unlocks": [],
+          "research_tier": 5,
+          "troop_features": [
+            "city_progression_cap"
+          ]
+        }
+      ],
+      "production": {
+        "resource": "gold",
+        "collection_mode": "CLAIM",
+        "offline_enabled": true
+      },
+      "max_count": 1
+    },
+    {
+      "id": "building_barracks",
+      "asset_id": "building_barracks",
+      "display_name": "Barracks",
+      "category": "MILITARY",
+      "role": "troop_training_infantry",
+      "functionality": "train_swordsmen_spearmen",
+      "footprint": [
+        3,
+        3
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 380,
+        "wood": 520,
+        "stone": 260,
+        "gold": 80
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.39
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.34
+      },
+      "unlock_citadel_level": 2,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 2
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 380,
+            "wood": 520,
+            "stone": 260,
+            "gold": 80
+          },
+          "build_time_sec": 70,
+          "citadel_required_level": 1,
+          "power": 72,
+          "storage_contribution": 160,
+          "population_cap_contribution": 20,
+          "training_capacity": 40,
+          "training_speed_pct": 0.0,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 530,
+            "wood": 725,
+            "stone": 360,
+            "gold": 110
+          },
+          "build_time_sec": 94,
+          "citadel_required_level": 2,
+          "power": 93,
+          "storage_contribution": 179,
+          "population_cap_contribution": 22,
+          "training_capacity": 46,
+          "training_speed_pct": 0.012,
+          "population_required": 60
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 735,
+            "wood": 1005,
+            "stone": 500,
+            "gold": 155
+          },
+          "build_time_sec": 126,
+          "citadel_required_level": 3,
+          "power": 120,
+          "storage_contribution": 201,
+          "population_cap_contribution": 25,
+          "training_capacity": 53,
+          "training_speed_pct": 0.024,
+          "population_required": 70
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 1020,
+            "wood": 1395,
+            "stone": 700,
+            "gold": 215
+          },
+          "build_time_sec": 168,
+          "citadel_required_level": 4,
+          "power": 155,
+          "storage_contribution": 225,
+          "population_cap_contribution": 27,
+          "training_capacity": 61,
+          "training_speed_pct": 0.036,
+          "population_required": 80
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 1420,
+            "wood": 1940,
+            "stone": 970,
+            "gold": 300
+          },
+          "build_time_sec": 226,
+          "citadel_required_level": 5,
+          "power": 199,
+          "storage_contribution": 252,
+          "population_cap_contribution": 30,
+          "training_capacity": 70,
+          "training_speed_pct": 0.048,
+          "population_required": 90
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 1970,
+            "wood": 2700,
+            "stone": 1350,
+            "gold": 415
+          },
+          "build_time_sec": 302,
+          "citadel_required_level": 6,
+          "power": 257,
+          "storage_contribution": 282,
+          "population_cap_contribution": 34,
+          "training_capacity": 80,
+          "training_speed_pct": 0.06,
+          "population_required": 100
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 2740,
+            "wood": 3750,
+            "stone": 1875,
+            "gold": 575
+          },
+          "build_time_sec": 405,
+          "citadel_required_level": 7,
+          "power": 332,
+          "storage_contribution": 316,
+          "population_cap_contribution": 37,
+          "training_capacity": 93,
+          "training_speed_pct": 0.072,
+          "population_required": 110
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 3810,
+            "wood": 5215,
+            "stone": 2605,
+            "gold": 800
+          },
+          "build_time_sec": 543,
+          "citadel_required_level": 8,
+          "power": 428,
+          "storage_contribution": 354,
+          "population_cap_contribution": 42,
+          "training_capacity": 106,
+          "training_speed_pct": 0.084,
+          "population_required": 120
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 5295,
+            "wood": 7245,
+            "stone": 3625,
+            "gold": 1115
+          },
+          "build_time_sec": 728,
+          "citadel_required_level": 9,
+          "power": 552,
+          "storage_contribution": 396,
+          "population_cap_contribution": 46,
+          "training_capacity": 122,
+          "training_speed_pct": 0.096,
+          "population_required": 130
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 7360,
+            "wood": 10070,
+            "stone": 5035,
+            "gold": 1550
+          },
+          "build_time_sec": 975,
+          "citadel_required_level": 10,
+          "power": 712,
+          "storage_contribution": 444,
+          "population_cap_contribution": 51,
+          "training_capacity": 141,
+          "training_speed_pct": 0.108,
+          "population_required": 140
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 10230,
+            "wood": 14000,
+            "stone": 7000,
+            "gold": 2155
+          },
+          "build_time_sec": 1307,
+          "citadel_required_level": 11,
+          "power": 919,
+          "storage_contribution": 497,
+          "population_cap_contribution": 57,
+          "training_capacity": 162,
+          "training_speed_pct": 0.12,
+          "population_required": 150
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 14220,
+            "wood": 19460,
+            "stone": 9730,
+            "gold": 2995
+          },
+          "build_time_sec": 1751,
+          "citadel_required_level": 12,
+          "power": 1185,
+          "storage_contribution": 557,
+          "population_cap_contribution": 63,
+          "training_capacity": 186,
+          "training_speed_pct": 0.132,
+          "population_required": 160
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 19770,
+            "wood": 27050,
+            "stone": 13525,
+            "gold": 4160
+          },
+          "build_time_sec": 2346,
+          "citadel_required_level": 13,
+          "power": 1529,
+          "storage_contribution": 623,
+          "population_cap_contribution": 70,
+          "training_capacity": 214,
+          "training_speed_pct": 0.144,
+          "population_required": 170
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 27475,
+            "wood": 37600,
+            "stone": 18800,
+            "gold": 5785
+          },
+          "build_time_sec": 3144,
+          "citadel_required_level": 14,
+          "power": 1972,
+          "storage_contribution": 698,
+          "population_cap_contribution": 78,
+          "training_capacity": 246,
+          "training_speed_pct": 0.156,
+          "population_required": 180
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 38195,
+            "wood": 52265,
+            "stone": 26130,
+            "gold": 8040
+          },
+          "build_time_sec": 4213,
+          "citadel_required_level": 15,
+          "power": 2544,
+          "storage_contribution": 782,
+          "population_cap_contribution": 86,
+          "training_capacity": 283,
+          "training_speed_pct": 0.168,
+          "population_required": 190
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 53090,
+            "wood": 72650,
+            "stone": 36325,
+            "gold": 11175
+          },
+          "build_time_sec": 5645,
+          "citadel_required_level": 16,
+          "power": 3282,
+          "storage_contribution": 876,
+          "population_cap_contribution": 96,
+          "training_capacity": 325,
+          "training_speed_pct": 0.18,
+          "population_required": 200
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 73795,
+            "wood": 100980,
+            "stone": 50490,
+            "gold": 15535
+          },
+          "build_time_sec": 7564,
+          "citadel_required_level": 17,
+          "power": 4234,
+          "storage_contribution": 981,
+          "population_cap_contribution": 106,
+          "training_capacity": 374,
+          "training_speed_pct": 0.192,
+          "population_required": 210
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 102575,
+            "wood": 140365,
+            "stone": 70180,
+            "gold": 21595
+          },
+          "build_time_sec": 10136,
+          "citadel_required_level": 18,
+          "power": 5462,
+          "storage_contribution": 1099,
+          "population_cap_contribution": 118,
+          "training_capacity": 430,
+          "training_speed_pct": 0.204,
+          "population_required": 220
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 142575,
+            "wood": 195105,
+            "stone": 97555,
+            "gold": 30015
+          },
+          "build_time_sec": 13583,
+          "citadel_required_level": 19,
+          "power": 7046,
+          "storage_contribution": 1230,
+          "population_cap_contribution": 131,
+          "training_capacity": 495,
+          "training_speed_pct": 0.216,
+          "population_required": 230
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 198180,
+            "wood": 271195,
+            "stone": 135600,
+            "gold": 41725
+          },
+          "build_time_sec": 18201,
+          "citadel_required_level": 20,
+          "power": 9089,
+          "storage_contribution": 1378,
+          "population_cap_contribution": 145,
+          "training_capacity": 569,
+          "training_speed_pct": 0.228,
+          "population_required": 240
+        }
+      ],
+      "troop_unlocks": [
+        {
+          "troop_id": "troop_kingdom_swordsman",
+          "building_level": 1
+        },
+        {
+          "troop_id": "troop_kingdom_spearman",
+          "building_level": 3
+        }
+      ],
+      "max_count": 3
+    },
+    {
+      "id": "building_archery_range",
+      "asset_id": "building_archery_range",
+      "display_name": "Archery Range",
+      "category": "MILITARY",
+      "role": "troop_training_archer",
+      "functionality": "train_archers",
+      "footprint": [
+        3,
+        3
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 430,
+        "wood": 610,
+        "stone": 210,
+        "gold": 95
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.4
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.34
+      },
+      "unlock_citadel_level": 3,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 3
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 430,
+            "wood": 610,
+            "stone": 210,
+            "gold": 95
+          },
+          "build_time_sec": 78,
+          "citadel_required_level": 1,
+          "power": 76,
+          "storage_contribution": 140,
+          "population_cap_contribution": 18,
+          "training_capacity": 35,
+          "training_speed_pct": 0.0,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 600,
+            "wood": 855,
+            "stone": 295,
+            "gold": 135
+          },
+          "build_time_sec": 105,
+          "citadel_required_level": 2,
+          "power": 98,
+          "storage_contribution": 157,
+          "population_cap_contribution": 20,
+          "training_capacity": 40,
+          "training_speed_pct": 0.011,
+          "population_required": 60
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 845,
+            "wood": 1195,
+            "stone": 410,
+            "gold": 185
+          },
+          "build_time_sec": 140,
+          "citadel_required_level": 3,
+          "power": 126,
+          "storage_contribution": 176,
+          "population_cap_contribution": 22,
+          "training_capacity": 46,
+          "training_speed_pct": 0.022,
+          "population_required": 70
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 1180,
+            "wood": 1675,
+            "stone": 575,
+            "gold": 260
+          },
+          "build_time_sec": 188,
+          "citadel_required_level": 4,
+          "power": 163,
+          "storage_contribution": 197,
+          "population_cap_contribution": 25,
+          "training_capacity": 53,
+          "training_speed_pct": 0.033,
+          "population_required": 80
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 1650,
+            "wood": 2345,
+            "stone": 805,
+            "gold": 365
+          },
+          "build_time_sec": 251,
+          "citadel_required_level": 5,
+          "power": 210,
+          "storage_contribution": 220,
+          "population_cap_contribution": 27,
+          "training_capacity": 61,
+          "training_speed_pct": 0.044,
+          "population_required": 90
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 2315,
+            "wood": 3280,
+            "stone": 1130,
+            "gold": 510
+          },
+          "build_time_sec": 337,
+          "citadel_required_level": 6,
+          "power": 271,
+          "storage_contribution": 247,
+          "population_cap_contribution": 30,
+          "training_capacity": 70,
+          "training_speed_pct": 0.055,
+          "population_required": 100
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 3240,
+            "wood": 4595,
+            "stone": 1580,
+            "gold": 715
+          },
+          "build_time_sec": 452,
+          "citadel_required_level": 7,
+          "power": 350,
+          "storage_contribution": 276,
+          "population_cap_contribution": 34,
+          "training_capacity": 81,
+          "training_speed_pct": 0.066,
+          "population_required": 110
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 4535,
+            "wood": 6430,
+            "stone": 2215,
+            "gold": 1000
+          },
+          "build_time_sec": 605,
+          "citadel_required_level": 8,
+          "power": 452,
+          "storage_contribution": 309,
+          "population_cap_contribution": 37,
+          "training_capacity": 93,
+          "training_speed_pct": 0.077,
+          "population_required": 120
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 6345,
+            "wood": 9000,
+            "stone": 3100,
+            "gold": 1400
+          },
+          "build_time_sec": 811,
+          "citadel_required_level": 9,
+          "power": 583,
+          "storage_contribution": 347,
+          "population_cap_contribution": 41,
+          "training_capacity": 107,
+          "training_speed_pct": 0.088,
+          "population_required": 130
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 8885,
+            "wood": 12605,
+            "stone": 4340,
+            "gold": 1965
+          },
+          "build_time_sec": 1087,
+          "citadel_required_level": 10,
+          "power": 752,
+          "storage_contribution": 388,
+          "population_cap_contribution": 46,
+          "training_capacity": 123,
+          "training_speed_pct": 0.099,
+          "population_required": 140
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 12440,
+            "wood": 17645,
+            "stone": 6075,
+            "gold": 2750
+          },
+          "build_time_sec": 1456,
+          "citadel_required_level": 11,
+          "power": 970,
+          "storage_contribution": 435,
+          "population_cap_contribution": 51,
+          "training_capacity": 142,
+          "training_speed_pct": 0.11,
+          "population_required": 150
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 17415,
+            "wood": 24700,
+            "stone": 8505,
+            "gold": 3845
+          },
+          "build_time_sec": 1951,
+          "citadel_required_level": 12,
+          "power": 1251,
+          "storage_contribution": 487,
+          "population_cap_contribution": 57,
+          "training_capacity": 163,
+          "training_speed_pct": 0.121,
+          "population_required": 160
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 24380,
+            "wood": 34585,
+            "stone": 11905,
+            "gold": 5385
+          },
+          "build_time_sec": 2614,
+          "citadel_required_level": 13,
+          "power": 1614,
+          "storage_contribution": 545,
+          "population_cap_contribution": 63,
+          "training_capacity": 187,
+          "training_speed_pct": 0.132,
+          "population_required": 170
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 34130,
+            "wood": 48415,
+            "stone": 16670,
+            "gold": 7540
+          },
+          "build_time_sec": 3503,
+          "citadel_required_level": 14,
+          "power": 2082,
+          "storage_contribution": 611,
+          "population_cap_contribution": 70,
+          "training_capacity": 215,
+          "training_speed_pct": 0.143,
+          "population_required": 180
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 47780,
+            "wood": 67785,
+            "stone": 23335,
+            "gold": 10555
+          },
+          "build_time_sec": 4694,
+          "citadel_required_level": 15,
+          "power": 2686,
+          "storage_contribution": 684,
+          "population_cap_contribution": 78,
+          "training_capacity": 248,
+          "training_speed_pct": 0.154,
+          "population_required": 190
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 66895,
+            "wood": 94895,
+            "stone": 32670,
+            "gold": 14780
+          },
+          "build_time_sec": 6290,
+          "citadel_required_level": 16,
+          "power": 3465,
+          "storage_contribution": 766,
+          "population_cap_contribution": 86,
+          "training_capacity": 285,
+          "training_speed_pct": 0.165,
+          "population_required": 200
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 93650,
+            "wood": 132855,
+            "stone": 45735,
+            "gold": 20690
+          },
+          "build_time_sec": 8429,
+          "citadel_required_level": 17,
+          "power": 4469,
+          "storage_contribution": 858,
+          "population_cap_contribution": 96,
+          "training_capacity": 328,
+          "training_speed_pct": 0.176,
+          "population_required": 210
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 131115,
+            "wood": 185995,
+            "stone": 64030,
+            "gold": 28965
+          },
+          "build_time_sec": 11295,
+          "citadel_required_level": 18,
+          "power": 5766,
+          "storage_contribution": 961,
+          "population_cap_contribution": 106,
+          "training_capacity": 377,
+          "training_speed_pct": 0.187,
+          "population_required": 220
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 183560,
+            "wood": 260395,
+            "stone": 89645,
+            "gold": 40555
+          },
+          "build_time_sec": 15135,
+          "citadel_required_level": 19,
+          "power": 7438,
+          "storage_contribution": 1077,
+          "population_cap_contribution": 118,
+          "training_capacity": 433,
+          "training_speed_pct": 0.198,
+          "population_required": 230
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 256980,
+            "wood": 364555,
+            "stone": 125500,
+            "gold": 56775
+          },
+          "build_time_sec": 20281,
+          "citadel_required_level": 20,
+          "power": 9594,
+          "storage_contribution": 1206,
+          "population_cap_contribution": 131,
+          "training_capacity": 498,
+          "training_speed_pct": 0.209,
+          "population_required": 240
+        }
+      ],
+      "troop_unlocks": [
+        {
+          "troop_id": "troop_kingdom_archer",
+          "building_level": 1
+        }
+      ],
+      "max_count": 3
+    },
+    {
+      "id": "building_royal_stable",
+      "asset_id": "building_royal_stable",
+      "display_name": "Royal Stable",
+      "category": "MILITARY",
+      "role": "troop_training_cavalry",
+      "functionality": "train_cavalry",
+      "footprint": [
+        4,
+        3
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 650,
+        "wood": 560,
+        "stone": 320,
+        "gold": 145
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.42
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.35
+      },
+      "unlock_citadel_level": 5,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 5
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 650,
+            "wood": 560,
+            "stone": 320,
+            "gold": 145
+          },
+          "build_time_sec": 105,
+          "citadel_required_level": 1,
+          "power": 92,
+          "storage_contribution": 180,
+          "population_cap_contribution": 26,
+          "training_capacity": 24,
+          "training_speed_pct": 0.0,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 925,
+            "wood": 795,
+            "stone": 455,
+            "gold": 205
+          },
+          "build_time_sec": 142,
+          "citadel_required_level": 2,
+          "power": 120,
+          "storage_contribution": 202,
+          "population_cap_contribution": 29,
+          "training_capacity": 27,
+          "training_speed_pct": 0.01,
+          "population_required": 60
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 1310,
+            "wood": 1130,
+            "stone": 645,
+            "gold": 290
+          },
+          "build_time_sec": 191,
+          "citadel_required_level": 3,
+          "power": 155,
+          "storage_contribution": 226,
+          "population_cap_contribution": 33,
+          "training_capacity": 31,
+          "training_speed_pct": 0.02,
+          "population_required": 70
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 1860,
+            "wood": 1605,
+            "stone": 915,
+            "gold": 415
+          },
+          "build_time_sec": 258,
+          "citadel_required_level": 4,
+          "power": 202,
+          "storage_contribution": 253,
+          "population_cap_contribution": 37,
+          "training_capacity": 36,
+          "training_speed_pct": 0.03,
+          "population_required": 80
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 2645,
+            "wood": 2275,
+            "stone": 1300,
+            "gold": 590
+          },
+          "build_time_sec": 349,
+          "citadel_required_level": 5,
+          "power": 263,
+          "storage_contribution": 283,
+          "population_cap_contribution": 41,
+          "training_capacity": 41,
+          "training_speed_pct": 0.04,
+          "population_required": 90
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 3755,
+            "wood": 3235,
+            "stone": 1850,
+            "gold": 835
+          },
+          "build_time_sec": 471,
+          "citadel_required_level": 6,
+          "power": 342,
+          "storage_contribution": 317,
+          "population_cap_contribution": 46,
+          "training_capacity": 46,
+          "training_speed_pct": 0.05,
+          "population_required": 100
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 5330,
+            "wood": 4590,
+            "stone": 2625,
+            "gold": 1190
+          },
+          "build_time_sec": 636,
+          "citadel_required_level": 7,
+          "power": 444,
+          "storage_contribution": 355,
+          "population_cap_contribution": 51,
+          "training_capacity": 53,
+          "training_speed_pct": 0.06,
+          "population_required": 110
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 7565,
+            "wood": 6520,
+            "stone": 3725,
+            "gold": 1690
+          },
+          "build_time_sec": 858,
+          "citadel_required_level": 8,
+          "power": 577,
+          "storage_contribution": 398,
+          "population_cap_contribution": 57,
+          "training_capacity": 60,
+          "training_speed_pct": 0.07,
+          "population_required": 120
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 10745,
+            "wood": 9260,
+            "stone": 5290,
+            "gold": 2395
+          },
+          "build_time_sec": 1158,
+          "citadel_required_level": 9,
+          "power": 750,
+          "storage_contribution": 446,
+          "population_cap_contribution": 64,
+          "training_capacity": 68,
+          "training_speed_pct": 0.08,
+          "population_required": 130
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 15260,
+            "wood": 13145,
+            "stone": 7510,
+            "gold": 3405
+          },
+          "build_time_sec": 1564,
+          "citadel_required_level": 10,
+          "power": 976,
+          "storage_contribution": 499,
+          "population_cap_contribution": 72,
+          "training_capacity": 78,
+          "training_speed_pct": 0.09,
+          "population_required": 140
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 21665,
+            "wood": 18665,
+            "stone": 10665,
+            "gold": 4835
+          },
+          "build_time_sec": 2111,
+          "citadel_required_level": 11,
+          "power": 1268,
+          "storage_contribution": 559,
+          "population_cap_contribution": 81,
+          "training_capacity": 89,
+          "training_speed_pct": 0.1,
+          "population_required": 150
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 30765,
+            "wood": 26505,
+            "stone": 15145,
+            "gold": 6865
+          },
+          "build_time_sec": 2850,
+          "citadel_required_level": 12,
+          "power": 1649,
+          "storage_contribution": 626,
+          "population_cap_contribution": 90,
+          "training_capacity": 101,
+          "training_speed_pct": 0.11,
+          "population_required": 160
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 43690,
+            "wood": 37640,
+            "stone": 21510,
+            "gold": 9745
+          },
+          "build_time_sec": 3848,
+          "citadel_required_level": 13,
+          "power": 2143,
+          "storage_contribution": 701,
+          "population_cap_contribution": 101,
+          "training_capacity": 116,
+          "training_speed_pct": 0.12,
+          "population_required": 170
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 62040,
+            "wood": 53450,
+            "stone": 30540,
+            "gold": 13840
+          },
+          "build_time_sec": 5194,
+          "citadel_required_level": 14,
+          "power": 2786,
+          "storage_contribution": 785,
+          "population_cap_contribution": 113,
+          "training_capacity": 132,
+          "training_speed_pct": 0.13,
+          "population_required": 180
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 88095,
+            "wood": 75895,
+            "stone": 43370,
+            "gold": 19650
+          },
+          "build_time_sec": 7012,
+          "citadel_required_level": 15,
+          "power": 3622,
+          "storage_contribution": 880,
+          "population_cap_contribution": 127,
+          "training_capacity": 150,
+          "training_speed_pct": 0.14,
+          "population_required": 190
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 125095,
+            "wood": 107775,
+            "stone": 61585,
+            "gold": 27905
+          },
+          "build_time_sec": 9467,
+          "citadel_required_level": 16,
+          "power": 4709,
+          "storage_contribution": 985,
+          "population_cap_contribution": 142,
+          "training_capacity": 171,
+          "training_speed_pct": 0.15,
+          "population_required": 200
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 177635,
+            "wood": 153040,
+            "stone": 87450,
+            "gold": 39625
+          },
+          "build_time_sec": 12780,
+          "citadel_required_level": 17,
+          "power": 6122,
+          "storage_contribution": 1103,
+          "population_cap_contribution": 159,
+          "training_capacity": 195,
+          "training_speed_pct": 0.16,
+          "population_required": 210
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 252240,
+            "wood": 217315,
+            "stone": 124180,
+            "gold": 56270
+          },
+          "build_time_sec": 17253,
+          "citadel_required_level": 18,
+          "power": 7958,
+          "storage_contribution": 1236,
+          "population_cap_contribution": 179,
+          "training_capacity": 223,
+          "training_speed_pct": 0.17,
+          "population_required": 220
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 358180,
+            "wood": 308585,
+            "stone": 176335,
+            "gold": 79900
+          },
+          "build_time_sec": 23291,
+          "citadel_required_level": 19,
+          "power": 10346,
+          "storage_contribution": 1384,
+          "population_cap_contribution": 200,
+          "training_capacity": 254,
+          "training_speed_pct": 0.18,
+          "population_required": 230
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 508620,
+            "wood": 438195,
+            "stone": 250395,
+            "gold": 113460
+          },
+          "build_time_sec": 31444,
+          "citadel_required_level": 20,
+          "power": 13450,
+          "storage_contribution": 1550,
+          "population_cap_contribution": 224,
+          "training_capacity": 289,
+          "training_speed_pct": 0.19,
+          "population_required": 240
+        }
+      ],
+      "troop_unlocks": [
+        {
+          "troop_id": "troop_royal_cavalry",
+          "building_level": 1
+        }
+      ],
+      "max_count": 2
+    },
+    {
+      "id": "building_grand_academy",
+      "asset_id": "building_grand_academy",
+      "display_name": "Grand Academy",
+      "category": "RESEARCH",
+      "role": "research_academy",
+      "functionality": "research",
+      "footprint": [
+        4,
+        4
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 420,
+        "wood": 600,
+        "stone": 520,
+        "gold": 190
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.44
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.36
+      },
+      "unlock_citadel_level": 3,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 3
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 420,
+            "wood": 600,
+            "stone": 520,
+            "gold": 190
+          },
+          "build_time_sec": 110,
+          "citadel_required_level": 1,
+          "power": 110,
+          "storage_contribution": 300,
+          "population_cap_contribution": 28,
+          "research_speed_pct": 0.0,
+          "population_required": 0,
+          "training_capacity": 12,
+          "training_speed_pct": 0.0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 605,
+            "wood": 865,
+            "stone": 750,
+            "gold": 275
+          },
+          "build_time_sec": 150,
+          "citadel_required_level": 2,
+          "power": 144,
+          "storage_contribution": 339,
+          "population_cap_contribution": 31,
+          "research_speed_pct": 0.014,
+          "population_required": 62,
+          "training_capacity": 14,
+          "training_speed_pct": 0.008
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 870,
+            "wood": 1245,
+            "stone": 1080,
+            "gold": 395
+          },
+          "build_time_sec": 203,
+          "citadel_required_level": 3,
+          "power": 189,
+          "storage_contribution": 383,
+          "population_cap_contribution": 35,
+          "research_speed_pct": 0.028,
+          "population_required": 74,
+          "training_capacity": 15,
+          "training_speed_pct": 0.016
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 1255,
+            "wood": 1790,
+            "stone": 1555,
+            "gold": 565
+          },
+          "build_time_sec": 277,
+          "citadel_required_level": 4,
+          "power": 247,
+          "storage_contribution": 433,
+          "population_cap_contribution": 39,
+          "research_speed_pct": 0.042,
+          "population_required": 86,
+          "training_capacity": 17,
+          "training_speed_pct": 0.024
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 1805,
+            "wood": 2580,
+            "stone": 2235,
+            "gold": 815
+          },
+          "build_time_sec": 376,
+          "citadel_required_level": 5,
+          "power": 324,
+          "storage_contribution": 489,
+          "population_cap_contribution": 44,
+          "research_speed_pct": 0.056,
+          "population_required": 98,
+          "training_capacity": 20,
+          "training_speed_pct": 0.032
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 2600,
+            "wood": 3715,
+            "stone": 3220,
+            "gold": 1175
+          },
+          "build_time_sec": 512,
+          "citadel_required_level": 6,
+          "power": 424,
+          "storage_contribution": 553,
+          "population_cap_contribution": 49,
+          "research_speed_pct": 0.07,
+          "population_required": 110,
+          "training_capacity": 22,
+          "training_speed_pct": 0.04
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 3745,
+            "wood": 5350,
+            "stone": 4635,
+            "gold": 1695
+          },
+          "build_time_sec": 696,
+          "citadel_required_level": 7,
+          "power": 556,
+          "storage_contribution": 625,
+          "population_cap_contribution": 55,
+          "research_speed_pct": 0.084,
+          "population_required": 122,
+          "training_capacity": 25,
+          "training_speed_pct": 0.048
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 5390,
+            "wood": 7705,
+            "stone": 6675,
+            "gold": 2440
+          },
+          "build_time_sec": 947,
+          "citadel_required_level": 8,
+          "power": 728,
+          "storage_contribution": 706,
+          "population_cap_contribution": 62,
+          "research_speed_pct": 0.098,
+          "population_required": 134,
+          "training_capacity": 28,
+          "training_speed_pct": 0.056
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 7765,
+            "wood": 11095,
+            "stone": 9615,
+            "gold": 3515
+          },
+          "build_time_sec": 1287,
+          "citadel_required_level": 9,
+          "power": 954,
+          "storage_contribution": 798,
+          "population_cap_contribution": 69,
+          "research_speed_pct": 0.112,
+          "population_required": 146,
+          "training_capacity": 32,
+          "training_speed_pct": 0.064
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 11180,
+            "wood": 15975,
+            "stone": 13845,
+            "gold": 5060
+          },
+          "build_time_sec": 1751,
+          "citadel_required_level": 10,
+          "power": 1250,
+          "storage_contribution": 901,
+          "population_cap_contribution": 78,
+          "research_speed_pct": 0.126,
+          "population_required": 158,
+          "training_capacity": 36,
+          "training_speed_pct": 0.072
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 16100,
+            "wood": 23005,
+            "stone": 19935,
+            "gold": 7285
+          },
+          "build_time_sec": 2381,
+          "citadel_required_level": 11,
+          "power": 1637,
+          "storage_contribution": 1018,
+          "population_cap_contribution": 87,
+          "research_speed_pct": 0.14,
+          "population_required": 170,
+          "training_capacity": 41,
+          "training_speed_pct": 0.08
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 23185,
+            "wood": 33125,
+            "stone": 28705,
+            "gold": 10490
+          },
+          "build_time_sec": 3238,
+          "citadel_required_level": 12,
+          "power": 2145,
+          "storage_contribution": 1151,
+          "population_cap_contribution": 97,
+          "research_speed_pct": 0.154,
+          "population_required": 182,
+          "training_capacity": 46,
+          "training_speed_pct": 0.088
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 33390,
+            "wood": 47700,
+            "stone": 41340,
+            "gold": 15105
+          },
+          "build_time_sec": 4404,
+          "citadel_required_level": 13,
+          "power": 2810,
+          "storage_contribution": 1300,
+          "population_cap_contribution": 109,
+          "research_speed_pct": 0.168,
+          "population_required": 194,
+          "training_capacity": 52,
+          "training_speed_pct": 0.096
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 48080,
+            "wood": 68685,
+            "stone": 59525,
+            "gold": 21750
+          },
+          "build_time_sec": 5990,
+          "citadel_required_level": 14,
+          "power": 3681,
+          "storage_contribution": 1469,
+          "population_cap_contribution": 122,
+          "research_speed_pct": 0.182,
+          "population_required": 206,
+          "training_capacity": 59,
+          "training_speed_pct": 0.104
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 69235,
+            "wood": 98905,
+            "stone": 85720,
+            "gold": 31320
+          },
+          "build_time_sec": 8146,
+          "citadel_required_level": 15,
+          "power": 4822,
+          "storage_contribution": 1660,
+          "population_cap_contribution": 137,
+          "research_speed_pct": 0.196,
+          "population_required": 218,
+          "training_capacity": 66,
+          "training_speed_pct": 0.112
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 99700,
+            "wood": 142425,
+            "stone": 123435,
+            "gold": 45100
+          },
+          "build_time_sec": 11078,
+          "citadel_required_level": 16,
+          "power": 6316,
+          "storage_contribution": 1876,
+          "population_cap_contribution": 153,
+          "research_speed_pct": 0.21,
+          "population_required": 230,
+          "training_capacity": 75,
+          "training_speed_pct": 0.12
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 143565,
+            "wood": 205095,
+            "stone": 177745,
+            "gold": 64945
+          },
+          "build_time_sec": 15067,
+          "citadel_required_level": 17,
+          "power": 8274,
+          "storage_contribution": 2120,
+          "population_cap_contribution": 172,
+          "research_speed_pct": 0.224,
+          "population_required": 242,
+          "training_capacity": 85,
+          "training_speed_pct": 0.128
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 206735,
+            "wood": 295335,
+            "stone": 255955,
+            "gold": 93520
+          },
+          "build_time_sec": 20491,
+          "citadel_required_level": 18,
+          "power": 10839,
+          "storage_contribution": 2396,
+          "population_cap_contribution": 192,
+          "research_speed_pct": 0.238,
+          "population_required": 254,
+          "training_capacity": 96,
+          "training_speed_pct": 0.136
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 297695,
+            "wood": 425280,
+            "stone": 368575,
+            "gold": 134670
+          },
+          "build_time_sec": 27867,
+          "citadel_required_level": 19,
+          "power": 14200,
+          "storage_contribution": 2707,
+          "population_cap_contribution": 215,
+          "research_speed_pct": 0.252,
+          "population_required": 266,
+          "training_capacity": 108,
+          "training_speed_pct": 0.144
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 428685,
+            "wood": 612405,
+            "stone": 530750,
+            "gold": 193930
+          },
+          "build_time_sec": 37899,
+          "citadel_required_level": 20,
+          "power": 18601,
+          "storage_contribution": 3059,
+          "population_cap_contribution": 241,
+          "research_speed_pct": 0.266,
+          "population_required": 278,
+          "training_capacity": 122,
+          "training_speed_pct": 0.152
+        }
+      ],
+      "research_unlocks": {
+        "branch_access": true
+      },
+      "troop_unlocks": [
+        {
+          "troop_id": "troop_battle_mage",
+          "building_level": 5
+        }
+      ],
+      "max_count": 1
+    },
+    {
+      "id": "building_farm",
+      "asset_id": "building_farm",
+      "display_name": "Farm",
+      "category": "ECONOMY",
+      "role": "resource_food",
+      "functionality": "produce_food",
+      "footprint": [
+        2,
+        2
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 120,
+        "wood": 240,
+        "stone": 60,
+        "gold": 20
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.35
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.3
+      },
+      "unlock_citadel_level": 1,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 1
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 120,
+            "wood": 240,
+            "stone": 60,
+            "gold": 20
+          },
+          "build_time_sec": 35,
+          "citadel_required_level": 1,
+          "power": 38,
+          "storage_contribution": 500,
+          "population_cap_contribution": 35,
+          "production_per_hour": 180,
+          "local_production_cap": 600,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 160,
+            "wood": 325,
+            "stone": 80,
+            "gold": 25
+          },
+          "build_time_sec": 46,
+          "citadel_required_level": 2,
+          "power": 48,
+          "storage_contribution": 585,
+          "population_cap_contribution": 40,
+          "production_per_hour": 209,
+          "local_production_cap": 708,
+          "population_required": 56
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 220,
+            "wood": 435,
+            "stone": 110,
+            "gold": 35
+          },
+          "build_time_sec": 59,
+          "citadel_required_level": 3,
+          "power": 61,
+          "storage_contribution": 684,
+          "population_cap_contribution": 45,
+          "production_per_hour": 242,
+          "local_production_cap": 835,
+          "population_required": 62
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 295,
+            "wood": 590,
+            "stone": 150,
+            "gold": 50
+          },
+          "build_time_sec": 77,
+          "citadel_required_level": 4,
+          "power": 78,
+          "storage_contribution": 801,
+          "population_cap_contribution": 51,
+          "production_per_hour": 281,
+          "local_production_cap": 986,
+          "population_required": 68
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 400,
+            "wood": 795,
+            "stone": 200,
+            "gold": 65
+          },
+          "build_time_sec": 100,
+          "citadel_required_level": 5,
+          "power": 99,
+          "storage_contribution": 937,
+          "population_cap_contribution": 57,
+          "production_per_hour": 326,
+          "local_production_cap": 1163,
+          "population_required": 74
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 540,
+            "wood": 1075,
+            "stone": 270,
+            "gold": 90
+          },
+          "build_time_sec": 130,
+          "citadel_required_level": 6,
+          "power": 126,
+          "storage_contribution": 1096,
+          "population_cap_contribution": 64,
+          "production_per_hour": 378,
+          "local_production_cap": 1373,
+          "population_required": 80
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 725,
+            "wood": 1455,
+            "stone": 365,
+            "gold": 120
+          },
+          "build_time_sec": 169,
+          "citadel_required_level": 7,
+          "power": 159,
+          "storage_contribution": 1283,
+          "population_cap_contribution": 73,
+          "production_per_hour": 439,
+          "local_production_cap": 1620,
+          "population_required": 86
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 980,
+            "wood": 1960,
+            "stone": 490,
+            "gold": 165
+          },
+          "build_time_sec": 220,
+          "citadel_required_level": 8,
+          "power": 202,
+          "storage_contribution": 1501,
+          "population_cap_contribution": 82,
+          "production_per_hour": 509,
+          "local_production_cap": 1911,
+          "population_required": 92
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 1325,
+            "wood": 2650,
+            "stone": 660,
+            "gold": 220
+          },
+          "build_time_sec": 286,
+          "citadel_required_level": 9,
+          "power": 257,
+          "storage_contribution": 1756,
+          "population_cap_contribution": 93,
+          "production_per_hour": 590,
+          "local_production_cap": 2255,
+          "population_required": 98
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 1785,
+            "wood": 3575,
+            "stone": 895,
+            "gold": 300
+          },
+          "build_time_sec": 371,
+          "citadel_required_level": 10,
+          "power": 327,
+          "storage_contribution": 2054,
+          "population_cap_contribution": 105,
+          "production_per_hour": 685,
+          "local_production_cap": 2661,
+          "population_required": 104
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 2415,
+            "wood": 4825,
+            "stone": 1205,
+            "gold": 400
+          },
+          "build_time_sec": 483,
+          "citadel_required_level": 11,
+          "power": 415,
+          "storage_contribution": 2403,
+          "population_cap_contribution": 119,
+          "production_per_hour": 794,
+          "local_production_cap": 3140,
+          "population_required": 110
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 3255,
+            "wood": 6515,
+            "stone": 1630,
+            "gold": 545
+          },
+          "build_time_sec": 627,
+          "citadel_required_level": 12,
+          "power": 527,
+          "storage_contribution": 2812,
+          "population_cap_contribution": 134,
+          "production_per_hour": 921,
+          "local_production_cap": 3706,
+          "population_required": 116
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 4395,
+            "wood": 8795,
+            "stone": 2200,
+            "gold": 735
+          },
+          "build_time_sec": 815,
+          "citadel_required_level": 13,
+          "power": 669,
+          "storage_contribution": 3290,
+          "population_cap_contribution": 152,
+          "production_per_hour": 1068,
+          "local_production_cap": 4373,
+          "population_required": 122
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 5935,
+            "wood": 11875,
+            "stone": 2970,
+            "gold": 990
+          },
+          "build_time_sec": 1060,
+          "citadel_required_level": 14,
+          "power": 850,
+          "storage_contribution": 3849,
+          "population_cap_contribution": 171,
+          "production_per_hour": 1239,
+          "local_production_cap": 5160,
+          "population_required": 128
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 8015,
+            "wood": 16030,
+            "stone": 4005,
+            "gold": 1335
+          },
+          "build_time_sec": 1378,
+          "citadel_required_level": 15,
+          "power": 1079,
+          "storage_contribution": 4504,
+          "population_cap_contribution": 194,
+          "production_per_hour": 1438,
+          "local_production_cap": 6088,
+          "population_required": 134
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 10820,
+            "wood": 21640,
+            "stone": 5410,
+            "gold": 1805
+          },
+          "build_time_sec": 1792,
+          "citadel_required_level": 16,
+          "power": 1370,
+          "storage_contribution": 5269,
+          "population_cap_contribution": 219,
+          "production_per_hour": 1668,
+          "local_production_cap": 7184,
+          "population_required": 140
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 14605,
+            "wood": 29210,
+            "stone": 7305,
+            "gold": 2435
+          },
+          "build_time_sec": 2329,
+          "citadel_required_level": 17,
+          "power": 1740,
+          "storage_contribution": 6165,
+          "population_cap_contribution": 247,
+          "production_per_hour": 1935,
+          "local_production_cap": 8477,
+          "population_required": 146
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 19720,
+            "wood": 39435,
+            "stone": 9860,
+            "gold": 3285
+          },
+          "build_time_sec": 3028,
+          "citadel_required_level": 18,
+          "power": 2210,
+          "storage_contribution": 7213,
+          "population_cap_contribution": 280,
+          "production_per_hour": 2244,
+          "local_production_cap": 10003,
+          "population_required": 152
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 26620,
+            "wood": 53240,
+            "stone": 13310,
+            "gold": 4435
+          },
+          "build_time_sec": 3936,
+          "citadel_required_level": 19,
+          "power": 2807,
+          "storage_contribution": 8439,
+          "population_cap_contribution": 316,
+          "production_per_hour": 2603,
+          "local_production_cap": 11804,
+          "population_required": 158
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 35935,
+            "wood": 71870,
+            "stone": 17970,
+            "gold": 5990
+          },
+          "build_time_sec": 5117,
+          "citadel_required_level": 20,
+          "power": 3565,
+          "storage_contribution": 9874,
+          "population_cap_contribution": 357,
+          "production_per_hour": 3020,
+          "local_production_cap": 13929,
+          "population_required": 164
+        }
+      ],
+      "production": {
+        "resource": "food",
+        "collection_mode": "CLAIM",
+        "offline_enabled": true
+      },
+      "max_count": 6
+    },
+    {
+      "id": "building_lumber_mill",
+      "asset_id": "building_lumber_mill",
+      "display_name": "Lumber Mill",
+      "category": "ECONOMY",
+      "role": "resource_lumber",
+      "functionality": "produce_wood",
+      "footprint": [
+        2,
+        2
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 160,
+        "wood": 150,
+        "stone": 80,
+        "gold": 22
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.35
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.3
+      },
+      "unlock_citadel_level": 1,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 1
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 160,
+            "wood": 150,
+            "stone": 80,
+            "gold": 20
+          },
+          "build_time_sec": 38,
+          "citadel_required_level": 1,
+          "power": 40,
+          "storage_contribution": 480,
+          "population_cap_contribution": 28,
+          "production_per_hour": 165,
+          "local_production_cap": 560,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 215,
+            "wood": 200,
+            "stone": 110,
+            "gold": 30
+          },
+          "build_time_sec": 49,
+          "citadel_required_level": 2,
+          "power": 51,
+          "storage_contribution": 562,
+          "population_cap_contribution": 32,
+          "production_per_hour": 191,
+          "local_production_cap": 661,
+          "population_required": 56
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 290,
+            "wood": 275,
+            "stone": 145,
+            "gold": 40
+          },
+          "build_time_sec": 64,
+          "citadel_required_level": 3,
+          "power": 65,
+          "storage_contribution": 657,
+          "population_cap_contribution": 36,
+          "production_per_hour": 222,
+          "local_production_cap": 780,
+          "population_required": 62
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 395,
+            "wood": 370,
+            "stone": 195,
+            "gold": 55
+          },
+          "build_time_sec": 83,
+          "citadel_required_level": 4,
+          "power": 82,
+          "storage_contribution": 769,
+          "population_cap_contribution": 40,
+          "production_per_hour": 258,
+          "local_production_cap": 920,
+          "population_required": 68
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 530,
+            "wood": 500,
+            "stone": 265,
+            "gold": 75
+          },
+          "build_time_sec": 109,
+          "citadel_required_level": 5,
+          "power": 104,
+          "storage_contribution": 899,
+          "population_cap_contribution": 46,
+          "production_per_hour": 299,
+          "local_production_cap": 1086,
+          "population_required": 74
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 715,
+            "wood": 675,
+            "stone": 360,
+            "gold": 100
+          },
+          "build_time_sec": 141,
+          "citadel_required_level": 6,
+          "power": 132,
+          "storage_contribution": 1052,
+          "population_cap_contribution": 52,
+          "production_per_hour": 347,
+          "local_production_cap": 1281,
+          "population_required": 80
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 970,
+            "wood": 910,
+            "stone": 485,
+            "gold": 135
+          },
+          "build_time_sec": 183,
+          "citadel_required_level": 7,
+          "power": 168,
+          "storage_contribution": 1231,
+          "population_cap_contribution": 58,
+          "production_per_hour": 402,
+          "local_production_cap": 1512,
+          "population_required": 86
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 1310,
+            "wood": 1225,
+            "stone": 655,
+            "gold": 180
+          },
+          "build_time_sec": 238,
+          "citadel_required_level": 8,
+          "power": 213,
+          "storage_contribution": 1441,
+          "population_cap_contribution": 66,
+          "production_per_hour": 466,
+          "local_production_cap": 1784,
+          "population_required": 92
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 1765,
+            "wood": 1655,
+            "stone": 885,
+            "gold": 245
+          },
+          "build_time_sec": 310,
+          "citadel_required_level": 9,
+          "power": 271,
+          "storage_contribution": 1685,
+          "population_cap_contribution": 74,
+          "production_per_hour": 541,
+          "local_production_cap": 2105,
+          "population_required": 98
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 2385,
+            "wood": 2235,
+            "stone": 1190,
+            "gold": 330
+          },
+          "build_time_sec": 403,
+          "citadel_required_level": 10,
+          "power": 344,
+          "storage_contribution": 1972,
+          "population_cap_contribution": 84,
+          "production_per_hour": 627,
+          "local_production_cap": 2484,
+          "population_required": 104
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 3215,
+            "wood": 3015,
+            "stone": 1610,
+            "gold": 440
+          },
+          "build_time_sec": 524,
+          "citadel_required_level": 11,
+          "power": 437,
+          "storage_contribution": 2307,
+          "population_cap_contribution": 95,
+          "production_per_hour": 728,
+          "local_production_cap": 2931,
+          "population_required": 110
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 4345,
+            "wood": 4070,
+            "stone": 2170,
+            "gold": 595
+          },
+          "build_time_sec": 681,
+          "citadel_required_level": 12,
+          "power": 554,
+          "storage_contribution": 2700,
+          "population_cap_contribution": 107,
+          "production_per_hour": 844,
+          "local_production_cap": 3459,
+          "population_required": 116
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 5865,
+            "wood": 5495,
+            "stone": 2930,
+            "gold": 805
+          },
+          "build_time_sec": 885,
+          "citadel_required_level": 13,
+          "power": 704,
+          "storage_contribution": 3158,
+          "population_cap_contribution": 121,
+          "production_per_hour": 979,
+          "local_production_cap": 4081,
+          "population_required": 122
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 7915,
+            "wood": 7420,
+            "stone": 3960,
+            "gold": 1090
+          },
+          "build_time_sec": 1151,
+          "citadel_required_level": 14,
+          "power": 894,
+          "storage_contribution": 3695,
+          "population_cap_contribution": 137,
+          "production_per_hour": 1136,
+          "local_production_cap": 4816,
+          "population_required": 128
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 10685,
+            "wood": 10020,
+            "stone": 5345,
+            "gold": 1470
+          },
+          "build_time_sec": 1496,
+          "citadel_required_level": 15,
+          "power": 1136,
+          "storage_contribution": 4324,
+          "population_cap_contribution": 155,
+          "production_per_hour": 1318,
+          "local_production_cap": 5682,
+          "population_required": 134
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 14425,
+            "wood": 13525,
+            "stone": 7215,
+            "gold": 1985
+          },
+          "build_time_sec": 1945,
+          "citadel_required_level": 16,
+          "power": 1442,
+          "storage_contribution": 5059,
+          "population_cap_contribution": 175,
+          "production_per_hour": 1529,
+          "local_production_cap": 6705,
+          "population_required": 140
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 19475,
+            "wood": 18255,
+            "stone": 9735,
+            "gold": 2680
+          },
+          "build_time_sec": 2529,
+          "citadel_required_level": 17,
+          "power": 1832,
+          "storage_contribution": 5919,
+          "population_cap_contribution": 198,
+          "production_per_hour": 1773,
+          "local_production_cap": 7912,
+          "population_required": 146
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 26290,
+            "wood": 24645,
+            "stone": 13145,
+            "gold": 3615
+          },
+          "build_time_sec": 3287,
+          "citadel_required_level": 18,
+          "power": 2327,
+          "storage_contribution": 6925,
+          "population_cap_contribution": 224,
+          "production_per_hour": 2057,
+          "local_production_cap": 9336,
+          "population_required": 152
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 35490,
+            "wood": 33275,
+            "stone": 17745,
+            "gold": 4880
+          },
+          "build_time_sec": 4273,
+          "citadel_required_level": 19,
+          "power": 2955,
+          "storage_contribution": 8102,
+          "population_cap_contribution": 253,
+          "production_per_hour": 2386,
+          "local_production_cap": 11017,
+          "population_required": 158
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 47915,
+            "wood": 44920,
+            "stone": 23955,
+            "gold": 6590
+          },
+          "build_time_sec": 5555,
+          "citadel_required_level": 20,
+          "power": 3753,
+          "storage_contribution": 9479,
+          "population_cap_contribution": 286,
+          "production_per_hour": 2768,
+          "local_production_cap": 13000,
+          "population_required": 164
+        }
+      ],
+      "production": {
+        "resource": "wood",
+        "collection_mode": "CLAIM",
+        "offline_enabled": true
+      },
+      "max_count": 6
+    },
+    {
+      "id": "building_stone_quarry",
+      "asset_id": "building_stone_quarry",
+      "display_name": "Stone Quarry",
+      "category": "ECONOMY",
+      "role": "resource_stone",
+      "functionality": "produce_stone",
+      "footprint": [
+        3,
+        2
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 190,
+        "wood": 220,
+        "stone": 80,
+        "gold": 28
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.36
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.31
+      },
+      "unlock_citadel_level": 1,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 1
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 190,
+            "wood": 220,
+            "stone": 80,
+            "gold": 30
+          },
+          "build_time_sec": 45,
+          "citadel_required_level": 1,
+          "power": 43,
+          "storage_contribution": 430,
+          "population_cap_contribution": 24,
+          "production_per_hour": 130,
+          "local_production_cap": 480,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 260,
+            "wood": 300,
+            "stone": 110,
+            "gold": 40
+          },
+          "build_time_sec": 59,
+          "citadel_required_level": 2,
+          "power": 55,
+          "storage_contribution": 503,
+          "population_cap_contribution": 27,
+          "production_per_hour": 150,
+          "local_production_cap": 566,
+          "population_required": 56
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 350,
+            "wood": 405,
+            "stone": 150,
+            "gold": 50
+          },
+          "build_time_sec": 77,
+          "citadel_required_level": 3,
+          "power": 69,
+          "storage_contribution": 589,
+          "population_cap_contribution": 30,
+          "production_per_hour": 173,
+          "local_production_cap": 668,
+          "population_required": 62
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 480,
+            "wood": 555,
+            "stone": 200,
+            "gold": 70
+          },
+          "build_time_sec": 101,
+          "citadel_required_level": 4,
+          "power": 88,
+          "storage_contribution": 689,
+          "population_cap_contribution": 34,
+          "production_per_hour": 200,
+          "local_production_cap": 789,
+          "population_required": 68
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 650,
+            "wood": 755,
+            "stone": 275,
+            "gold": 95
+          },
+          "build_time_sec": 133,
+          "citadel_required_level": 5,
+          "power": 112,
+          "storage_contribution": 806,
+          "population_cap_contribution": 38,
+          "production_per_hour": 231,
+          "local_production_cap": 931,
+          "population_required": 74
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 885,
+            "wood": 1025,
+            "stone": 370,
+            "gold": 130
+          },
+          "build_time_sec": 174,
+          "citadel_required_level": 6,
+          "power": 142,
+          "storage_contribution": 943,
+          "population_cap_contribution": 42,
+          "production_per_hour": 267,
+          "local_production_cap": 1098,
+          "population_required": 80
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 1200,
+            "wood": 1390,
+            "stone": 505,
+            "gold": 175
+          },
+          "build_time_sec": 227,
+          "citadel_required_level": 7,
+          "power": 180,
+          "storage_contribution": 1103,
+          "population_cap_contribution": 47,
+          "production_per_hour": 309,
+          "local_production_cap": 1296,
+          "population_required": 86
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 1635,
+            "wood": 1895,
+            "stone": 690,
+            "gold": 240
+          },
+          "build_time_sec": 298,
+          "citadel_required_level": 8,
+          "power": 229,
+          "storage_contribution": 1291,
+          "population_cap_contribution": 53,
+          "production_per_hour": 356,
+          "local_production_cap": 1529,
+          "population_required": 92
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 2225,
+            "wood": 2575,
+            "stone": 935,
+            "gold": 330
+          },
+          "build_time_sec": 390,
+          "citadel_required_level": 9,
+          "power": 291,
+          "storage_contribution": 1510,
+          "population_cap_contribution": 59,
+          "production_per_hour": 412,
+          "local_production_cap": 1804,
+          "population_required": 98
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 3025,
+            "wood": 3500,
+            "stone": 1275,
+            "gold": 445
+          },
+          "build_time_sec": 511,
+          "citadel_required_level": 10,
+          "power": 370,
+          "storage_contribution": 1767,
+          "population_cap_contribution": 67,
+          "production_per_hour": 476,
+          "local_production_cap": 2129,
+          "population_required": 104
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 4115,
+            "wood": 4760,
+            "stone": 1730,
+            "gold": 605
+          },
+          "build_time_sec": 670,
+          "citadel_required_level": 11,
+          "power": 469,
+          "storage_contribution": 2067,
+          "population_cap_contribution": 75,
+          "production_per_hour": 549,
+          "local_production_cap": 2512,
+          "population_required": 110
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 5595,
+            "wood": 6475,
+            "stone": 2355,
+            "gold": 825
+          },
+          "build_time_sec": 877,
+          "citadel_required_level": 12,
+          "power": 596,
+          "storage_contribution": 2418,
+          "population_cap_contribution": 83,
+          "production_per_hour": 634,
+          "local_production_cap": 2964,
+          "population_required": 116
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 7605,
+            "wood": 8810,
+            "stone": 3205,
+            "gold": 1120
+          },
+          "build_time_sec": 1149,
+          "citadel_required_level": 13,
+          "power": 757,
+          "storage_contribution": 2829,
+          "population_cap_contribution": 94,
+          "production_per_hour": 733,
+          "local_production_cap": 3498,
+          "population_required": 122
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 10345,
+            "wood": 11980,
+            "stone": 4355,
+            "gold": 1525
+          },
+          "build_time_sec": 1506,
+          "citadel_required_level": 14,
+          "power": 961,
+          "storage_contribution": 3310,
+          "population_cap_contribution": 105,
+          "production_per_hour": 846,
+          "local_production_cap": 4128,
+          "population_required": 128
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 14070,
+            "wood": 16290,
+            "stone": 5925,
+            "gold": 2075
+          },
+          "build_time_sec": 1972,
+          "citadel_required_level": 15,
+          "power": 1221,
+          "storage_contribution": 3873,
+          "population_cap_contribution": 117,
+          "production_per_hour": 977,
+          "local_production_cap": 4871,
+          "population_required": 134
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 19135,
+            "wood": 22155,
+            "stone": 8055,
+            "gold": 2820
+          },
+          "build_time_sec": 2584,
+          "citadel_required_level": 16,
+          "power": 1551,
+          "storage_contribution": 4532,
+          "population_cap_contribution": 131,
+          "production_per_hour": 1129,
+          "local_production_cap": 5747,
+          "population_required": 140
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 26025,
+            "wood": 30135,
+            "stone": 10960,
+            "gold": 3835
+          },
+          "build_time_sec": 3385,
+          "citadel_required_level": 17,
+          "power": 1969,
+          "storage_contribution": 5302,
+          "population_cap_contribution": 147,
+          "production_per_hour": 1304,
+          "local_production_cap": 6782,
+          "population_required": 146
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 35395,
+            "wood": 40980,
+            "stone": 14900,
+            "gold": 5215
+          },
+          "build_time_sec": 4434,
+          "citadel_required_level": 18,
+          "power": 2501,
+          "storage_contribution": 6203,
+          "population_cap_contribution": 165,
+          "production_per_hour": 1506,
+          "local_production_cap": 8003,
+          "population_required": 152
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 48135,
+            "wood": 55735,
+            "stone": 20265,
+            "gold": 7095
+          },
+          "build_time_sec": 5809,
+          "citadel_required_level": 19,
+          "power": 3176,
+          "storage_contribution": 7258,
+          "population_cap_contribution": 185,
+          "production_per_hour": 1739,
+          "local_production_cap": 9443,
+          "population_required": 158
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 65465,
+            "wood": 75800,
+            "stone": 27565,
+            "gold": 9645
+          },
+          "build_time_sec": 7610,
+          "citadel_required_level": 20,
+          "power": 4034,
+          "storage_contribution": 8492,
+          "population_cap_contribution": 207,
+          "production_per_hour": 2009,
+          "local_production_cap": 11143,
+          "population_required": 164
+        }
+      ],
+      "production": {
+        "resource": "stone",
+        "collection_mode": "CLAIM",
+        "offline_enabled": true
+      },
+      "max_count": 6
+    },
+    {
+      "id": "building_watchtower",
+      "asset_id": "building_watchtower",
+      "display_name": "Watchtower",
+      "category": "DEFENSE",
+      "role": "defense_watchtower",
+      "functionality": "city_defense_scouting",
+      "footprint": [
+        2,
+        2
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 220,
+        "wood": 390,
+        "stone": 420,
+        "gold": 60
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.38
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.33
+      },
+      "unlock_citadel_level": 4,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 4
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 220,
+            "wood": 390,
+            "stone": 420,
+            "gold": 60
+          },
+          "build_time_sec": 65,
+          "citadel_required_level": 1,
+          "power": 88,
+          "storage_contribution": 100,
+          "population_cap_contribution": 8,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 305,
+            "wood": 540,
+            "stone": 580,
+            "gold": 85
+          },
+          "build_time_sec": 86,
+          "citadel_required_level": 2,
+          "power": 114,
+          "storage_contribution": 110,
+          "population_cap_contribution": 9,
+          "population_required": 58
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 420,
+            "wood": 745,
+            "stone": 800,
+            "gold": 115
+          },
+          "build_time_sec": 115,
+          "citadel_required_level": 3,
+          "power": 149,
+          "storage_contribution": 121,
+          "population_cap_contribution": 10,
+          "population_required": 66
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 580,
+            "wood": 1025,
+            "stone": 1105,
+            "gold": 160
+          },
+          "build_time_sec": 153,
+          "citadel_required_level": 4,
+          "power": 193,
+          "storage_contribution": 133,
+          "population_cap_contribution": 10,
+          "population_required": 74
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 800,
+            "wood": 1415,
+            "stone": 1525,
+            "gold": 220
+          },
+          "build_time_sec": 203,
+          "citadel_required_level": 5,
+          "power": 251,
+          "storage_contribution": 146,
+          "population_cap_contribution": 11,
+          "population_required": 82
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 1100,
+            "wood": 1950,
+            "stone": 2100,
+            "gold": 300
+          },
+          "build_time_sec": 271,
+          "citadel_required_level": 6,
+          "power": 327,
+          "storage_contribution": 161,
+          "population_cap_contribution": 12,
+          "population_required": 90
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 1520,
+            "wood": 2695,
+            "stone": 2900,
+            "gold": 415
+          },
+          "build_time_sec": 360,
+          "citadel_required_level": 7,
+          "power": 425,
+          "storage_contribution": 177,
+          "population_cap_contribution": 13,
+          "population_required": 98
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 2095,
+            "wood": 3715,
+            "stone": 4005,
+            "gold": 570
+          },
+          "build_time_sec": 478,
+          "citadel_required_level": 8,
+          "power": 552,
+          "storage_contribution": 195,
+          "population_cap_contribution": 15,
+          "population_required": 106
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 2895,
+            "wood": 5130,
+            "stone": 5525,
+            "gold": 790
+          },
+          "build_time_sec": 636,
+          "citadel_required_level": 9,
+          "power": 718,
+          "storage_contribution": 214,
+          "population_cap_contribution": 16,
+          "population_required": 114
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 3995,
+            "wood": 7080,
+            "stone": 7625,
+            "gold": 1090
+          },
+          "build_time_sec": 846,
+          "citadel_required_level": 10,
+          "power": 933,
+          "storage_contribution": 236,
+          "population_cap_contribution": 17,
+          "population_required": 122
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 5510,
+            "wood": 9770,
+            "stone": 10520,
+            "gold": 1505
+          },
+          "build_time_sec": 1126,
+          "citadel_required_level": 11,
+          "power": 1213,
+          "storage_contribution": 259,
+          "population_cap_contribution": 19,
+          "population_required": 130
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 7605,
+            "wood": 13480,
+            "stone": 14520,
+            "gold": 2075
+          },
+          "build_time_sec": 1497,
+          "citadel_required_level": 12,
+          "power": 1577,
+          "storage_contribution": 285,
+          "population_cap_contribution": 21,
+          "population_required": 138
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 10495,
+            "wood": 18605,
+            "stone": 20035,
+            "gold": 2860
+          },
+          "build_time_sec": 1991,
+          "citadel_required_level": 13,
+          "power": 2050,
+          "storage_contribution": 314,
+          "population_cap_contribution": 23,
+          "population_required": 146
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 14485,
+            "wood": 25675,
+            "stone": 27650,
+            "gold": 3950
+          },
+          "build_time_sec": 2648,
+          "citadel_required_level": 14,
+          "power": 2665,
+          "storage_contribution": 345,
+          "population_cap_contribution": 25,
+          "population_required": 154
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 19985,
+            "wood": 35430,
+            "stone": 38155,
+            "gold": 5450
+          },
+          "build_time_sec": 3522,
+          "citadel_required_level": 15,
+          "power": 3465,
+          "storage_contribution": 380,
+          "population_cap_contribution": 27,
+          "population_required": 162
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 27580,
+            "wood": 48895,
+            "stone": 52655,
+            "gold": 7520
+          },
+          "build_time_sec": 4685,
+          "citadel_required_level": 16,
+          "power": 4504,
+          "storage_contribution": 418,
+          "population_cap_contribution": 29,
+          "population_required": 170
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 38060,
+            "wood": 67475,
+            "stone": 72665,
+            "gold": 10380
+          },
+          "build_time_sec": 6231,
+          "citadel_required_level": 17,
+          "power": 5856,
+          "storage_contribution": 459,
+          "population_cap_contribution": 32,
+          "population_required": 178
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 52525,
+            "wood": 93115,
+            "stone": 100275,
+            "gold": 14325
+          },
+          "build_time_sec": 8287,
+          "citadel_required_level": 18,
+          "power": 7612,
+          "storage_contribution": 505,
+          "population_cap_contribution": 35,
+          "population_required": 186
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 72485,
+            "wood": 128495,
+            "stone": 138380,
+            "gold": 19770
+          },
+          "build_time_sec": 11022,
+          "citadel_required_level": 19,
+          "power": 9896,
+          "storage_contribution": 556,
+          "population_cap_contribution": 38,
+          "population_required": 194
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 100030,
+            "wood": 177325,
+            "stone": 190965,
+            "gold": 27280
+          },
+          "build_time_sec": 14659,
+          "citadel_required_level": 20,
+          "power": 12865,
+          "storage_contribution": 612,
+          "population_cap_contribution": 41,
+          "population_required": 202
+        }
+      ],
+      "max_count": 4
+    },
+    {
+      "id": "building_alliance_hall",
+      "asset_id": "building_alliance_hall",
+      "display_name": "Alliance Hall",
+      "category": "ALLIANCE",
+      "role": "alliance_hall",
+      "functionality": "alliance_support",
+      "footprint": [
+        4,
+        4
+      ],
+      "max_level": 20,
+      "base_cost": {
+        "food": 500,
+        "wood": 620,
+        "stone": 650,
+        "gold": 220
+      },
+      "cost_curve": {
+        "type": "exponential",
+        "growth": 1.43
+      },
+      "upgrade_time_curve": {
+        "type": "exponential",
+        "growth": 1.36
+      },
+      "unlock_citadel_level": 6,
+      "prerequisites": [
+        {
+          "building_id": "building_royal_citadel",
+          "level": 6
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "cost": {
+            "food": 500,
+            "wood": 620,
+            "stone": 650,
+            "gold": 220
+          },
+          "build_time_sec": 125,
+          "citadel_required_level": 1,
+          "power": 115,
+          "storage_contribution": 420,
+          "population_cap_contribution": 45,
+          "population_required": 0
+        },
+        {
+          "level": 2,
+          "cost": {
+            "food": 715,
+            "wood": 885,
+            "stone": 930,
+            "gold": 315
+          },
+          "build_time_sec": 170,
+          "citadel_required_level": 2,
+          "power": 151,
+          "storage_contribution": 479,
+          "population_cap_contribution": 50,
+          "population_required": 64
+        },
+        {
+          "level": 3,
+          "cost": {
+            "food": 1020,
+            "wood": 1270,
+            "stone": 1330,
+            "gold": 450
+          },
+          "build_time_sec": 231,
+          "citadel_required_level": 3,
+          "power": 197,
+          "storage_contribution": 546,
+          "population_cap_contribution": 56,
+          "population_required": 78
+        },
+        {
+          "level": 4,
+          "cost": {
+            "food": 1460,
+            "wood": 1815,
+            "stone": 1900,
+            "gold": 645
+          },
+          "build_time_sec": 314,
+          "citadel_required_level": 4,
+          "power": 259,
+          "storage_contribution": 622,
+          "population_cap_contribution": 63,
+          "population_required": 92
+        },
+        {
+          "level": 5,
+          "cost": {
+            "food": 2090,
+            "wood": 2595,
+            "stone": 2720,
+            "gold": 920
+          },
+          "build_time_sec": 428,
+          "citadel_required_level": 5,
+          "power": 339,
+          "storage_contribution": 709,
+          "population_cap_contribution": 71,
+          "population_required": 106
+        },
+        {
+          "level": 6,
+          "cost": {
+            "food": 2990,
+            "wood": 3705,
+            "stone": 3885,
+            "gold": 1315
+          },
+          "build_time_sec": 582,
+          "citadel_required_level": 6,
+          "power": 444,
+          "storage_contribution": 809,
+          "population_cap_contribution": 79,
+          "population_required": 120
+        },
+        {
+          "level": 7,
+          "cost": {
+            "food": 4275,
+            "wood": 5300,
+            "stone": 5560,
+            "gold": 1880
+          },
+          "build_time_sec": 791,
+          "citadel_required_level": 7,
+          "power": 581,
+          "storage_contribution": 922,
+          "population_cap_contribution": 89,
+          "population_required": 134
+        },
+        {
+          "level": 8,
+          "cost": {
+            "food": 6115,
+            "wood": 7580,
+            "stone": 7950,
+            "gold": 2690
+          },
+          "build_time_sec": 1076,
+          "citadel_required_level": 8,
+          "power": 761,
+          "storage_contribution": 1051,
+          "population_cap_contribution": 99,
+          "population_required": 148
+        },
+        {
+          "level": 9,
+          "cost": {
+            "food": 8745,
+            "wood": 10840,
+            "stone": 11365,
+            "gold": 3845
+          },
+          "build_time_sec": 1463,
+          "citadel_required_level": 9,
+          "power": 997,
+          "storage_contribution": 1198,
+          "population_cap_contribution": 111,
+          "population_required": 162
+        },
+        {
+          "level": 10,
+          "cost": {
+            "food": 12500,
+            "wood": 15505,
+            "stone": 16255,
+            "gold": 5500
+          },
+          "build_time_sec": 1990,
+          "citadel_required_level": 10,
+          "power": 1307,
+          "storage_contribution": 1366,
+          "population_cap_contribution": 125,
+          "population_required": 176
+        },
+        {
+          "level": 11,
+          "cost": {
+            "food": 17880,
+            "wood": 22170,
+            "stone": 23240,
+            "gold": 7865
+          },
+          "build_time_sec": 2706,
+          "citadel_required_level": 11,
+          "power": 1712,
+          "storage_contribution": 1557,
+          "population_cap_contribution": 140,
+          "population_required": 190
+        },
+        {
+          "level": 12,
+          "cost": {
+            "food": 25565,
+            "wood": 31700,
+            "stone": 33235,
+            "gold": 11250
+          },
+          "build_time_sec": 3680,
+          "citadel_required_level": 12,
+          "power": 2242,
+          "storage_contribution": 1775,
+          "population_cap_contribution": 157,
+          "population_required": 204
+        },
+        {
+          "level": 13,
+          "cost": {
+            "food": 36560,
+            "wood": 45335,
+            "stone": 47530,
+            "gold": 16085
+          },
+          "build_time_sec": 5005,
+          "citadel_required_level": 13,
+          "power": 2937,
+          "storage_contribution": 2024,
+          "population_cap_contribution": 175,
+          "population_required": 218
+        },
+        {
+          "level": 14,
+          "cost": {
+            "food": 52280,
+            "wood": 64830,
+            "stone": 67965,
+            "gold": 23005
+          },
+          "build_time_sec": 6806,
+          "citadel_required_level": 14,
+          "power": 3848,
+          "storage_contribution": 2307,
+          "population_cap_contribution": 196,
+          "population_required": 232
+        },
+        {
+          "level": 15,
+          "cost": {
+            "food": 74760,
+            "wood": 92705,
+            "stone": 97190,
+            "gold": 32895
+          },
+          "build_time_sec": 9257,
+          "citadel_required_level": 15,
+          "power": 5041,
+          "storage_contribution": 2630,
+          "population_cap_contribution": 220,
+          "population_required": 246
+        },
+        {
+          "level": 16,
+          "cost": {
+            "food": 106910,
+            "wood": 132565,
+            "stone": 138980,
+            "gold": 47040
+          },
+          "build_time_sec": 12589,
+          "citadel_required_level": 16,
+          "power": 6603,
+          "storage_contribution": 2998,
+          "population_cap_contribution": 246,
+          "population_required": 260
+        },
+        {
+          "level": 17,
+          "cost": {
+            "food": 152880,
+            "wood": 189570,
+            "stone": 198740,
+            "gold": 67265
+          },
+          "build_time_sec": 17121,
+          "citadel_required_level": 17,
+          "power": 8650,
+          "storage_contribution": 3418,
+          "population_cap_contribution": 276,
+          "population_required": 274
+        },
+        {
+          "level": 18,
+          "cost": {
+            "food": 218615,
+            "wood": 271085,
+            "stone": 284200,
+            "gold": 96190
+          },
+          "build_time_sec": 23285,
+          "citadel_required_level": 18,
+          "power": 11332,
+          "storage_contribution": 3896,
+          "population_cap_contribution": 309,
+          "population_required": 288
+        },
+        {
+          "level": 19,
+          "cost": {
+            "food": 312620,
+            "wood": 387650,
+            "stone": 406410,
+            "gold": 137555
+          },
+          "build_time_sec": 31667,
+          "citadel_required_level": 19,
+          "power": 14845,
+          "storage_contribution": 4442,
+          "population_cap_contribution": 346,
+          "population_required": 302
+        },
+        {
+          "level": 20,
+          "cost": {
+            "food": 447050,
+            "wood": 554340,
+            "stone": 581165,
+            "gold": 196700
+          },
+          "build_time_sec": 43067,
+          "citadel_required_level": 20,
+          "power": 19447,
+          "storage_contribution": 5063,
+          "population_cap_contribution": 388,
+          "population_required": 316
+        }
+      ],
+      "max_count": 1
+    }
+  ]
+}

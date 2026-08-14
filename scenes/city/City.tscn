@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/city/city_controller.gd" id="1_city"]
+[ext_resource type="Script" path="res://scripts/city/strategy_camera.gd" id="2_camera"]
+[ext_resource type="Script" path="res://scripts/city/build_mode_controller.gd" id="3_build"]
+[ext_resource type="PackedScene" path="res://scenes/ui/CityHUD.tscn" id="4_hud"]
+
+[sub_resource type="BoxMesh" id="TerrainMesh"]
+size = Vector3(64, 0.4, 64)
+
+[sub_resource type="StandardMaterial3D" id="TerrainMaterial"]
+albedo_color = Color(0.19, 0.32, 0.18, 1)
+roughness = 1.0
+
+
+[node name="City" type="Node3D"]
+script = ExtResource("1_city")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Terrain" type="MeshInstance3D" parent="."]
+mesh = SubResource("TerrainMesh")
+material_override = SubResource("TerrainMaterial")
+position = Vector3(0, -0.2, 0)
+
+[node name="CameraRoot" type="Node3D" parent="."]
+position = Vector3(0, 0, 10)
+rotation_degrees = Vector3(0, -45, 0)
+script = ExtResource("2_camera")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRoot"]
+position = Vector3(0, 22, 22)
+rotation_degrees = Vector3(-45, 0, 0)
+current = true
+
+[node name="BuildingRoot" type="Node3D" parent="."]
+[node name="DecorationRoot" type="Node3D" parent="."]
+[node name="PlacementRoot" type="Node3D" parent="."]
+[node name="SelectionLayer" type="Node3D" parent="."]
+[node name="BuildModeController" type="Node" parent="."]
+script = ExtResource("3_build")
+[node name="UIRoot" type="CanvasLayer" parent="."]
+[node name="CityHUD" parent="UIRoot" instance=ExtResource("4_hud")]

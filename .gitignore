@@ -1,0 +1,14 @@
+.godot/
+.cache/
+build/
+exports/
+*.apk
+*.aab
+*.pck
+__pycache__/
+*.pyc
+
+# Original ~2M-triangle sources remain on Google Drive and local source workspace.
+assets/source/*.glb
+assets/processed/**
+!assets/processed/.gdignore

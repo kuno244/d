@@ -1,0 +1,829 @@
+{
+  "schema_version": 3,
+  "development_phase": "DEVELOPMENT_04",
+  "shipping_assets": [
+    {
+      "asset_id": "world_rock_cluster",
+      "category": "WORLD_OBJECT",
+      "lods": {
+        "LOD0": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod0.glb",
+        "LOD1": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod1.glb",
+        "LOD2": "assets/mobile/world/world_rock_cluster/world_rock_cluster_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "lower_mass",
+            "center": [
+              -1.9e-05,
+              -0.385473,
+              0.00925
+            ],
+            "size": [
+              1.751088,
+              0.710374,
+              1.293815
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -1.9e-05,
+              0.236104,
+              0.00925
+            ],
+            "size": [
+              0.913611,
+              0.81397,
+              0.730625
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "world_stylized_tree",
+      "category": "WORLD_OBJECT",
+      "lods": {
+        "LOD0": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod0.glb",
+        "LOD1": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod1.glb",
+        "LOD2": "assets/mobile/world/world_stylized_tree/world_stylized_tree_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "trunk",
+            "center": [
+              0.007434,
+              -0.343008,
+              -0.003321
+            ],
+            "size": [
+              0.41476,
+              1.218739,
+              0.363057
+            ]
+          },
+          {
+            "name": "canopy",
+            "center": [
+              0.007434,
+              0.475832,
+              -0.003321
+            ],
+            "size": [
+              1.696746,
+              0.856926,
+              1.485231
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "decoration_bush_cluster",
+      "category": "DECORATION",
+      "lods": {
+        "LOD0": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod0.glb",
+        "LOD1": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod1.glb",
+        "LOD2": "assets/mobile/decorations/decoration_bush_cluster/decoration_bush_cluster_lod2.glb"
+      },
+      "collision": {
+        "strategy": "none",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "reason": "decoration_non_interactive"
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_watchtower",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_watchtower/building_watchtower_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_watchtower/building_watchtower_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_watchtower/building_watchtower_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000429,
+              -0.647618,
+              -0.000446
+            ],
+            "size": [
+              0.649366,
+              0.609097,
+              0.649324
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000429,
+              -0.07659,
+              -0.000446
+            ],
+            "size": [
+              0.538836,
+              0.875576,
+              0.538801
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000429,
+              0.475404,
+              -0.000446
+            ],
+            "size": [
+              0.331591,
+              0.799439,
+              0.33157
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "world_stone_bridge",
+      "category": "WORLD_OBJECT",
+      "lods": {
+        "LOD0": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod0.glb",
+        "LOD1": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod1.glb",
+        "LOD2": "assets/mobile/world/world_stone_bridge/world_stone_bridge_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "deck",
+            "center": [
+              -0.000253,
+              0.018201,
+              -0.006172
+            ],
+            "size": [
+              1.825092,
+              0.172956,
+              1.570516
+            ]
+          },
+          {
+            "name": "support_a",
+            "center": [
+              -0.608617,
+              -0.222017,
+              -0.006172
+            ],
+            "size": [
+              0.475284,
+              0.480434,
+              1.331525
+            ]
+          },
+          {
+            "name": "support_b",
+            "center": [
+              0.60811,
+              -0.222017,
+              -0.006172
+            ],
+            "size": [
+              0.475284,
+              0.480434,
+              1.331525
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_archery_range",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_archery_range/building_archery_range_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_archery_range/building_archery_range_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_archery_range/building_archery_range_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.001264,
+              -0.646917,
+              0.008084
+            ],
+            "size": [
+              1.656485,
+              0.608679,
+              1.567258
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.001264,
+              -0.076281,
+              0.008084
+            ],
+            "size": [
+              1.37453,
+              0.874976,
+              1.300491
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.001264,
+              0.475334,
+              0.008084
+            ],
+            "size": [
+              0.845865,
+              0.798891,
+              0.800302
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_grand_academy",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_grand_academy/building_grand_academy_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000574,
+              -0.647675,
+              0.000118
+            ],
+            "size": [
+              1.311492,
+              0.609111,
+              1.386565
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000574,
+              -0.076633,
+              0.000118
+            ],
+            "size": [
+              1.088259,
+              0.875598,
+              1.150554
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000574,
+              0.475374,
+              0.000118
+            ],
+            "size": [
+              0.669698,
+              0.799459,
+              0.708033
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_royal_citadel",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_royal_citadel/building_royal_citadel_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.010752,
+              -0.64794,
+              -0.000572
+            ],
+            "size": [
+              1.071417,
+              0.608912,
+              0.899243
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.010752,
+              -0.077085,
+              -0.000572
+            ],
+            "size": [
+              0.889048,
+              0.875311,
+              0.74618
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.010752,
+              0.474742,
+              -0.000572
+            ],
+            "size": [
+              0.547106,
+              0.799197,
+              0.459188
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_lumber_mill",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_lumber_mill/building_lumber_mill_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.001069,
+              -0.517952,
+              0.000544
+            ],
+            "size": [
+              1.789381,
+              0.487109,
+              1.546003
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.001069,
+              -0.061287,
+              0.000544
+            ],
+            "size": [
+              1.484806,
+              0.700219,
+              1.282854
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.001069,
+              0.380155,
+              0.000544
+            ],
+            "size": [
+              0.913727,
+              0.63933,
+              0.789448
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_alliance_hall",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_alliance_hall/building_alliance_hall_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000199,
+              -0.648004,
+              -0.001095
+            ],
+            "size": [
+              1.260623,
+              0.608898,
+              1.250529
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000199,
+              -0.077163,
+              -0.001095
+            ],
+            "size": [
+              1.046049,
+              0.87529,
+              1.037673
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000199,
+              0.474651,
+              -0.001095
+            ],
+            "size": [
+              0.643722,
+              0.799178,
+              0.638568
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_barracks",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_barracks/building_barracks_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_barracks/building_barracks_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_barracks/building_barracks_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.00082,
+              -0.523048,
+              -0.003095
+            ],
+            "size": [
+              1.78029,
+              0.485399,
+              1.785712
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.00082,
+              -0.067987,
+              -0.003095
+            ],
+            "size": [
+              1.477262,
+              0.697761,
+              1.481761
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.00082,
+              0.371906,
+              -0.003095
+            ],
+            "size": [
+              0.909084,
+              0.637086,
+              0.911853
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_farm",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_farm/building_farm_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_farm/building_farm_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_farm/building_farm_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000533,
+              -0.347763,
+              -0.000145
+            ],
+            "size": [
+              1.788953,
+              0.326751,
+              1.744299
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000533,
+              -0.041433,
+              -0.000145
+            ],
+            "size": [
+              1.484451,
+              0.469705,
+              1.447397
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000533,
+              0.254685,
+              -0.000145
+            ],
+            "size": [
+              0.913508,
+              0.428861,
+              0.890706
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_stone_quarry",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_stone_quarry/building_stone_quarry_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              -0.000267,
+              -0.528773,
+              0.000175
+            ],
+            "size": [
+              1.788753,
+              0.493857,
+              1.596868
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              -0.000267,
+              -0.065782,
+              0.000175
+            ],
+            "size": [
+              1.484285,
+              0.70992,
+              1.325061
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              -0.000267,
+              0.381776,
+              0.000175
+            ],
+            "size": [
+              0.913406,
+              0.648188,
+              0.815422
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    },
+    {
+      "asset_id": "building_royal_stable",
+      "category": "BUILDING",
+      "lods": {
+        "LOD0": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod0.glb",
+        "LOD1": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod1.glb",
+        "LOD2": "assets/mobile/buildings/building_royal_stable/building_royal_stable_lod2.glb"
+      },
+      "collision": {
+        "strategy": "compound_boxes",
+        "primitive": true,
+        "collision_mesh_triangles": 0,
+        "boxes": [
+          {
+            "name": "footprint",
+            "center": [
+              0.00019,
+              -0.648118,
+              -0.001337
+            ],
+            "size": [
+              1.430969,
+              0.609071,
+              1.625375
+            ]
+          },
+          {
+            "name": "main_body",
+            "center": [
+              0.00019,
+              -0.077114,
+              -0.001337
+            ],
+            "size": [
+              1.187399,
+              0.87554,
+              1.348715
+            ]
+          },
+          {
+            "name": "upper_mass",
+            "center": [
+              0.00019,
+              0.474856,
+              -0.001337
+            ],
+            "size": [
+              0.730707,
+              0.799406,
+              0.829979
+            ]
+          }
+        ]
+      },
+      "texture_strategy": "source Base Color baked to vertex colors; no embedded mobile textures; avoids UV collapse artifacts verified in DEVELOPMENT 02 character/static experiments"
+    }
+  ],
+  "excluded_raw_only_assets": [
+    {
+      "asset_id": "troop_kingdom_swordsman",
+      "category": "TROOP",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "troop_kingdom_spearman",
+      "category": "TROOP",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "monster_forest_troll",
+      "category": "PVE_CREATURE",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "monster_stone_golem",
+      "category": "PVE_CREATURE",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "monster_titan_boar",
+      "category": "PVE_CREATURE",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "monster_armored_wyvern",
+      "category": "PVE_CREATURE",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "troop_royal_cavalry",
+      "category": "TROOP",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "troop_battle_mage",
+      "category": "TROOP",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "troop_kingdom_archer",
+      "category": "TROOP",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "monster_cursed_knight",
+      "category": "PVE_CREATURE",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_cassian_vale",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_fire_mage_001",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_aurelian_stormblade",
+      "category": "HERO",
+      "reason": "BLOCKED_RIG_AND_OPTIMIZATION"
+    },
+    {
+      "asset_id": "hero_brakk_ironhide",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_kael_thornwind",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_rakan_sandfang",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_vex_nightclaw",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_selene_frostborn",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_mira_dawnshield",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    },
+    {
+      "asset_id": "hero_torvald_runehammer",
+      "category": "HERO",
+      "reason": "BLOCKED_RAW_ONLY"
+    }
+  ],
+  "shipping_asset_count": 14,
+  "shipping_lod_file_count": 42,
+  "raw_only_asset_count": 20
+}

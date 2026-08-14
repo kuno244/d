@@ -1,0 +1,34 @@
+; Engine configuration file.
+; CROWNFRONT: REALMS — Android-first Godot 4.x project foundation.
+config_version=5
+
+[application]
+config/name="CROWNFRONT: REALMS"
+config/version="1.0.0"
+run/main_scene="res://scenes/boot/Boot.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+GameState="*res://scripts/core/game_state.gd"
+DataRegistry="*res://scripts/data/data_registry.gd"
+SaveService="*res://scripts/save/save_service.gd"
+SceneRouter="*res://scripts/core/scene_router.gd"
+GameClock="*res://scripts/core/game_clock.gd"
+EventHub="*res://scripts/core/event_hub.gd"
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+occlusion_culling/use_occlusion_culling=true
+
+[debug]
+settings/stdout/print_fps=false

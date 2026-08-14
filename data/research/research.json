@@ -1,0 +1,586 @@
+{
+  "schema_version": 2,
+  "branches": [
+    "economy",
+    "military",
+    "development",
+    "exploration"
+  ],
+  "items": [
+    {
+      "id": "research_agricultural_methods",
+      "display_name": "Agricultural Methods",
+      "branch": "economy",
+      "max_level": 5,
+      "prerequisites": [],
+      "academy_requirement": 1,
+      "base_cost": {
+        "food": 175,
+        "wood": 200,
+        "stone": 115,
+        "gold": 55
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 360,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "food_production_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 18,
+      "research_tier": 1,
+      "citadel_requirement": 3
+    },
+    {
+      "id": "research_lumber_processing",
+      "display_name": "Lumber Processing",
+      "branch": "economy",
+      "max_level": 5,
+      "prerequisites": [
+        "research_agricultural_methods"
+      ],
+      "academy_requirement": 3,
+      "base_cost": {
+        "food": 230,
+        "wood": 260,
+        "stone": 160,
+        "gold": 80
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 540,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "wood_production_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 24,
+      "research_tier": 2,
+      "citadel_requirement": 5
+    },
+    {
+      "id": "research_stone_cutting",
+      "display_name": "Stone Cutting",
+      "branch": "economy",
+      "max_level": 5,
+      "prerequisites": [
+        "research_lumber_processing"
+      ],
+      "academy_requirement": 5,
+      "base_cost": {
+        "food": 285,
+        "wood": 320,
+        "stone": 205,
+        "gold": 105
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 720,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "stone_production_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 30,
+      "research_tier": 3,
+      "citadel_requirement": 7
+    },
+    {
+      "id": "research_tax_administration",
+      "display_name": "Tax Administration",
+      "branch": "economy",
+      "max_level": 5,
+      "prerequisites": [
+        "research_stone_cutting"
+      ],
+      "academy_requirement": 7,
+      "base_cost": {
+        "food": 340,
+        "wood": 380,
+        "stone": 250,
+        "gold": 130
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 900,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "gold_reward_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 36,
+      "research_tier": 4,
+      "citadel_requirement": 10
+    },
+    {
+      "id": "research_storage_logistics",
+      "display_name": "Storage Logistics",
+      "branch": "economy",
+      "max_level": 5,
+      "prerequisites": [
+        "research_tax_administration"
+      ],
+      "academy_requirement": 10,
+      "base_cost": {
+        "food": 395,
+        "wood": 440,
+        "stone": 295,
+        "gold": 155
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 1080,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "resource_capacity_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.06
+        }
+      ],
+      "power_per_level": 42,
+      "research_tier": 5,
+      "citadel_requirement": 16
+    },
+    {
+      "id": "research_infantry_training",
+      "display_name": "Infantry Training",
+      "branch": "military",
+      "max_level": 5,
+      "prerequisites": [],
+      "academy_requirement": 1,
+      "base_cost": {
+        "food": 275,
+        "wood": 200,
+        "stone": 115,
+        "gold": 80
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 360,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "infantry_attack_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 18,
+      "research_tier": 1,
+      "citadel_requirement": 3
+    },
+    {
+      "id": "research_defensive_formations",
+      "display_name": "Defensive Formations",
+      "branch": "military",
+      "max_level": 5,
+      "prerequisites": [
+        "research_infantry_training"
+      ],
+      "academy_requirement": 3,
+      "base_cost": {
+        "food": 330,
+        "wood": 260,
+        "stone": 160,
+        "gold": 105
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 540,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "troop_defense_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 24,
+      "research_tier": 2,
+      "citadel_requirement": 5
+    },
+    {
+      "id": "research_archery_doctrine",
+      "display_name": "Archery Doctrine",
+      "branch": "military",
+      "max_level": 5,
+      "prerequisites": [
+        "research_defensive_formations"
+      ],
+      "academy_requirement": 5,
+      "base_cost": {
+        "food": 385,
+        "wood": 320,
+        "stone": 205,
+        "gold": 130
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 720,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "archer_attack_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 30,
+      "research_tier": 3,
+      "citadel_requirement": 7
+    },
+    {
+      "id": "research_cavalry_logistics",
+      "display_name": "Cavalry Logistics",
+      "branch": "military",
+      "max_level": 5,
+      "prerequisites": [
+        "research_archery_doctrine"
+      ],
+      "academy_requirement": 7,
+      "base_cost": {
+        "food": 440,
+        "wood": 380,
+        "stone": 250,
+        "gold": 155
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 900,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "cavalry_speed_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 36,
+      "research_tier": 4,
+      "citadel_requirement": 10
+    },
+    {
+      "id": "research_battle_magic",
+      "display_name": "Battle Magic",
+      "branch": "military",
+      "max_level": 5,
+      "prerequisites": [
+        "research_cavalry_logistics",
+        "research_training_administration"
+      ],
+      "academy_requirement": 10,
+      "base_cost": {
+        "food": 495,
+        "wood": 440,
+        "stone": 295,
+        "gold": 180
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 1080,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "battle_mage_attack_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 42,
+      "research_tier": 5,
+      "citadel_requirement": 16
+    },
+    {
+      "id": "research_construction_techniques",
+      "display_name": "Construction Techniques",
+      "branch": "development",
+      "max_level": 5,
+      "prerequisites": [],
+      "academy_requirement": 1,
+      "base_cost": {
+        "food": 175,
+        "wood": 300,
+        "stone": 195,
+        "gold": 55
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 360,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "construction_speed_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 18,
+      "research_tier": 1,
+      "citadel_requirement": 3
+    },
+    {
+      "id": "research_builder_coordination",
+      "display_name": "Builder Coordination",
+      "branch": "development",
+      "max_level": 5,
+      "prerequisites": [
+        "research_construction_techniques"
+      ],
+      "academy_requirement": 3,
+      "base_cost": {
+        "food": 230,
+        "wood": 360,
+        "stone": 240,
+        "gold": 80
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 540,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "construction_speed_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.03
+        }
+      ],
+      "power_per_level": 24,
+      "research_tier": 2,
+      "citadel_requirement": 5
+    },
+    {
+      "id": "research_training_administration",
+      "display_name": "Training Administration",
+      "branch": "development",
+      "max_level": 5,
+      "prerequisites": [
+        "research_builder_coordination"
+      ],
+      "academy_requirement": 5,
+      "base_cost": {
+        "food": 285,
+        "wood": 420,
+        "stone": 285,
+        "gold": 105
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 720,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "training_speed_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 30,
+      "research_tier": 3,
+      "citadel_requirement": 7
+    },
+    {
+      "id": "research_urban_planning",
+      "display_name": "Urban Planning",
+      "branch": "development",
+      "max_level": 5,
+      "prerequisites": [
+        "research_training_administration"
+      ],
+      "academy_requirement": 7,
+      "base_cost": {
+        "food": 340,
+        "wood": 480,
+        "stone": 330,
+        "gold": 130
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 900,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "population_cap_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 36,
+      "research_tier": 4,
+      "citadel_requirement": 10
+    },
+    {
+      "id": "research_engineering",
+      "display_name": "Engineering",
+      "branch": "development",
+      "max_level": 5,
+      "prerequisites": [
+        "research_urban_planning",
+        "research_storage_logistics"
+      ],
+      "academy_requirement": 10,
+      "base_cost": {
+        "food": 395,
+        "wood": 540,
+        "stone": 375,
+        "gold": 155
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 1080,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "building_power_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 42,
+      "research_tier": 5,
+      "citadel_requirement": 16
+    },
+    {
+      "id": "research_scouting",
+      "display_name": "Scouting",
+      "branch": "exploration",
+      "max_level": 5,
+      "prerequisites": [],
+      "academy_requirement": 1,
+      "base_cost": {
+        "food": 175,
+        "wood": 200,
+        "stone": 115,
+        "gold": 125
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 360,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "scout_speed_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 18,
+      "research_tier": 1,
+      "citadel_requirement": 3
+    },
+    {
+      "id": "research_march_logistics",
+      "display_name": "March Logistics",
+      "branch": "exploration",
+      "max_level": 5,
+      "prerequisites": [
+        "research_scouting"
+      ],
+      "academy_requirement": 3,
+      "base_cost": {
+        "food": 230,
+        "wood": 260,
+        "stone": 160,
+        "gold": 150
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 540,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "march_speed_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.04
+        }
+      ],
+      "power_per_level": 24,
+      "research_tier": 2,
+      "citadel_requirement": 5
+    },
+    {
+      "id": "research_cartography",
+      "display_name": "Cartography",
+      "branch": "exploration",
+      "max_level": 5,
+      "prerequisites": [
+        "research_march_logistics"
+      ],
+      "academy_requirement": 5,
+      "base_cost": {
+        "food": 285,
+        "wood": 320,
+        "stone": 205,
+        "gold": 175
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 720,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "world_vision_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 30,
+      "research_tier": 3,
+      "citadel_requirement": 7
+    },
+    {
+      "id": "research_resource_detection",
+      "display_name": "Resource Detection",
+      "branch": "exploration",
+      "max_level": 5,
+      "prerequisites": [
+        "research_cartography"
+      ],
+      "academy_requirement": 7,
+      "base_cost": {
+        "food": 340,
+        "wood": 380,
+        "stone": 250,
+        "gold": 200
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 900,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "gather_speed_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 36,
+      "research_tier": 4,
+      "citadel_requirement": 10
+    },
+    {
+      "id": "research_expedition_supply",
+      "display_name": "Expedition Supply",
+      "branch": "exploration",
+      "max_level": 5,
+      "prerequisites": [
+        "research_resource_detection",
+        "research_storage_logistics"
+      ],
+      "academy_requirement": 10,
+      "base_cost": {
+        "food": 395,
+        "wood": 440,
+        "stone": 295,
+        "gold": 225
+      },
+      "cost_growth": 1.48,
+      "base_research_time_sec": 1080,
+      "time_growth": 1.42,
+      "effects": [
+        {
+          "stat": "supply_efficiency_pct",
+          "mode": "PERCENT",
+          "value_per_level": 0.05
+        }
+      ],
+      "power_per_level": 42,
+      "research_tier": 5,
+      "citadel_requirement": 16
+    }
+  ]
+}

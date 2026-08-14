@@ -1,0 +1,101 @@
+name: Crownfront Android Release
+
+on:
+  push:
+    branches: [crownfront-realms-release]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android build tools
+        run: |
+          set -euo pipefail
+          yes | sdkmanager --licenses >/dev/null
+          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Install verification dependencies
+        run: python3 -m pip install --disable-pip-version-check pillow
+
+      - name: Download verified Godot 4.7.1 toolchain
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 5 --retry-delay 3 \
+            --output godot.zip \
+            https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_linux.x86_64.zip
+          curl --fail --location --retry 5 --retry-delay 3 \
+            --output templates.tpz \
+            https://github.com/godotengine/godot-builds/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz
+          printf '%s  %s\n' c7ff14fd28472c8d4f193043de30278dcf7e5241a1dcf7566b02e27addaa33ba godot.zip | sha256sum -c -
+          printf '%s  %s\n' 86409db6200b6f8fd3230989c2d2002851f3dd18acf11d7bdbafddf5a0dd0f72 templates.tpz | sha256sum -c -
+          unzip -q godot.zip -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.7.1-stable_linux.x86_64"
+          mkdir -p "$HOME/.local/share/godot/export_templates/4.7.1.stable" "$RUNNER_TEMP/templates"
+          unzip -q templates.tpz -d "$RUNNER_TEMP/templates"
+          cp -a "$RUNNER_TEMP/templates/templates/." "$HOME/.local/share/godot/export_templates/4.7.1.stable/"
+          "$RUNNER_TEMP/godot/Godot_v4.7.1-stable_linux.x86_64" --version
+
+      - name: Import project and run all automated gates
+        env:
+          GODOT_BIN: ${{ runner.temp }}/godot/Godot_v4.7.1-stable_linux.x86_64
+          PYTHONPATH: tests:tools
+        run: |
+          set -euo pipefail
+          "$GODOT_BIN" --headless --editor --path . --import --quit 2>&1 | tee reports/ci_godot_import.log
+          for test_file in tests/test_*.py; do python3 "$test_file"; done
+          python3 tools/validate_gdscript_static.py .
+          python3 tools/validate_dev04_schema.py .
+          python3 tools/shipping_gate.py .
+
+      - name: Export debug-signed Android APK
+        env:
+          GODOT_BIN: ${{ runner.temp }}/godot/Godot_v4.7.1-stable_linux.x86_64
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          mkdir -p "$HOME/.local/share/godot/keystores"
+          if [ ! -f "$HOME/.local/share/godot/keystores/debug.keystore" ]; then
+            keytool -genkeypair -v -keystore "$HOME/.local/share/godot/keystores/debug.keystore" \
+              -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 \
+              -validity 10000 -dname "CN=Android Debug,O=Crownfront,C=US"
+          fi
+          settings="$HOME/.config/godot/editor_settings-4.7.tres"
+          sed -i "s#export/android/java_sdk_path = \".*\"#export/android/java_sdk_path = \"$JAVA_HOME\"#" "$settings"
+          sed -i "s#export/android/android_sdk_path = \".*\"#export/android/android_sdk_path = \"$ANDROID_HOME\"#" "$settings"
+          "$GODOT_BIN" --headless --path . --export-debug Android build/CrownfrontRealms.apk 2>&1 | tee reports/ci_android_export.log
+          test -s build/CrownfrontRealms.apk
+          unzip -t build/CrownfrontRealms.apk >/dev/null
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs build/CrownfrontRealms.apk | tee reports/ci_apk_signature.txt
+          sha256sum build/CrownfrontRealms.apk | tee build/CrownfrontRealms.apk.sha256
+
+      - name: Upload verified APK and reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: CROWNFRONT_REALMS_ANDROID_1.0.0
+          path: |
+            build/CrownfrontRealms.apk
+            build/CrownfrontRealms.apk.sha256
+            reports/ci_android_export.log
+            reports/ci_apk_signature.txt
+            reports/ci_godot_import.log
+            reports/shipping_gate_report.json
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 7

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "hero_cassian_vale",
+      "asset_id": "hero_cassian_vale",
+      "display_name": "Cassian Vale",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_fire_mage_001",
+      "asset_id": "hero_fire_mage_001",
+      "display_name": "Fire Mage 001",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_aurelian_stormblade",
+      "asset_id": "hero_aurelian_stormblade",
+      "display_name": "Aurelian Stormblade",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_brakk_ironhide",
+      "asset_id": "hero_brakk_ironhide",
+      "display_name": "Brakk Ironhide",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_kael_thornwind",
+      "asset_id": "hero_kael_thornwind",
+      "display_name": "Kael Thornwind",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_rakan_sandfang",
+      "asset_id": "hero_rakan_sandfang",
+      "display_name": "Rakan Sandfang",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_vex_nightclaw",
+      "asset_id": "hero_vex_nightclaw",
+      "display_name": "Vex Nightclaw",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_selene_frostborn",
+      "asset_id": "hero_selene_frostborn",
+      "display_name": "Selene Frostborn",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_mira_dawnshield",
+      "asset_id": "hero_mira_dawnshield",
+      "display_name": "Mira Dawnshield",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "hero_torvald_runehammer",
+      "asset_id": "hero_torvald_runehammer",
+      "display_name": "Torvald Runehammer",
+      "role": "commander",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    }
+  ]
+}

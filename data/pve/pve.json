@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "monster_forest_troll",
+      "asset_id": "monster_forest_troll",
+      "display_name": "Forest Troll",
+      "role": "pve_brute",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "monster_stone_golem",
+      "asset_id": "monster_stone_golem",
+      "display_name": "Stone Golem",
+      "role": "pve_construct",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "monster_titan_boar",
+      "asset_id": "monster_titan_boar",
+      "display_name": "Titan Boar",
+      "role": "pve_beast",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "monster_armored_wyvern",
+      "asset_id": "monster_armored_wyvern",
+      "display_name": "Armored Wyvern",
+      "role": "pve_flying_beast",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    },
+    {
+      "id": "monster_cursed_knight",
+      "asset_id": "monster_cursed_knight",
+      "display_name": "Cursed Knight",
+      "role": "pve_elite_humanoid",
+      "visual_state": "RAW_ONLY_DATA_ENTITY"
+    }
+  ]
+}
