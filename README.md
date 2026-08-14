@@ -1,32 +1,39 @@
 # CROWNFRONT: REALMS
 
-Android-first stylized 3D strategy project for Godot 4.x.
+Offline Android-first stylized 3D strategy game built with Godot 4.7.1.
 
-## Current state — DEVELOPMENT 04
+## Playable release 1.0.0
 
-The project now includes a data-driven city gameplay layer on top of the DEVELOPMENT 03 shipping/static-asset foundation:
+- Build and move 10 real city buildings on a 32×32 data-driven grid.
+- Upgrade every functional building from level 1 through 20.
+- Manage Food, Wood, Stone and Gold with storage, production and offline progress.
+- Train five troop types and unlock a 20-node research dependency tree.
+- Explore a deterministic 64×64 world split into 64 streamed chunks and six biomes.
+- Interact with resource nodes, ruins, villages, fortresses, PvE encounters and monster camps.
+- Command the Crown Vanguard in deterministic tactical battles with Commander Strike, Shield Wall, auto battle and retreat.
+- Continue through Save v3 with migrations from earlier Development 03/04 saves and atomic backup recovery.
 
-- 32×32 configurable city grid with world/grid conversion, rotation, occupancy, reservation and transactional move/cancel.
-- Build mode for all 10 real building definitions plus `decoration_bush_cluster` placement/move/removal.
-- 10 buildings with explicit level data for levels 1–20 (200 level rows total), Citadel progression gates, costs, timers, power, storage, population and building-specific stats.
-- Food/Wood/Stone/Gold economy with capacity, atomic multi-resource spending and overflow clamping.
-- Time-based and offline resource production with a 10-hour base offline cap and timestamp corruption guards.
-- Versioned construction queue architecture with one initial builder slot, upgrades, cancellation/refund and speed-up hooks.
-- Population and deterministic City Power derived from buildings, research and trained troops.
-- Five troop types with building/Citadel unlocks, training queues, capacity, costs, timers and persistent troop inventory.
-- Research system with 20 nodes across Economy, Military, Development and Exploration, real dependency DAG, Academy/Citadel gates and data-driven modifiers.
-- Save schema v2 with v0/v1 migrations, timers, queues, grid positions, rotations, production timestamps, research, troops, modifiers and atomic backup recovery.
-- Functional mobile-first City HUD architecture: resources, Build, Building, Construction, Troops, Research, Heroes data hook, World transition hook and placement confirmation controls.
-- Asset usage remains shipping-safe: 14 processed static assets / 42 mobile LOD GLBs; 20 character/troop/PvE source visuals remain RAW_ONLY data entities.
+The Android release uses the 14 approved static assets and 42 mobile LOD GLBs. The 20 unrigged high-poly character sources are never included in runtime scenes; tactical units use lightweight procedural presentation.
 
 ## Verification
 
-`LOGIC VERIFIED: YES`
+- Godot 4.7.1 `Boot → MainMenu`: verified.
+- City scene runtime: verified.
+- World Map runtime and chunk budget: verified.
+- Tactical Battle scene and reward persistence: verified.
+- Automated suite: 30 PASS, one optional VTK offline-tooling test skipped, zero failures.
+- Shipping gate: 14 assets, 42 mobile LODs, zero RAW source leakage.
+- Android CI: imports, tests, exports, checks APK ZIP integrity and verifies its signing certificate.
 
-`PROJECT STRUCTURE VERIFIED: YES` through deterministic Python reference tests plus schema/path/static GDScript validation.
+## Build
 
-`GODOT RUNTIME VERIFIED: NO` — the existing DEVELOPMENT 03 workspace limitation remains. Runtime execution/compile is not claimed.
+Open the project in Godot 4.7.1 or run the `Crownfront Android Release` GitHub Actions workflow on branch `crownfront-realms-release`. The Android preset produces `build/CrownfrontRealms.apk` for ARM64 devices in landscape orientation.
 
-Fresh DEVELOPMENT 04 verification: 26/26 script tests PASS, schema PASS, Python compile PASS, shipping gate PASS.
+Verified Android 1.0.0 artifact:
 
-Reports are under `reports/`.
+- size: 60,035,613 bytes;
+- SHA-256: `4221647e9903f91a2f91647b94b2f41af9679325adb40ae056f8d2eb8ac3d711`;
+- APK Signature Scheme v2/v3: verified;
+- native ABI: `arm64-v8a` only.
+
+The downloadable APK is debug-signed for direct installation and testing. A store release must be signed with the publisher's private production key.
