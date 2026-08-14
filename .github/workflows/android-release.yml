@@ -86,6 +86,18 @@ jobs:
           python3 tools/check_world_screenshot.py reports/world_map_release.png \
             | tee reports/ci_world_visual_validation.json
 
+      - name: Upload World Map visual diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CROWNFRONT_REALMS_WORLD_VISUAL_1.1.0
+          path: |
+            reports/world_map_release.png
+            reports/ci_world_visual_capture.log
+            reports/ci_world_visual_validation.json
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Export debug-signed Android APK
         env:
           GODOT_BIN: ${{ runner.temp }}/godot/Godot_v4.7.1-stable_linux.x86_64

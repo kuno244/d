@@ -8,7 +8,7 @@ signal camera_moved(cell: Vector2i)
 var world_width := 1024
 var world_height := 1024
 var cell_size := 8.0
-var zoom_value := 1.35
+var zoom_value := 2.0
 var target_position := Vector3.ZERO
 var velocity := Vector3.ZERO
 var dragging := false
@@ -26,7 +26,7 @@ func _ready() -> void:
 func configure(width: int, height: int, size_per_cell: float, camera_state: Dictionary) -> void:
     world_width = width; world_height = height; cell_size = size_per_cell
     var saved_cell: Array = camera_state.get("cell", [width / 2, height / 2])
-    zoom_value = clampf(float(camera_state.get("zoom", 1.35)), 0.28, 3.6)
+    zoom_value = clampf(float(camera_state.get("zoom", 2.0)), 0.28, 3.6)
     position = cell_to_local(Vector2i(int(saved_cell[0]), int(saved_cell[1])))
     target_position = position
     _apply_zoom()

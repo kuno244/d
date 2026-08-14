@@ -26,7 +26,7 @@ def default_save(now: int | None = None) -> dict:
             "seed":731942,"generated":False,"width":1024,"height":1024,"chunk_size":32,"region_size":128,
             "player_city_id":"city_player_001","player_city_cell":[512,512],"entities":[],
             "armies":[{"army_id":"army_player_001","display_name":"Crown Vanguard","cell":[512,516],"troops":{"troop_kingdom_swordsman":50,"troop_kingdom_archer":25},"status":"IDLE","target_entity_id":""}],
-            "explored_chunks":[[16,16]],"visible_chunks":[[16,16]],"camera":{"cell":[512,512],"zoom":1.35},
+            "explored_chunks":[[16,16]],"visible_chunks":[[16,16]],"camera":{"cell":[512,512],"zoom":2.0},
             "pending_battle":None,"last_world_timestamp":now,"objectives":{"chapter":1,"step":0},
             "season_id":"preseason_01",
         },
@@ -95,7 +95,7 @@ def _normalize_v4(result: dict, now: int) -> dict:
     camera=world.get("camera",{}) if isinstance(world.get("camera"),dict) else {}
     cell=camera.get("cell",[512,512]); cell=cell if isinstance(cell,list) and len(cell)>=2 else [512,512]
     camera["cell"]=[min(1023,max(0,int(cell[0]))),min(1023,max(0,int(cell[1])))]
-    camera["zoom"]=min(3.6,max(0.28,float(camera.get("zoom",1.35))))
+    camera["zoom"]=min(3.6,max(0.28,float(camera.get("zoom",2.0))))
     world["camera"]=camera
     timestamp=int(world.get("last_world_timestamp",now))
     world["last_world_timestamp"]=now if timestamp<0 or timestamp>now else timestamp

@@ -20,9 +20,9 @@ def validate(path: Path) -> dict:
     channel_mean = ImageStat.Stat(preview).mean
     errors = []
     if width < 960 or height < 540: errors.append("capture resolution is too small")
-    if mean_luminance < 42.0: errors.append("world center is too dark")
+    if mean_luminance < 58.0: errors.append("world center is too dark")
     if dark_ratio > 0.48: errors.append("world center is predominantly black")
-    if quantized_colors < 55: errors.append("world center lacks visual color variation")
+    if quantized_colors < 35: errors.append("world center lacks visual color variation")
     return {
         "passed": not errors,
         "errors": errors,

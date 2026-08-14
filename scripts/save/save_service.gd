@@ -26,7 +26,7 @@ func default_save() -> Dictionary:
             "seed": 731942, "generated": false, "width": 1024, "height": 1024, "chunk_size": 32, "region_size": 128,
             "player_city_id": "city_player_001", "player_city_cell": [512, 512], "entities": [],
             "armies": [{"army_id": "army_player_001", "display_name": "Crown Vanguard", "cell": [512, 516], "troops": {"troop_kingdom_swordsman": 50, "troop_kingdom_archer": 25}, "status": "IDLE", "target_entity_id": ""}],
-            "explored_chunks": [[16, 16]], "visible_chunks": [[16, 16]], "camera": {"cell": [512, 512], "zoom": 1.35},
+            "explored_chunks": [[16, 16]], "visible_chunks": [[16, 16]], "camera": {"cell": [512, 512], "zoom": 2.0},
             "pending_battle": null, "last_world_timestamp": now, "objectives": {"chapter": 1, "step": 0},
             "season_id": "preseason_01"
         }
@@ -197,7 +197,7 @@ func _normalize_v4(save_data: Dictionary, now: int) -> void:
     var camera: Dictionary = world.get("camera", {}) if world.get("camera") is Dictionary else {}
     var camera_cell: Array = camera.get("cell", [512, 512])
     camera["cell"] = [clampi(int(camera_cell[0]), 0, 1023), clampi(int(camera_cell[1]), 0, 1023)] if camera_cell.size() >= 2 else [512, 512]
-    camera["zoom"] = clampf(float(camera.get("zoom", 1.35)), 0.28, 3.6)
+    camera["zoom"] = clampf(float(camera.get("zoom", 2.0)), 0.28, 3.6)
     world["camera"] = camera
     var world_timestamp := int(world.get("last_world_timestamp", now))
     world["last_world_timestamp"] = now if world_timestamp < 0 or world_timestamp > now else world_timestamp

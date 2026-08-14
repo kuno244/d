@@ -109,6 +109,7 @@ func _spawn_chunk(chunk: Vector2i) -> Node3D:
             _surface_quad(surface, a, b, c, d, color)
     var material := StandardMaterial3D.new()
     material.vertex_color_use_as_albedo = true; material.roughness = 0.94
+    material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
     mesh_instance.mesh = surface.commit(); mesh_instance.material_override = material
     mesh_instance.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
     container.add_child(mesh_instance)
@@ -297,7 +298,7 @@ func _terrain_height(grid_x: int, grid_y: int, seed_value: int) -> float:
     return broad + ridges * 0.85
 
 func _terrain_color(base: Color, cell: Vector2i, seed_value: int) -> Color:
-    var variation := float(posmod((cell.x * 31) ^ (cell.y * 47) ^ seed_value, 17) - 8) * 0.006
+    var variation := float(posmod((cell.x * 31) ^ (cell.y * 47) ^ seed_value, 17) - 8) * 0.013
     return base.lightened(variation) if variation >= 0.0 else base.darkened(-variation)
 
 func _biome_color(biome_id: String) -> Color:
