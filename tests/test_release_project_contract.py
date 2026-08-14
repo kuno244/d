@@ -33,6 +33,7 @@ registry = (ROOT / "scripts/data/data_registry.gd").read_text()
 assert '"world": "res://data/world/world.json"' in registry
 project = (ROOT / "project.godot").read_text()
 assert "window/handheld/orientation=0" in project, "Android release must be landscape"
+assert "textures/vram_compression/import_etc2_astc=true" in project, "Android release requires ETC2/ASTC texture import"
 assert "window/size/viewport_width=1920" in project and "window/size/viewport_height=1080" in project
 
 runtime_text = "\n".join(
