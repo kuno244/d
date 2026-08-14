@@ -31,6 +31,9 @@ router = (ROOT / "scripts/core/scene_router.gd").read_text()
 assert "BATTLE" in router and "goto_battle" in router
 registry = (ROOT / "scripts/data/data_registry.gd").read_text()
 assert '"world": "res://data/world/world.json"' in registry
+project = (ROOT / "project.godot").read_text()
+assert "window/handheld/orientation=0" in project, "Android release must be landscape"
+assert "window/size/viewport_width=1920" in project and "window/size/viewport_height=1080" in project
 
 runtime_text = "\n".join(
     path.read_text(errors="ignore")
